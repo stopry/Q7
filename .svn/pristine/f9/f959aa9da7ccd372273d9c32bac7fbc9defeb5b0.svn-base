@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "cc",
+    "Class",
+    "extends",
+    "Component",
+    "properties",
+    "userName",
+    "default",
+    "type",
+    "EditBox",
+    "password",
+    "remAct",
+    "Node",
+    "remPwd",
+    "onLoad",
+    "logIn",
+    "account",
+    "string",
+    "isRemAct",
+    "children",
+    "active",
+    "isRemPwd",
+    "log",
+    "director",
+    "loadScene",
+    "update",
+    "dt"
+  ],
+  "mappings": ";;AAAAA,GAAGC,KAAH,CAAS;AACLC,aAASF,GAAGG,SADP;;AAGLC,gBAAY;AACPC,kBAAS,EAAC;AACNC,qBAAQ,IADH;AAELC,kBAAKP,GAAGQ;AAFH,SADF;AAKPC,kBAAS,EAAC;AACNH,qBAAQ,IADH;AAELC,kBAAKP,GAAGQ;AAFH,SALF;AASPE,gBAAO,EAAC;AACJJ,qBAAQ,IADL;AAEHC,kBAAKP,GAAGW;AAFL,SATA;AAaPC,gBAAO,EAAC;AACJN,qBAAQ,IADL;AAEHC,kBAAKP,GAAGW;AAFL;AAbA,KAHP;;AA0BL;AACAE,YAAQ,kBAAY,CAEnB,CA7BI;AA8BLC,WAAM,iBAAU;AACZ;AACA,YAAIC,UAAU,KAAKV,QAAL,CAAcW,MAA5B;AACA,YAAIP,WAAW,KAAKA,QAAL,CAAcO,MAA7B;AACA;AACA,YAAIC,WAAW,KAAKP,MAAL,CAAYQ,QAAZ,CAAqB,CAArB,EAAwBC,MAAvC;AACA,YAAIC,WAAW,KAAKR,MAAL,CAAYM,QAAZ,CAAqB,CAArB,EAAwBC,MAAvC;AACAnB,WAAGqB,GAAH,CAAOD,QAAP;AACApB,WAAGsB,QAAH,CAAYC,SAAZ,CAAsB,MAAtB;AACH,KAvCI;AAwCLC,YAAQ,gBAAUC,EAAV,EAAc,CAErB;AA1CI,CAAT",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n         userName:{// 用户名 \r\n             default:null,\r\n             type:cc.EditBox \r\n         },\r\n         password:{// 密码 \r\n             default:null,\r\n             type:cc.EditBox\r\n         },\r\n         remAct:{//  记住账号  \r\n             default:null,\r\n             type:cc.Node\r\n         },\r\n         remPwd:{//  记住密码  \r\n             default:null,\r\n             type:cc.Node\r\n         },\r\n        //  littleTip:{// 小提示    预制资源 \r\n        //      default:null,\r\n        //      type:ccpre.Prefab\r\n        //  }\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n        \r\n    },\r\n    logIn:function(){\r\n        // 登录\r\n        var account = this.userName.string;\r\n        var password = this.password.string;\r\n        // 记住账号密码\r\n        var isRemAct = this.remAct.children[1].active;\r\n        var isRemPwd = this.remPwd.children[1].active;\r\n        cc.log(isRemPwd);\r\n        cc.director.loadScene(\"Game\");\r\n    },\r\n    update: function (dt) {\r\n    \r\n    },\r\n});\r\n"
+  ]
+}
