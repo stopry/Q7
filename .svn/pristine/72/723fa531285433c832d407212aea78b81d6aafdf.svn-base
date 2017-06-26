@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "cc",
+    "Class",
+    "extends",
+    "Component",
+    "properties",
+    "text",
+    "default",
+    "multiline",
+    "onLoad"
+  ],
+  "mappings": ";;AAAAA,GAAGC,KAAH,CAAS;AACLC,aAASF,GAAGG,SADP;;AAGLC,gBAAY;AACRC,cAAM;AACFC,qBAAS,EADP;AAEFC,uBAAW;AAFT;AAIN;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAbQ,KAHP;;AAmBL;AACAC,YAAQ,kBAAY,CAEnB;;AAtBI,CAAT",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        text: {\r\n            default: '',\r\n            multiline: true\r\n        }\r\n        // foo: {\r\n        //    default: null,\r\n        //    url: cc.Texture2D,  // optional, default is typeof default\r\n        //    serializable: true, // optional, default is true\r\n        //    visible: true,      // optional, default is true\r\n        //    displayName: 'Foo', // optional\r\n        //    readonly: false,    // optional, default is false\r\n        // },\r\n        // ...\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n        \r\n    },\r\n\r\n    // called every frame\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});\r\n"
+  ]
+}

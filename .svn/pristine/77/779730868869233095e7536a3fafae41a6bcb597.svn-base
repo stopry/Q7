@@ -1,0 +1,202 @@
+2017-06-26T02:47:04.362Z - normal: Load ~/.CocosCreator/settings.json
+2017-06-26T02:47:04.365Z - normal: checking language setting...
+2017-06-26T02:47:04.365Z - normal: Language: zh
+2017-06-26T02:47:05.744Z - success: protocol editor-framework registered
+2017-06-26T02:47:05.744Z - success: protocol app registered
+2017-06-26T02:47:05.744Z - success: protocol theme registered
+2017-06-26T02:47:05.745Z - success: protocol profile registered
+2017-06-26T02:47:05.745Z - success: protocol packages registered
+2017-06-26T02:47:05.745Z - success: protocol unpack registerred
+2017-06-26T02:47:05.745Z - success: protocol disable-commonjs registerred
+2017-06-26T02:47:05.978Z - normal: connected!
+2017-06-26T02:47:05.986Z - normal: Check project F:\Work\Q7Game
+2017-06-26T02:47:05.993Z - normal: Initializing Cocos2d
+2017-06-26T02:47:06.242Z - normal: Initializing Asset Database
+2017-06-26T02:47:06.272Z - success: protocol uuid registerred
+2017-06-26T02:47:06.272Z - success: protocol db registerred
+2017-06-26T02:47:06.273Z - success: protocol thumbnail registerred
+2017-06-26T02:47:06.273Z - normal: Loading editor/builtin packages
+2017-06-26T02:47:06.303Z - success: anysdk loaded
+2017-06-26T02:47:06.419Z - success: assets loaded
+2017-06-26T02:47:06.425Z - success: builder loaded
+2017-06-26T02:47:06.428Z - success: hierarchy loaded
+2017-06-26T02:47:06.431Z - success: inspector loaded
+2017-06-26T02:47:06.434Z - success: keystore loaded
+2017-06-26T02:47:06.436Z - success: node-library loaded
+2017-06-26T02:47:06.438Z - success: package-asset loaded
+2017-06-26T02:47:06.439Z - success: preferences loaded
+2017-06-26T02:47:06.451Z - success: project-importer loaded
+2017-06-26T02:47:06.452Z - success: project-settings loaded
+2017-06-26T02:47:06.454Z - success: ui-kit loaded
+2017-06-26T02:47:06.455Z - success: ui-grid loaded
+2017-06-26T02:47:06.459Z - success: scene loaded
+2017-06-26T02:47:06.460Z - success: sprite-editor loaded
+2017-06-26T02:47:06.462Z - success: store loaded
+2017-06-26T02:47:06.466Z - success: timeline loaded
+2017-06-26T02:47:06.466Z - normal: Loading builtin packages
+2017-06-26T02:47:06.468Z - success: asset-db-debugger loaded
+2017-06-26T02:47:06.469Z - success: code-editor loaded
+2017-06-26T02:47:06.469Z - success: color-picker loaded
+2017-06-26T02:47:06.472Z - success: console loaded
+2017-06-26T02:47:06.474Z - success: package-manager loaded
+2017-06-26T02:47:06.476Z - success: tester loaded
+2017-06-26T02:47:06.477Z - success: ui-kit-preview-extra loaded
+2017-06-26T02:47:06.478Z - success: ui-kit-preview loaded
+2017-06-26T02:47:06.480Z - success: ui-tree loaded
+2017-06-26T02:47:06.523Z - normal: Initializing project F:\Work\Q7Game
+2017-06-26T02:47:06.525Z - normal: Loading packages
+2017-06-26T02:47:06.528Z - normal: Watching packages
+2017-06-26T02:47:06.539Z - normal: Run Application
+2017-06-26T02:47:07.133Z - success: preview server running at http://localhost:7456
+2017-06-26T02:47:07.133Z - normal: Compiling scripts...
+2017-06-26T02:47:08.388Z - normal: Compiled project javascript file successfully
+2017-06-26T02:47:11.358Z - normal: 1.5.0
+2017-06-26T02:50:55.819Z - normal: Compiled project javascript file successfully
+2017-06-26T02:50:55.820Z - error: Compile error: Cannot require 'i18n' from 'F:\Work\Q7Game\temp\scripts\assets\scripts\global'. Module not found.
+    at Readable.<anonymous> (E:\CocosCreator\resources\app.asar\editor\page\compile-worker.js:1:3784)
+    at emitOne (events.js:96:13)
+    at Readable.emit (events.js:188:7)
+    at Labeled.<anonymous> (E:\CocosCreator\resources\app.asar\node_modules\read-only-stream\index.js:28:44)
+    at emitOne (events.js:96:13)
+    at Labeled.emit (events.js:188:7)
+    at Labeled.<anonymous> (E:\CocosCreator\resources\app.asar\node_modules\stream-splicer\index.js:130:18)
+    at emitOne (events.js:101:20)
+    at Labeled.emit (events.js:188:7)
+    at Deps.<anonymous> (E:\CocosCreator\resources\app.asar\node_modules\stream-splicer\index.js:130:18)
+    at E:\CocosCreator\resources\app.asar\editor\core\compiler.js:1:1022
+    at E:\CocosCreator\resources\app.asar\editor\core\compiler.js:1:466
+    at BrowserWindow.<anonymous> (E:\CocosCreator\resources\app.asar\editor\core\compiler.js:1:2045)
+    at BrowserWindow.g (events.js:286:16)
+    at emitOne (events.js:101:20)
+    at BrowserWindow.emit (events.js:188:7)
+2017-06-26T02:51:46.511Z - normal: Compiled project javascript file successfully
+2017-06-26T03:03:04.677Z - normal: Compiled project javascript file successfully
+2017-06-26T03:06:19.185Z - failed: Task [save-editor-mode:[scene]] run error, stop running other tasks.
+ Error: ipc timeout. message: scene:save-scene, session: 2@renderer:15065
+    at r.Error (native)
+    at new r (E:\CocosCreator\resources\app.asar\editor-framework\lib\share\ipc.js:1:1682)
+    at E:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:404
+2017-06-26T03:06:19.187Z - error: ipc timeout. message: scene:save-scene, session: 2@renderer:15065
+    at Object.callback (E:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode.js:1:2681)
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:906:35
+    at _arrayEach (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:85:13)
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:898:17
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:44:16
+    at Object.<anonymous> (E:\CocosCreator\resources\app.asar\editor\page\scene-utils\tasks.js:1:337)
+    at Object.callback (E:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode.js:1:2339)
+    at E:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:395
+2017-06-26T03:11:12.579Z - warn: [timeline] - update dump failed
+2017-06-26T04:22:28.295Z - failed: [db-task][sync-changes] Failed to load meta E:\CocosCreator\resources\static\default-assets\image\default_toggle_pressed.png.meta, message: Unexpected end of JSON input
+2017-06-26T04:22:28.298Z - failed: [db-task][sync-changes] Failed to import asset E:\CocosCreator\resources\static\default-assets\image\default_toggle_pressed.png, message: Error: Can not find raw texture for E:\CocosCreator\resources\static\default-assets\image\default_toggle_pressed.png\default_toggle_pressed, uuid not found: 338c4d6c-2ecd-48cb-9098-2e148a0a31a5
+    at e.value (E:\CocosCreator\resources\app.asar\editor\share\assets\meta\sprite-frame.js:1:3846)
+    at E:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:5517
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:181:20
+    at replenish (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:319:21)
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:330:15
+    at Object.async.forEachLimit.async.eachLimit (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:220:35)
+    at E:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:5391
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:718:13
+    at Immediate.iterate (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:262:13)
+    at runCallback (timers.js:574:20)
+2017-06-26T04:22:28.370Z - failed: [db-task][sync-changes] Failed to load meta E:\CocosCreator\resources\static\default-assets\image\default_toggle_pressed.png.meta, message: Unexpected end of JSON input
+2017-06-26T04:22:28.371Z - failed: [db-task][sync-changes] Failed to import asset E:\CocosCreator\resources\static\default-assets\image\default_toggle_pressed.png, message: Error: Can not find raw texture for E:\CocosCreator\resources\static\default-assets\image\default_toggle_pressed.png\default_toggle_pressed, uuid not found: 2ac0feb6-041c-4b47-8239-7bbc2ae63ea5
+    at e.value (E:\CocosCreator\resources\app.asar\editor\share\assets\meta\sprite-frame.js:1:3846)
+    at E:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:5517
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:181:20
+    at replenish (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:319:21)
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:330:15
+    at Object.async.forEachLimit.async.eachLimit (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:220:35)
+    at E:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:5391
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:718:13
+    at Immediate.iterate (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:262:13)
+    at runCallback (timers.js:574:20)
+2017-06-26T04:33:28.741Z - normal: Compiled project javascript file successfully
+2017-06-26T04:33:35.921Z - normal: Compiled project javascript file successfully
+2017-06-26T04:33:46.135Z - normal: Compiled project javascript file successfully
+2017-06-26T04:34:00.454Z - normal: Compiled project javascript file successfully
+2017-06-26T04:34:05.973Z - normal: Compiled project javascript file successfully
+2017-06-26T04:34:13.209Z - normal: Compiled project javascript file successfully
+2017-06-26T04:34:22.415Z - normal: Compiled project javascript file successfully
+2017-06-26T05:01:20.717Z - normal: Compiled project javascript file successfully
+2017-06-26T05:16:35.927Z - normal: Compiled project javascript file successfully
+2017-06-26T05:24:50.376Z - failed: [db-task][sync-changes] Failed to import asset F:\Work\Q7Game\assets\scripts\Game\MapControl.js, message: Compile error: SyntaxError: unknown: Unexpected token (25:16)
+  23 |     scrollEvent:function(sender,event){
+  24 |         switch (event){
+> 25 |             case:0:
+     |                 ^
+  26 |                 cc.log('top');
+  27 |                 break;
+  28 |             case:1:
+    at Parser.pp$5.raise (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4443:13)
+    at Parser.pp.unexpected (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1755:8)
+    at Parser.pp$3.parseExprAtom (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3740:12)
+    at Parser.pp$3.parseExprSubscripts (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3484:19)
+    at Parser.pp$3.parseMaybeUnary (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3464:19)
+    at Parser.pp$3.parseExprOps (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3394:19)
+    at Parser.pp$3.parseMaybeConditional (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3371:19)
+    at Parser.pp$3.parseMaybeAssign (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3334:19)
+    at Parser.pp$3.parseExpression (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3296:19)
+    at Parser.pp$1.parseSwitchStatement (E:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:2099:25)
+2017-06-26T05:25:30.896Z - normal: Compiled project javascript file successfully
+2017-06-26T05:27:39.437Z - normal: Compiled project javascript file successfully
+2017-06-26T05:28:49.774Z - normal: Compiled project javascript file successfully
+2017-06-26T05:31:04.055Z - normal: Compiled project javascript file successfully
+2017-06-26T05:32:49.530Z - normal: Compiled project javascript file successfully
+2017-06-26T05:33:06.513Z - normal: Compiled project javascript file successfully
+2017-06-26T05:34:42.616Z - normal: Compiled project javascript file successfully
+2017-06-26T05:34:53.873Z - normal: Compiled project javascript file successfully
+2017-06-26T05:35:04.150Z - normal: Compiled project javascript file successfully
+2017-06-26T05:35:12.031Z - normal: Compiled project javascript file successfully
+2017-06-26T05:35:43.861Z - normal: Compiled project javascript file successfully
+2017-06-26T05:39:11.303Z - normal: Compiled project javascript file successfully
+2017-06-26T05:39:59.060Z - normal: Compiled project javascript file successfully
+2017-06-26T05:40:20.323Z - normal: Compiled project javascript file successfully
+2017-06-26T05:41:25.150Z - normal: Compiled project javascript file successfully
+2017-06-26T05:41:35.280Z - normal: Compiled project javascript file successfully
+2017-06-26T05:41:43.976Z - normal: Compiled project javascript file successfully
+2017-06-26T05:44:17.122Z - normal: Compiled project javascript file successfully
+2017-06-26T05:44:30.456Z - normal: Compiled project javascript file successfully
+2017-06-26T05:44:49.610Z - normal: Compiled project javascript file successfully
+2017-06-26T05:45:00.011Z - normal: Compiled project javascript file successfully
+2017-06-26T05:47:06.149Z - normal: Compiled project javascript file successfully
+2017-06-26T05:47:54.906Z - normal: Compiled project javascript file successfully
+2017-06-26T05:48:11.105Z - normal: Compiled project javascript file successfully
+2017-06-26T05:48:29.044Z - normal: Compiled project javascript file successfully
+2017-06-26T05:48:49.462Z - normal: Compiled project javascript file successfully
+2017-06-26T05:49:50.915Z - normal: Compiled project javascript file successfully
+2017-06-26T05:56:35.612Z - normal: Compiled project javascript file successfully
+2017-06-26T05:56:49.718Z - normal: Compiled project javascript file successfully
+2017-06-26T05:57:08.328Z - normal: Compiled project javascript file successfully
+2017-06-26T05:57:16.963Z - normal: Compiled project javascript file successfully
+2017-06-26T05:57:37.307Z - normal: Compiled project javascript file successfully
+2017-06-26T05:57:47.106Z - normal: Compiled project javascript file successfully
+2017-06-26T05:59:53.955Z - normal: Compiled project javascript file successfully
+2017-06-26T06:07:56.839Z - normal: Compiled project javascript file successfully
+2017-06-26T06:09:12.998Z - normal: Compiled project javascript file successfully
+2017-06-26T06:10:10.162Z - normal: Compiled project javascript file successfully
+2017-06-26T06:11:34.221Z - normal: Compiled project javascript file successfully
+2017-06-26T06:43:16.616Z - normal: Compiled project javascript file successfully
+2017-06-26T06:48:35.704Z - failed: Task [save-editor-mode:[scene]] run error, stop running other tasks.
+ Error: ipc timeout. message: scene:save-scene, session: 2@renderer:283025
+    at r.Error (native)
+    at new r (E:\CocosCreator\resources\app.asar\editor-framework\lib\share\ipc.js:1:1682)
+    at E:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:404
+2017-06-26T06:48:35.706Z - error: ipc timeout. message: scene:save-scene, session: 2@renderer:283025
+    at Object.callback (E:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode.js:1:2681)
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:906:35
+    at _arrayEach (E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:85:13)
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:898:17
+    at E:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:44:16
+    at Object.<anonymous> (E:\CocosCreator\resources\app.asar\editor\page\scene-utils\tasks.js:1:337)
+    at Object.callback (E:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode.js:1:2339)
+    at E:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:395
+2017-06-26T06:56:01.215Z - error: Should not add renderer component (3627) to a Canvas node.
+    at Object.errorID (E:\CocosCreator\resources\engine\CCDebugger.js:367:18)
+    at cc_Sprite._registSizeProvider (E:\CocosCreator\resources\engine\cocos2d\core\components\CCSGComponent.js:91:20)
+    at cc_Sprite.__preload (E:\CocosCreator\resources\engine\cocos2d\core\components\CCRendererUnderSG.js:61:14)
+    at cc_Sprite.Sprite.__preload (E:\CocosCreator\resources\engine\cocos2d\core\components\CCSprite.js:631:14)
+    at call__preloadInTryCatch (eval at <anonymous> (E:\CocosCreator\resources\engine\cocos2d\core\utils\misc.js:1:1), <anonymous>:4:24)
+    at CCClass.activateComp (E:\CocosCreator\resources\engine\cocos2d\core\node-activator.js:228:21)
+    at cc_Node.addComponent (E:\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:879:40)
+    at Object.addComponent (E:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:12109)
+    at editor-scene.scene:add-component (file:///E:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:8863)

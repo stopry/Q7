@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "i18n",
+    "require",
+    "cc",
+    "Class",
+    "extends",
+    "Label",
+    "properties",
+    "textKey",
+    "default",
+    "multiline",
+    "tooltip",
+    "notify",
+    "_sgNode",
+    "setString",
+    "string",
+    "_updateNodeSize",
+    "override",
+    "get",
+    "t",
+    "set",
+    "value",
+    "warn"
+  ],
+  "mappings": ";;AAAA,IAAMA,OAAOC,QAAQ,MAAR,CAAb;AACAC,GAAGC,KAAH,CAAS;AACLC,aAASF,GAAGG,KADP;;AAGLC,gBAAY;AACRC,iBAAS;AACLC,qBAAS,UADJ;AAELC,uBAAW,IAFN;AAGLC,qBAAS,qBAHJ;AAILC,oBAAQ,kBAAY;AAChB,oBAAI,KAAKC,OAAT,EAAkB;AACd,yBAAKA,OAAL,CAAaC,SAAb,CAAuB,KAAKC,MAA5B;AACA,yBAAKC,eAAL;AACH;AACJ;AATI,SADD;AAYRD,gBAAQ;AACJE,sBAAU,IADN;AAEJN,qBAAS,6CAFL;AAGJO,iBAAK,eAAY;AACb,uBAAOjB,KAAKkB,CAAL,CAAO,KAAKX,OAAZ,CAAP;AACH,aALG;AAMJY,iBAAK,aAAUC,KAAV,EAAiB;AAClB,qBAAKb,OAAL,GAAea,KAAf;AACAlB,mBAAGmB,IAAH,CAAQ,iDAAR;AACH;AATG;AAZA;AAHP,CAAT",
+  "file": "unknown",
+  "sourcesContent": [
+    "const i18n = require('i18n');\r\ncc.Class({\r\n    extends: cc.Label,\r\n\r\n    properties: {\r\n        textKey: {\r\n            default: 'TEXT_KEY',\r\n            multiline: true,\r\n            tooltip: 'Enter i18n key here',\r\n            notify: function () {\r\n                if (this._sgNode) {\r\n                    this._sgNode.setString(this.string);\r\n                    this._updateNodeSize();\r\n                }\r\n            }\r\n        },\r\n        string: {\r\n            override: true,\r\n            tooltip: 'Here shows the localized string of Text Key',\r\n            get: function () {\r\n                return i18n.t(this.textKey);\r\n            },\r\n            set: function (value) {\r\n                this.textKey = value;\r\n                cc.warn('Please set label text key in Text Key property.');\r\n            }\r\n        }\r\n    }\r\n});"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "progress_time",
+    "texture": "255a963c-6043-4c76-86f9-42de2798b8eb",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      301,
+      23
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      301,
+      23
+    ]
+  }
+}

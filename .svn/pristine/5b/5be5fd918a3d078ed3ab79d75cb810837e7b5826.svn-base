@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "header_pullup",
+    "texture": "0758cf51-5911-4c4e-99e4-e62f83a5cd57",
+    "atlas": "",
+    "rect": [
+      0,
+      1,
+      60,
+      56
+    ],
+    "offset": [
+      -1.5,
+      0.5
+    ],
+    "originalSize": [
+      63,
+      59
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "header_list_dropo",
+    "texture": "54b0804a-39a4-46a2-bbee-a24d4faf4d34",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      362,
+      103
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      363,
+      104
+    ]
+  }
+}

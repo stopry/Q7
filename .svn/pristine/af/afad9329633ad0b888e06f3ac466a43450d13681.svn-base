@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "header_pulldown",
+    "texture": "654abc14-cb69-4ff4-bc54-646e928a5fcd",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      60,
+      56
+    ],
+    "offset": [
+      -1,
+      1.5
+    ],
+    "originalSize": [
+      62,
+      59
+    ]
+  }
+}

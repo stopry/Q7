@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "Polyglot",
+    "require",
+    "lang",
+    "cc",
+    "sys",
+    "language",
+    "data",
+    "polyglot",
+    "phrases",
+    "allowMissing",
+    "module",
+    "exports",
+    "init",
+    "replace",
+    "t",
+    "key",
+    "opt"
+  ],
+  "mappings": ";;AAAA,IAAMA,WAAWC,QAAQ,UAAR,CAAjB;AACA,IAAIC,OAAOC,GAAGC,GAAH,CAAOC,QAAlB;AACA,IAAIH,SAAS,IAAb,EAAmB;AACfA,WAAO,IAAP;AACH;AACD,IAAII,OAAOL,QAAQC,IAAR,CAAX,C,CAA0B;AAC1B;AACA,IAAIK,WAAW,IAAIP,QAAJ,CAAa,EAACQ,SAASF,IAAV,EAAgBG,cAAc,IAA9B,EAAb,CAAf;;AAGAC,OAAOC,OAAP,GAAiB;AACb;;;;;;AAMAC,QAPa,gBAOPP,QAPO,EAOG;AACZH,eAAOG,QAAP;AACAC,eAAOL,QAAQC,IAAR,CAAP;AACAK,iBAASM,OAAT,CAAiBP,IAAjB;AACH,KAXY;;AAYb;;;;;;;;;;;;;;AAcAQ,KA1Ba,aA0BVC,GA1BU,EA0BLC,GA1BK,EA0BA;AACT,eAAOT,SAASO,CAAT,CAAWC,GAAX,EAAgBC,GAAhB,CAAP;AACH;AA5BY,CAAjB",
+  "file": "unknown",
+  "sourcesContent": [
+    "const Polyglot = require('polyglot');\r\nlet lang = cc.sys.language;\r\nif (lang !== 'zh') {\r\n    lang = 'en';\r\n}\r\nlet data = require(lang); // update this to set your default displaying language in editor\r\n// let polyglot = null;\r\nlet polyglot = new Polyglot({phrases: data, allowMissing: true});\r\n\r\n\r\nmodule.exports = {\r\n    /**\r\n     * This method allow you to switch language during runtime, language argument should be the same as your data file name\r\n     * such as when language is 'zh', it will load your 'zh.js' data source.\r\n     * @method init\r\n     * @param language - the language specific data file name, such as 'zh' to load 'zh.js'\r\n     */\r\n    init (language) {\r\n        lang = language;\r\n        data = require(lang);\r\n        polyglot.replace(data);\r\n    },\r\n    /**\r\n     * this method takes a text key as input, and return the localized string\r\n     * Please read https://github.com/airbnb/polyglot.js for details\r\n     * @method t\r\n     * @return {String} localized string\r\n     * @example\r\n     *\r\n     * var myText = i18n.t('MY_TEXT_KEY');\r\n     *\r\n     * // if your data source is defined as\r\n     * // {\"hello_name\": \"Hello, %{name}\"}\r\n     * // you can use the following to interpolate the text\r\n     * var greetingText = i18n.t('hello_name', {name: 'nantas'}); // Hello, nantas\r\n     */\r\n    t (key, opt) {\r\n        return polyglot.t(key, opt);\r\n    }\r\n};"
+  ]
+}

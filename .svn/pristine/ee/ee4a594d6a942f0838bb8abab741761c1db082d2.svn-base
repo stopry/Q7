@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "progress_time$bar",
+    "texture": "2acd35ee-d394-413b-8430-abdfa46def6e",
+    "atlas": "",
+    "rect": [
+      3,
+      3,
+      295,
+      17
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      301,
+      23
+    ]
+  }
+}
