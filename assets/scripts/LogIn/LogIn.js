@@ -17,6 +17,10 @@ cc.Class({
          remPwd:{//  记住密码  
              default:null,
              type:cc.Node
+         },
+         littleTip:{// 小提示    预制资源 
+             default:null,
+             type:ccpre.Prefab
          }
     },
 
