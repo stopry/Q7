@@ -1,0 +1,33 @@
+'use strict';
+
+//设置仓库每个item的属性
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        img: { //item图片
+            default: null,
+            type: cc.Sprite
+        },
+        num: { //item数量
+            default: null,
+            type: cc.Label
+        },
+        spriteList: { //图片列表
+            default: [],
+            type: [cc.SpriteFrame]
+        }
+    },
+
+    onLoad: function onLoad() {
+        this.setItme(1, '44');
+        //this.node.on('touchend', function () {
+        //    console.log("Item " + this.itemID + ' clicked');
+        //}, this);
+    },
+    setItme: function setItme(img, num) {
+        //设置item的显示数据
+        this.img.spriteFrame = this.spriteList[img];
+        this.num.string = num;
+    }
+});

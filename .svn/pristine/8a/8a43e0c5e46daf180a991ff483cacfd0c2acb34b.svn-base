@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "cc",
+    "Class",
+    "extends",
+    "Component",
+    "properties",
+    "sky",
+    "default",
+    "type",
+    "Node",
+    "scrollView",
+    "ScrollView",
+    "content",
+    "onLoad",
+    "mapScrolling",
+    "update",
+    "dt",
+    "node",
+    "on",
+    "scrollEvent",
+    "sender",
+    "event",
+    "conPos",
+    "position",
+    "setPosition",
+    "x"
+  ],
+  "mappings": ";;AAAAA,GAAGC,KAAH,CAAS;AACLC,aAASF,GAAGG,SADP;;AAGLC,gBAAY;AACRC,aAAI,EAAC;AACDC,qBAAQ,IADR;AAEAC,kBAAKP,GAAGQ;AAFR,SADI;AAKRC,oBAAW,EAAC;AACRH,qBAAQ,IADD;AAEPC,kBAAKP,GAAGU;AAFD,SALH;AASRC,iBAAQ,EAAC;AACLL,qBAAQ,IADJ;AAEJC,kBAAKP,GAAGQ;AAFJ;AATA,KAHP;AAiBL;AACAI,YAAQ,kBAAY;AAChB,aAAKC,YAAL;AACH,KApBI;AAqBLC,YAAQ,gBAAUC,EAAV,EAAc,CAErB,CAvBI;AAwBLF,kBAAa,wBAAU;AACnB,aAAKJ,UAAL,CAAgBO,IAAhB,CAAqBC,EAArB,CAAwB,WAAxB,EAAoC,YAAU,CAE7C,CAFD;AAGH,KA5BI;AA6BLC,iBAAY,qBAASC,MAAT,EAAgBC,KAAhB,EAAsB;AAC9B,YAAIC,SAAS,KAAKV,OAAL,CAAaW,QAA1B;AACA,aAAKjB,GAAL,CAASkB,WAAT,CAAqB,CAACF,OAAOG,CAAR,GAAU,GAA/B,EAAmC,GAAnC;AACA;AACA,gBAAQJ,KAAR;AACI,iBAAK,CAAL;AACI;AACA;AACJ,iBAAK,CAAL;AACI;AACA;AANR;AAQH;AAzCI,CAAT",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        sky:{//天空背景\r\n            default:null,\r\n            type:cc.Node\r\n        },\r\n        scrollView:{//滚动视图\r\n            default:null,\r\n            type:cc.ScrollView\r\n        },\r\n        content:{//滚动视图 \r\n            default:null,\r\n            type:cc.Node\r\n        }\r\n    },\r\n    // use this for initialization\r\n    onLoad: function () {\r\n        this.mapScrolling();\r\n    },\r\n    update: function (dt) {\r\n        \r\n    },\r\n    mapScrolling:function(){\r\n        this.scrollView.node.on(\"scrolling\",function(){\r\n\r\n        });\r\n    },\r\n    scrollEvent:function(sender,event){\r\n        var conPos = this.content.position;\r\n        this.sky.setPosition(-conPos.x*0.3,506);\r\n        // console.log(conPos)\r\n        switch (event){\r\n            case 0:\r\n                //cc.log('top');\r\n                break;\r\n            case 1:\r\n                //cc.log('bot');\r\n                break;\r\n        }\r\n    }\r\n});\r\n"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "cc",
+    "Class",
+    "extends",
+    "Component",
+    "properties",
+    "label",
+    "default",
+    "type",
+    "Label",
+    "onLoad",
+    "setContent",
+    "str",
+    "string"
+  ],
+  "mappings": ";;AAAAA,GAAGC,KAAH,CAAS;AACLC,aAASF,GAAGG,SADP;;AAGLC,gBAAY;AACRC,eAAM;AACFC,qBAAQ,IADN;AAEFC,kBAAKP,GAAGQ;AAFN;AADE,KAHP;;AAUL;AACAC,YAAQ,kBAAY,CACnB,CAZI;AAaLC,gBAAW,oBAASC,GAAT,EAAa;AAAC;AACrB,aAAKN,KAAL,CAAWO,MAAX,GAAoBD,GAApB;AACH;AACD;AACA;;AAEA;AAnBK,CAAT",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        label:{\r\n            default:null,\r\n            type:cc.Label\r\n        }\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n    },\r\n    setContent:function(str){//设置提示内容\r\n        this.label.string = str;\r\n    }\r\n    // called every frame, uncomment this function to activate update callback\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});\r\n"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "waterMalen",
+    "texture": "7e6a034d-e452-4d3e-9c00-359ec82e6f79",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      47,
+      47
+    ],
+    "offset": [
+      -1,
+      0.5
+    ],
+    "originalSize": [
+      49,
+      48
+    ]
+  }
+}

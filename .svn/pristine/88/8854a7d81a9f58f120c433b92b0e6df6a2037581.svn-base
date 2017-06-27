@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "enterPot_title",
+    "texture": "76b8af7c-532b-4a9b-8309-3f8280d20e28",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      260,
+      83
+    ],
+    "offset": [
+      -1,
+      0
+    ],
+    "originalSize": [
+      262,
+      83
+    ]
+  }
+}

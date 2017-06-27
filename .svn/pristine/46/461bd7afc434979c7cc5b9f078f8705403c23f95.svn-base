@@ -1,14 +1,14 @@
+"use strict";
+
 cc.Class({
     extends: cc.Component,
 
-    properties: {
-       
-    },
+    properties: {},
 
     // use this for initialization
-    onLoad: function () {
+    onLoad: function onLoad() {
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-           var action = cc.scaleTo(0.05, 0.9, 0.9);
+            var action = cc.scaleTo(0.05, 0.9, 0.9);
             //var action = cc.scaleTo(0.05, 1.1, 1.1);
             this.node.runAction(action);
         }, this);
@@ -17,9 +17,5 @@ cc.Class({
             //var action = cc.scaleTo(0.05, 1.1, 1.1);
             this.node.runAction(action);
         }, this);
-    },
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
+    }
 });

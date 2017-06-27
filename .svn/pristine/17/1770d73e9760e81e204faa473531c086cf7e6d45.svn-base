@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "cc",
+    "Class",
+    "extends",
+    "Component",
+    "properties",
+    "itemTemplate",
+    "default",
+    "type",
+    "Prefab",
+    "content",
+    "Node",
+    "onLoad",
+    "items",
+    "initialize",
+    "k",
+    "i",
+    "item",
+    "instantiate",
+    "addChild",
+    "getComponent",
+    "setItme",
+    "push"
+  ],
+  "mappings": ";;AAAAA,GAAGC,KAAH,CAAS;AACLC,aAASF,GAAGG,SADP;;AAGLC,gBAAY;AACRC,sBAAa,EAAC;AACVC,qBAAQ,IADC;AAETC,kBAAKP,GAAGQ;AAFC,SADL;AAKRC,iBAAQ,EAAC;AACLH,qBAAQ,IADJ;AAEJC,kBAAKP,GAAGU;AAFJ;AALA,KAHP;;AAcL;AACAC,YAAQ,kBAAY;AAChB,aAAKC,KAAL,GAAa,EAAb;AACA,aAAKC,UAAL;AACH,KAlBI;AAmBLA,gBAAW,sBAAU;AACjB,YAAIC,IAAI,CAAR;AACA,aAAI,IAAIC,IAAI,CAAZ,EAAcA,IAAE,EAAhB,EAAmB,EAAEA,CAArB,EAAuB;AACnB,gBAAIC,OAAOhB,GAAGiB,WAAH,CAAe,KAAKZ,YAApB,CAAX;AACA,iBAAKI,OAAL,CAAaS,QAAb,CAAsBF,IAAtB;AACAA,iBAAKG,YAAL,CAAkB,iBAAlB,EAAqCC,OAArC,CAA6C,CAA7C,EAA+CN,CAA/C;AACAA;AACA,iBAAKF,KAAL,CAAWS,IAAX,CAAgBL,IAAhB;AACH;AACJ;AACD;AACA;;AAEA;AAhCK,CAAT",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        itemTemplate:{//仓库列表项\r\n            default:null,\r\n            type:cc.Prefab\r\n        },\r\n        content:{//列表容器\r\n            default:null,\r\n            type:cc.Node\r\n        }\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n        this.items = [];\r\n        this.initialize();\r\n    },\r\n    initialize:function(){\r\n        var k = 0\r\n        for(let i = 0;i<30;++i){\r\n            let item = cc.instantiate(this.itemTemplate);\r\n            this.content.addChild(item);\r\n            item.getComponent('SetEnterpotItem').setItme(1,k);\r\n            k++;\r\n            this.items.push(item);\r\n        }\r\n    }\r\n    // called every frame, uncomment this function to activate update callback\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});\r\n"
+  ]
+}

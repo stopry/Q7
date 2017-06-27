@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [
+    "cc",
+    "Class",
+    "extends",
+    "Component",
+    "properties",
+    "img",
+    "default",
+    "type",
+    "Sprite",
+    "num",
+    "Label",
+    "spriteList",
+    "SpriteFrame",
+    "onLoad",
+    "setItme",
+    "spriteFrame",
+    "string"
+  ],
+  "mappings": ";;AAAA;AACAA,GAAGC,KAAH,CAAS;AACLC,aAASF,GAAGG,SADP;;AAGLC,gBAAY;AACRC,aAAI,EAAC;AACDC,qBAAQ,IADR;AAEAC,kBAAKP,GAAGQ;AAFR,SADI;AAKRC,aAAI,EAAC;AACDH,qBAAQ,IADR;AAEAC,kBAAKP,GAAGU;AAFR,SALI;AASRC,oBAAY,EAAC;AACTL,qBAAS,EADD;AAERC,kBAAM,CAACP,GAAGY,WAAJ;AAFE;AATJ,KAHP;;AAkBLC,YAAQ,kBAAY;AAChB,aAAKC,OAAL,CAAa,CAAb,EAAe,IAAf;AACA;AACA;AACA;AACH,KAvBI;AAwBLA,aAAQ,iBAAST,GAAT,EAAaI,GAAb,EAAiB;AAAC;AACtB,aAAKJ,GAAL,CAASU,WAAT,GAAuB,KAAKJ,UAAL,CAAgBN,GAAhB,CAAvB;AACA,aAAKI,GAAL,CAASO,MAAT,GAAkBP,GAAlB;AACH;AA3BI,CAAT",
+  "file": "unknown",
+  "sourcesContent": [
+    "//设置仓库每个item的属性\r\ncc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        img:{//item图片\r\n            default:null,\r\n            type:cc.Sprite\r\n        },\r\n        num:{//item数量\r\n            default:null,\r\n            type:cc.Label\r\n        },\r\n        spriteList: {//图片列表\r\n            default: [],\r\n            type: [cc.SpriteFrame]\r\n        }\r\n    },\r\n\r\n    onLoad: function () {\r\n        this.setItme(1,'44')\r\n        //this.node.on('touchend', function () {\r\n        //    console.log(\"Item \" + this.itemID + ' clicked');\r\n        //}, this);\r\n    },\r\n    setItme:function(img,num){//设置item的显示数据\r\n        this.img.spriteFrame = this.spriteList[img];\r\n        this.num.string = num;\r\n    },\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});"
+  ]
+}

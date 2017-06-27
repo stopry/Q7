@@ -1,12 +1,13 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "",
+    "_name": "littleTip",
     "_objFlags": 0,
     "_rawFiles": null,
     "data": {
       "__id__": 1
-    }
+    },
+    "asyncLoadAssets": false
   },
   {
     "__type__": "cc.Node",

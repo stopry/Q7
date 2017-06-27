@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "enterPot_Icon",
+    "texture": "ab4852d4-05dc-43d8-8553-fc5e4ba4322c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      79,
+      87
+    ],
+    "offset": [
+      -1,
+      1
+    ],
+    "originalSize": [
+      81,
+      89
+    ]
+  }
+}

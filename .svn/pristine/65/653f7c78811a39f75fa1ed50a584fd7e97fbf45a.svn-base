@@ -1,0 +1,163 @@
+2017-06-27T01:28:57.651Z - normal: Load ~/.CocosCreator/settings.json
+2017-06-27T01:28:57.655Z - normal: checking language setting...
+2017-06-27T01:28:57.655Z - normal: Language: zh
+2017-06-27T01:28:58.998Z - success: protocol editor-framework registered
+2017-06-27T01:28:58.998Z - success: protocol app registered
+2017-06-27T01:28:58.998Z - success: protocol theme registered
+2017-06-27T01:28:58.998Z - success: protocol profile registered
+2017-06-27T01:28:58.998Z - success: protocol packages registered
+2017-06-27T01:28:58.998Z - success: protocol unpack registerred
+2017-06-27T01:28:58.998Z - success: protocol disable-commonjs registerred
+2017-06-27T01:28:59.214Z - normal: connected!
+2017-06-27T01:28:59.220Z - normal: Check project F:\Work\Q7Game
+2017-06-27T01:28:59.224Z - normal: Initializing Cocos2d
+2017-06-27T01:28:59.479Z - normal: Initializing Asset Database
+2017-06-27T01:28:59.510Z - success: protocol uuid registerred
+2017-06-27T01:28:59.511Z - success: protocol db registerred
+2017-06-27T01:28:59.511Z - success: protocol thumbnail registerred
+2017-06-27T01:28:59.511Z - normal: Loading editor/builtin packages
+2017-06-27T01:28:59.535Z - success: anysdk loaded
+2017-06-27T01:28:59.661Z - success: assets loaded
+2017-06-27T01:28:59.663Z - success: builder loaded
+2017-06-27T01:28:59.666Z - success: hierarchy loaded
+2017-06-27T01:28:59.669Z - success: inspector loaded
+2017-06-27T01:28:59.670Z - success: keystore loaded
+2017-06-27T01:28:59.672Z - success: node-library loaded
+2017-06-27T01:28:59.674Z - success: package-asset loaded
+2017-06-27T01:28:59.675Z - success: preferences loaded
+2017-06-27T01:28:59.687Z - success: project-importer loaded
+2017-06-27T01:28:59.690Z - success: project-settings loaded
+2017-06-27T01:28:59.692Z - success: ui-kit loaded
+2017-06-27T01:28:59.693Z - success: ui-grid loaded
+2017-06-27T01:28:59.697Z - success: scene loaded
+2017-06-27T01:28:59.698Z - success: sprite-editor loaded
+2017-06-27T01:28:59.701Z - success: store loaded
+2017-06-27T01:28:59.706Z - success: timeline loaded
+2017-06-27T01:28:59.706Z - normal: Loading builtin packages
+2017-06-27T01:28:59.708Z - success: asset-db-debugger loaded
+2017-06-27T01:28:59.709Z - success: code-editor loaded
+2017-06-27T01:28:59.710Z - success: color-picker loaded
+2017-06-27T01:28:59.712Z - success: console loaded
+2017-06-27T01:28:59.714Z - success: package-manager loaded
+2017-06-27T01:28:59.716Z - success: tester loaded
+2017-06-27T01:28:59.718Z - success: ui-kit-preview-extra loaded
+2017-06-27T01:28:59.720Z - success: ui-kit-preview loaded
+2017-06-27T01:28:59.722Z - success: ui-tree loaded
+2017-06-27T01:28:59.766Z - normal: Initializing project F:\Work\Q7Game
+2017-06-27T01:28:59.768Z - normal: Loading packages
+2017-06-27T01:28:59.771Z - normal: Watching packages
+2017-06-27T01:28:59.783Z - normal: Run Application
+2017-06-27T01:29:00.545Z - success: preview server running at http://localhost:7456
+2017-06-27T01:29:04.030Z - normal: 1.5.0
+2017-06-27T03:03:38.356Z - normal: Compiled project javascript file successfully
+2017-06-27T03:04:09.539Z - normal: Compiled project javascript file successfully
+2017-06-27T03:05:25.664Z - normal: Compiled project javascript file successfully
+2017-06-27T03:07:06.929Z - normal: Compiled project javascript file successfully
+2017-06-27T03:07:18.655Z - normal: Compiled project javascript file successfully
+2017-06-27T03:21:40.993Z - normal: Compiled project javascript file successfully
+2017-06-27T03:21:46.541Z - normal: Compiled project javascript file successfully
+2017-06-27T03:23:35.272Z - normal: Compiled project javascript file successfully
+2017-06-27T03:24:55.206Z - normal: Compiled project javascript file successfully
+2017-06-27T03:25:53.189Z - normal: Compiled project javascript file successfully
+2017-06-27T03:29:20.801Z - normal: Compiled project javascript file successfully
+2017-06-27T03:30:39.171Z - normal: Compiled project javascript file successfully
+2017-06-27T03:38:51.704Z - normal: Compiled project javascript file successfully
+2017-06-27T03:40:03.284Z - normal: Compiled project javascript file successfully
+2017-06-27T03:40:29.085Z - normal: Compiled project javascript file successfully
+2017-06-27T03:41:41.208Z - normal: Compiled project javascript file successfully
+2017-06-27T03:42:38.660Z - normal: Compiled project javascript file successfully
+2017-06-27T03:43:37.779Z - normal: Compiled project javascript file successfully
+2017-06-27T03:44:06.789Z - normal: Compiled project javascript file successfully
+2017-06-27T03:45:20.891Z - normal: Compiled project javascript file successfully
+2017-06-27T03:46:41.930Z - normal: Compiled project javascript file successfully
+2017-06-27T03:48:06.511Z - normal: Compiled project javascript file successfully
+2017-06-27T03:52:04.566Z - info: 只有预制节点 "littleBg/littleTip" 及其子节点会被保存。
+2017-06-27T03:52:17.452Z - info: 只有预制节点 "littleBg/littleTip" 及其子节点会被保存。
+2017-06-27T03:52:28.763Z - info: 只有预制节点 "littleBg/littleTip" 及其子节点会被保存。
+2017-06-27T03:53:20.471Z - normal: Compiled project javascript file successfully
+2017-06-27T03:55:24.792Z - normal: Compiled project javascript file successfully
+2017-06-27T03:55:42.117Z - info: 只有预制节点 "littleBg/littleTip" 及其子节点会被保存。
+2017-06-27T03:55:43.681Z - normal: Compiled project javascript file successfully
+2017-06-27T03:57:26.168Z - normal: Compiled project javascript file successfully
+2017-06-27T03:57:46.736Z - normal: Compiled project javascript file successfully
+2017-06-27T04:02:47.560Z - normal: Compiled project javascript file successfully
+2017-06-27T04:03:03.181Z - normal: Compiled project javascript file successfully
+2017-06-27T05:11:58.510Z - normal: Compiled project javascript file successfully
+2017-06-27T05:15:22.897Z - normal: Compiled project javascript file successfully
+2017-06-27T05:16:03.144Z - normal: Compiled project javascript file successfully
+2017-06-27T05:17:04.805Z - normal: Compiled project javascript file successfully
+2017-06-27T05:26:31.925Z - normal: Compiled project javascript file successfully
+2017-06-27T05:31:09.862Z - normal: Compiled project javascript file successfully
+2017-06-27T05:31:43.015Z - normal: Compiled project javascript file successfully
+2017-06-27T05:32:27.004Z - normal: Compiled project javascript file successfully
+2017-06-27T05:34:01.498Z - normal: Compiled project javascript file successfully
+2017-06-27T05:35:33.216Z - normal: Compiled project javascript file successfully
+2017-06-27T05:37:16.340Z - normal: Compiled project javascript file successfully
+2017-06-27T05:46:21.729Z - normal: Compiled project javascript file successfully
+2017-06-27T05:47:57.205Z - normal: Compiled project javascript file successfully
+2017-06-27T05:48:28.223Z - normal: Compiled project javascript file successfully
+2017-06-27T05:48:55.608Z - normal: Compiled project javascript file successfully
+2017-06-27T05:50:45.334Z - normal: Compiled project javascript file successfully
+2017-06-27T06:01:23.285Z - normal: Compiled project javascript file successfully
+2017-06-27T06:02:35.941Z - normal: Compiled project javascript file successfully
+2017-06-27T06:02:53.923Z - normal: Compiled project javascript file successfully
+2017-06-27T06:03:17.460Z - normal: Compiled project javascript file successfully
+2017-06-27T06:08:17.866Z - normal: Compiled project javascript file successfully
+2017-06-27T06:13:16.938Z - normal: Compiled project javascript file successfully
+2017-06-27T07:08:44.035Z - normal: Compiled project javascript file successfully
+2017-06-27T07:09:04.057Z - normal: Compiled project javascript file successfully
+2017-06-27T07:18:34.462Z - normal: Compiled project javascript file successfully
+2017-06-27T07:23:32.523Z - normal: Compiled project javascript file successfully
+2017-06-27T07:25:14.175Z - normal: Compiled project javascript file successfully
+2017-06-27T07:26:34.096Z - normal: Compiled project javascript file successfully
+2017-06-27T07:26:53.840Z - normal: Compiled project javascript file successfully
+2017-06-27T07:27:37.893Z - normal: Compiled project javascript file successfully
+2017-06-27T07:30:02.219Z - normal: Compiled project javascript file successfully
+2017-06-27T07:34:27.766Z - normal: Compiled project javascript file successfully
+2017-06-27T07:35:53.896Z - normal: Compiled project javascript file successfully
+2017-06-27T07:37:00.395Z - normal: Compiled project javascript file successfully
+2017-06-27T07:38:18.013Z - normal: Compiled project javascript file successfully
+2017-06-27T07:39:11.561Z - normal: Compiled project javascript file successfully
+2017-06-27T07:40:21.149Z - normal: Compiled project javascript file successfully
+2017-06-27T07:41:32.287Z - normal: Compiled project javascript file successfully
+2017-06-27T07:47:10.991Z - normal: Compiled project javascript file successfully
+2017-06-27T07:47:39.324Z - normal: Compiled project javascript file successfully
+2017-06-27T07:48:15.706Z - normal: Compiled project javascript file successfully
+2017-06-27T07:50:24.395Z - normal: Compiled project javascript file successfully
+2017-06-27T07:51:47.636Z - normal: Compiled project javascript file successfully
+2017-06-27T07:52:17.263Z - normal: Compiled project javascript file successfully
+2017-06-27T07:52:40.363Z - normal: Compiled project javascript file successfully
+2017-06-27T07:52:54.047Z - normal: Compiled project javascript file successfully
+2017-06-27T07:56:34.958Z - normal: Compiled project javascript file successfully
+2017-06-27T07:58:26.098Z - normal: Compiled project javascript file successfully
+2017-06-27T07:59:45.618Z - normal: Compiled project javascript file successfully
+2017-06-27T08:00:39.845Z - normal: Compiled project javascript file successfully
+2017-06-27T08:01:48.607Z - normal: Compiled project javascript file successfully
+2017-06-27T08:02:07.386Z - normal: Compiled project javascript file successfully
+2017-06-27T08:03:47.949Z - normal: Compiled project javascript file successfully
+2017-06-27T08:06:04.082Z - normal: Compiled project javascript file successfully
+2017-06-27T08:07:39.707Z - normal: Compiled project javascript file successfully
+2017-06-27T08:10:19.339Z - normal: Compiled project javascript file successfully
+2017-06-27T08:12:26.250Z - normal: Compiled project javascript file successfully
+2017-06-27T08:13:43.995Z - normal: Compiled project javascript file successfully
+2017-06-27T08:16:15.359Z - normal: Compiled project javascript file successfully
+2017-06-27T08:16:30.464Z - normal: Compiled project javascript file successfully
+2017-06-27T08:16:53.309Z - normal: Compiled project javascript file successfully
+2017-06-27T08:17:25.736Z - normal: Compiled project javascript file successfully
+2017-06-27T08:18:07.649Z - normal: Compiled project javascript file successfully
+2017-06-27T08:20:50.689Z - normal: Compiled project javascript file successfully
+2017-06-27T08:21:53.696Z - normal: Compiled project javascript file successfully
+2017-06-27T08:25:19.701Z - normal: Compiled project javascript file successfully
+2017-06-27T08:34:24.968Z - normal: Compiled project javascript file successfully
+2017-06-27T08:35:10.416Z - normal: Compiled project javascript file successfully
+2017-06-27T08:35:59.325Z - normal: Compiled project javascript file successfully
+2017-06-27T08:40:11.005Z - normal: Compiled project javascript file successfully
+2017-06-27T08:40:37.317Z - normal: Compiled project javascript file successfully
+2017-06-27T08:43:19.729Z - normal: Compiled project javascript file successfully
+2017-06-27T08:48:15.323Z - normal: Compiled project javascript file successfully
+2017-06-27T08:50:11.747Z - normal: Compiled project javascript file successfully
+2017-06-27T08:51:40.631Z - normal: Compiled project javascript file successfully
+2017-06-27T08:52:06.250Z - normal: Compiled project javascript file successfully
+2017-06-27T08:53:33.464Z - normal: Compiled project javascript file successfully
+2017-06-27T08:54:39.928Z - normal: Compiled project javascript file successfully
+2017-06-27T08:56:53.044Z - normal: Compiled project javascript file successfully
