@@ -1,0 +1,29 @@
+obj/local/armeabi-v7a/objs/cocos2dx_internal_static/__/external/sources/poly2tri/common/shapes.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/poly2tri/common/shapes.cc \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/poly2tri/common/shapes.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstddef \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/assert.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cmath \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/poly2tri/common/shapes.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstddef:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/assert.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cmath:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream:

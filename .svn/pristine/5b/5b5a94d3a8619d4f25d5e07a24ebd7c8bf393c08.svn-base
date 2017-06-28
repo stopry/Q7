@@ -1,0 +1,47 @@
+obj/local/armeabi-v7a/objs/cocos2dx_internal_static/__/external/sources/tinyxml2/tinyxml2.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/tinyxml2/tinyxml2.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/tinyxml2/tinyxml2.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cctype \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/climits \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdio \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdlib \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstring \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdarg \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/new \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstddef
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/tinyxml2/tinyxml2.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cctype:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/climits:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdio:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdlib:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstring:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdarg:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/new:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstddef:

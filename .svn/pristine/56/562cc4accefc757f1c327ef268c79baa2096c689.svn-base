@@ -1,0 +1,992 @@
+obj/local/armeabi-v7a/objs/creator_static/physics/CCPhysicsAABBQueryCallback.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/creator/physics/CCPhysicsAABBQueryCallback.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/creator/physics/CCPhysicsAABBQueryCallback.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Box2D.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Settings.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/assert.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Draw.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Math.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/page.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Timer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2CircleShape.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2Shape.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2BlockAllocator.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2Collision.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2EdgeShape.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2ChainShape.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2PolygonShape.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2BroadPhase.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2DynamicTree.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2GrowableStack.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/string.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/malloc.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2Distance.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2TimeOfImpact.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2Body.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2Fixture.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2WorldCallbacks.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2TimeStep.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2World.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2StackAllocator.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2ContactManager.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Contacts/b2Contact.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2DistanceJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2Joint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2FrictionJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2GearJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2MotorJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2MouseJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2PulleyJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2RopeJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2WeldJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2WheelJoint.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/cocos2d.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCAsyncTaskPool.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCDirector.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/stack \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCVector.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConsole.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCStdC.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCStdC-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccRandom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCScene.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProtocols.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccTypes.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCGeometry.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMath.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMathBase.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGL.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTexture2D.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScriptSupport.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCCommon.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCTouch.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventTouch.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEvent.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventKeyboard.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/list \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCAffineTransform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponentContainer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCMap.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponent.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGLView.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScheduler.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/set \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/uthash.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/inttypes.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/queue \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/condition_variable \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/future \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCAutoreleasePool.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConfiguration.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCValue.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConsole.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCDirector.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCIMEDelegate.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCIMEDispatcher.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCIMEDelegate.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCMap.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCNS.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProfiling.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProperties.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRefPtr.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScheduler.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCUserDefault.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCValue.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCVector.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ZipUtils.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCFileUtils.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCFileUtils-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/jni.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/asset_manager.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/base64.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccTypes.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccUTF8.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/sstream \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/jni/JniHelper.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccUtils.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventAcceleration.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventCustom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventDispatcher.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListener.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventFocus.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventKeyboard.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerAcceleration.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerCustom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerFocus.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerKeyboard.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerMouse.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventMouse.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerTouch.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventMouse.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventTouch.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventType.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCAffineTransform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCGeometry.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCVertex.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/MathUtil.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAction.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionCamera.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInterval.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAction.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimation.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrame.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAutoPolygon.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCImage.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTrianglesCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramState.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionCatmullRom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionEase.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInstant.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid3D.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInstant.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInterval.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionManager.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionPageTurn3D.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid3D.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionProgressTimer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionTiledGrid.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionTween.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTweenFunction.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAtlasNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCQuadCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCClippingNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGroupCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCCustomCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCClippingRectangleNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawingPrimitives.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFontFNT.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFont.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLabel.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFontAtlas.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLabelTTF.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLabel.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLayer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMenu.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMenuItem.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLayer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMenuItem.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMotionStreak.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNodeGrid.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleBatchNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCBatchCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleExamples.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystemQuad.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystem.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystem.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystemQuad.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCProgressTimer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCProtectedNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCRenderTexture.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSprite.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTextureAtlas.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCScene.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransition.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransitionPageTurn.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransition.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransitionProgress.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCGrabber.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCGrid.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProtocols.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCCustomCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgram.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramCache.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramState.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGroupCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCMaterial.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderState.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTechnique.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPass.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPass.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitive.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexIndexData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitiveCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitive.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCQuadCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommandPool.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderState.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgram.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTechnique.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTexture2D.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTextureCache.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTrianglesCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexAttribBinding.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexIndexBuffer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexIndexData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCFrameBuffer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccGLStateCache.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShaders.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCCommon.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCDevice.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCFileUtils.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCImage.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCSAXParser.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCThread.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCApplication-android.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCApplicationProtocol.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCAutoreleasePool.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGLViewImpl-android.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCStdC-android.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScriptSupport.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimation.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimationCache.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSprite.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAutoPolygon.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteBatchNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrame.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrameCache.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTextFieldTTF.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTextureAtlas.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParallaxNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXLayer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteBatchNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXXMLParser.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCSAXParser.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXObjectGroup.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccCArray.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXObjectGroup.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXTiledMap.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXXMLParser.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTileMapAtlas.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAtlasNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFastTMXLayer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitiveCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFastTMXTiledMap.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponent.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponentContainer.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/creator/physics/CCPhysicsAABBQueryCallback.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Box2D.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Settings.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/assert.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Draw.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Math.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/page.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2Timer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2CircleShape.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2Shape.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2BlockAllocator.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2Collision.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2EdgeShape.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2ChainShape.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/Shapes/b2PolygonShape.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2BroadPhase.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2DynamicTree.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2GrowableStack.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/string.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/malloc.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2Distance.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Collision/b2TimeOfImpact.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2Body.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2Fixture.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2WorldCallbacks.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2TimeStep.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2World.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Common/b2StackAllocator.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/b2ContactManager.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Contacts/b2Contact.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2DistanceJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2Joint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2FrictionJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2GearJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2MotorJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2MouseJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2PrismaticJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2PulleyJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2RevoluteJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2RopeJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2WeldJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/Box2D/Dynamics/Joints/b2WheelJoint.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/cocos2d.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCAsyncTaskPool.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCDirector.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/stack:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCVector.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConsole.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCStdC.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCStdC-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccRandom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCScene.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProtocols.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccTypes.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCGeometry.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMath.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMathBase.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGL.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTexture2D.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScriptSupport.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCCommon.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCTouch.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventTouch.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEvent.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventKeyboard.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/list:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCAffineTransform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponentContainer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCMap.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponent.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGLView.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScheduler.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/set:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/uthash.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/inttypes.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/queue:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/condition_variable:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/future:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCAutoreleasePool.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConfiguration.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCValue.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConsole.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCDirector.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCIMEDelegate.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCIMEDispatcher.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCIMEDelegate.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCMap.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCNS.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProfiling.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProperties.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRefPtr.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScheduler.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCUserDefault.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCValue.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCVector.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ZipUtils.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCFileUtils.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCFileUtils-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/jni.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/asset_manager.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/base64.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccTypes.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccUTF8.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/sstream:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/jni/JniHelper.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccUtils.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventAcceleration.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventCustom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventDispatcher.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListener.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventFocus.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventKeyboard.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerAcceleration.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerCustom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerFocus.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerKeyboard.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerMouse.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventMouse.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerTouch.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventMouse.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventTouch.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventType.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCAffineTransform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCGeometry.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCVertex.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/MathUtil.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAction.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionCamera.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInterval.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAction.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimation.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrame.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAutoPolygon.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCImage.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTrianglesCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramState.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionCatmullRom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionEase.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInstant.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid3D.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInstant.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInterval.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionManager.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionPageTurn3D.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionGrid3D.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionProgressTimer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionTiledGrid.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionTween.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTweenFunction.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAtlasNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCQuadCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCClippingNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGroupCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCCustomCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCClippingRectangleNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawingPrimitives.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFontFNT.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFont.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLabel.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFontAtlas.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLabelTTF.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLabel.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLayer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMenu.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMenuItem.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCLayer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMenuItem.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCMotionStreak.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNodeGrid.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleBatchNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCBatchCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleExamples.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystemQuad.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystem.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystem.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParticleSystemQuad.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCProgressTimer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCProtectedNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCRenderTexture.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSprite.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTextureAtlas.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCScene.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransition.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransitionPageTurn.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransition.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTransitionProgress.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCGrabber.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCGrid.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProtocols.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCCustomCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgram.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramCache.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramState.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGroupCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCMaterial.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderState.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTechnique.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPass.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPass.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitive.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexIndexData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitiveCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitive.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCQuadCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommandPool.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderState.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgram.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTechnique.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTexture2D.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTextureCache.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTrianglesCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexAttribBinding.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexIndexBuffer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCVertexIndexData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCFrameBuffer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccGLStateCache.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShaders.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCCommon.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCDevice.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCFileUtils.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCImage.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCSAXParser.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCThread.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCApplication-android.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCApplicationProtocol.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCAutoreleasePool.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGLViewImpl-android.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCStdC-android.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScriptSupport.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimation.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimationCache.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSprite.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAutoPolygon.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteBatchNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrame.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrameCache.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTextFieldTTF.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTextureAtlas.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCParallaxNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXLayer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteBatchNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXXMLParser.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCSAXParser.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXObjectGroup.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccCArray.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXObjectGroup.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXTiledMap.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTMXXMLParser.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCTileMapAtlas.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAtlasNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFastTMXLayer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCPrimitiveCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCFastTMXTiledMap.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponent.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponentContainer.h:

@@ -1,0 +1,9 @@
+{
+  "project_type": "javascript",
+  "debugMode": 3,
+  "showFPS": false,
+  "frameRate": 60,
+  "id": "GameCanvas",
+  "renderMode": 0,
+  "jsList": []
+}

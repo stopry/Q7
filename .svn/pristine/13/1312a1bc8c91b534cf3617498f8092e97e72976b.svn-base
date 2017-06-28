@@ -1,0 +1,32 @@
+obj/local/armeabi-v7a/objs/cocos2dx_internal_static/__/external/sources/clipper/clipper.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/clipper/clipper.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/clipper/clipper.hpp \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/set \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/stdexcept \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstring \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdlib \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/ostream \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cmath \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/../external/sources/clipper/clipper.hpp:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/set:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/stdexcept:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstring:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdlib:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/ostream:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cmath:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm:

@@ -1,0 +1,41 @@
+obj/local/armeabi-v7a/objs/cocos2dx_internal_static/base/CCEventListenerCustom.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerCustom.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerCustom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListener.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventCustom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEvent.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerCustom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListener.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventCustom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEvent.h:

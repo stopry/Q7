@@ -1,0 +1,61 @@
+obj/local/armeabi-v7a/objs/cocos2djs_shared/__/__/Classes/SDKManager.o: \
+ jni/../../Classes/SDKManager.cpp jni/../../Classes/SDKManager.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/AgentManager.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginManager.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginProtocol.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginParam.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginFactory.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolIAP.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolAnalytics.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolShare.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolAds.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolSocial.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolUser.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolPush.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/list \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolCrash.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolREC.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolCustom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolAdTracking.h
+
+jni/../../Classes/SDKManager.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/AgentManager.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginManager.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginProtocol.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginParam.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/PluginFactory.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolIAP.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolAnalytics.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolShare.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolAds.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolSocial.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolUser.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolPush.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/list:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolCrash.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolREC.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolCustom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/android/armeabi-v7a/include/anysdk/ProtocolAdTracking.h:

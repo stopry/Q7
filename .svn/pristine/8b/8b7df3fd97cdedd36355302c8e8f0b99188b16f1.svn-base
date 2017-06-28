@@ -1,0 +1,23 @@
+obj/local/armeabi-v7a/objs/pvmp3dec/src/pvmp3_mdct_6.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mdct_6.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pv_mp3dec_fxd_op.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pv_mp3dec_fxd_op_c_equivalent.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mdct_6.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pv_mp3dec_fxd_op.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pv_mp3dec_fxd_op_c_equivalent.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mdct_6.h:

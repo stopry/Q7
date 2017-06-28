@@ -1,0 +1,305 @@
+obj/local/armeabi-v7a/objs/audioengine_static/AudioDecoderSLES.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/AudioDecoderSLES.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AudioDecoderSLES.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AudioDecoder.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/OpenSLHelper.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/cutils/log.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdio.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/time.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/time.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/time.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/siginfo.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/unistd.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/signal.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/page.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/string.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/malloc.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/signal.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/sigcontext.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/ucontext.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/user.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysconf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/capability.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/pathconf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/PcmData.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCPlatformMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCPlatformConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCPlatformDefine.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCStdC.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/android/CCStdC-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdlib.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/alloca.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/strings.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/memory.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/condition_variable \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCFileUtils.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccTypes.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/CCGeometry.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCConsole.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCRef.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccRandom.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/random \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/CCMath.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec2.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/CCMathBase.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec2.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec3.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec3.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Mat4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec4.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Mat4.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Quaternion.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Quaternion.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCGL.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/android/CCGL-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCValue.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AudioDecoderSLES.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AudioDecoder.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/OpenSLHelper.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/cutils/log.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdio.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/time.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/time.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/time.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/siginfo.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/unistd.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/signal.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/page.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/string.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/malloc.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/signal.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/sigcontext.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/ucontext.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/user.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysconf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/capability.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/pathconf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/PcmData.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCPlatformMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCPlatformConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCPlatformDefine.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/android/CCPlatformDefine-android.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCStdC.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/android/CCStdC-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdlib.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/alloca.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/strings.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/memory.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/condition_variable:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCFileUtils.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccTypes.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/CCGeometry.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCConsole.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCRef.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/ccRandom.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/random:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/CCMath.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec2.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/CCMathBase.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec2.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec3.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec3.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Mat4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Vec4.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Mat4.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Quaternion.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../math/Quaternion.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/CCGL.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../platform/android/CCGL-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../base/CCValue.h:

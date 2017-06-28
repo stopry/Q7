@@ -1,0 +1,7 @@
+{
+  "engine_version": "1.5.0",
+  "has_native": true,
+  "project_type": "js",
+  "projectName": "Q7_Game",
+  "packageName": "org.cocos2d.Q7Game"
+}

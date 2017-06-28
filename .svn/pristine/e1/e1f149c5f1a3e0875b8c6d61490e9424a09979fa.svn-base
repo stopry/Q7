@@ -1,0 +1,5 @@
+obj/local/armeabi-v7a/objs/cocostudio_static/CCArmatureDefine.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/cocostudio/CCArmatureDefine.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/cocostudio/CCArmatureDefine.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/cocostudio/CCArmatureDefine.h:

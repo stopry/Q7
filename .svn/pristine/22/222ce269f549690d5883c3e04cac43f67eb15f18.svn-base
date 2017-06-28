@@ -1,0 +1,362 @@
+obj/local/armeabi-v7a/objs/cocos2dx_internal_static/2d/CCDrawNode.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawNode.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawNode.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNode.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdint \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConsole.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/time.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/time.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/signal.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/limits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/page.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/string.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/malloc.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/signal.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/sigcontext.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/siginfo.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/ucontext.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/user.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCStdC.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCStdC-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdlib.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/alloca.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/strings.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/memory.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccRandom.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/random \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCVector.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProtocols.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccTypes.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCGeometry.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMath.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMathBase.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.inl \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGL.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTexture2D.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScriptSupport.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCCommon.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCTouch.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventTouch.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEvent.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventKeyboard.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/list \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCAffineTransform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponentContainer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCMap.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponent.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCCustomCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommand.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventType.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConfiguration.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCValue.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderer.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/stack \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgram.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccGLStateCache.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramState.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramCache.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCDirector.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCScene.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGLView.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerCustom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListener.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventDispatcher.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/set \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionCatmullRom.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInterval.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAction.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimation.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrame.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAutoPolygon.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCImage.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTrianglesCommand.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCDrawNode.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCNode.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cstdint:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConsole.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/time.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/time.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/signal.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/limits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/page.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/string.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/malloc.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/signal.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/sigcontext.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm/siginfo.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/ucontext.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/user.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCRef.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCStdC.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCStdC-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdlib.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/alloca.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/strings.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/memory.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cassert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccRandom.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/random:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCVector.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCProtocols.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccTypes.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCGeometry.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMath.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCMathBase.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec2.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec3.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Vec4.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Mat4.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/Quaternion.inl:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGL.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTexture2D.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/unordered_map:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCScriptSupport.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCCommon.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCTouch.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventTouch.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEvent.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventKeyboard.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/list:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/math/CCAffineTransform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponentContainer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCMap.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCComponent.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCCustomCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderCommand.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventType.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCConfiguration.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCValue.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCRenderer.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/stack:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgram.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccGLStateCache.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramState.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCGLProgramCache.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCDirector.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCScene.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGLView.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListenerCustom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventListener.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/CCEventDispatcher.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/set:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionCatmullRom.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCActionInterval.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAction.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAnimation.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCSpriteFrame.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/2d/CCAutoPolygon.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCImage.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/CCTrianglesCommand.h:

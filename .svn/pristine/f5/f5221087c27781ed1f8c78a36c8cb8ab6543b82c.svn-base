@@ -1,0 +1,71 @@
+obj/local/armeabi-v7a/objs/audioengine_static/UrlAudioPlayer.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/UrlAudioPlayer.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/UrlAudioPlayer.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/IAudioPlayer.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/OpenSLHelper.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/cutils/log.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/unistd.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysconf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/capability.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/pathconf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AssetFd.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/ICallerThreadUtils.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/UrlAudioPlayer.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/IAudioPlayer.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/OpenSLHelper.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/cutils/log.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/unistd.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysconf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/capability.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/pathconf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AssetFd.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/ICallerThreadUtils.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/math.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm:

@@ -1,0 +1,74 @@
+obj/local/armeabi-v7a/objs/audioengine_static/PcmAudioService.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/PcmAudioService.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/PcmAudioService.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/IAudioPlayer.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/OpenSLHelper.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/cutils/log.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/unistd.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysconf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/capability.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/pathconf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/PcmData.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/condition_variable \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AudioMixerController.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/utils/Errors.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/atomic
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/PcmAudioService.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/IAudioPlayer.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/OpenSLHelper.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/cutils/log.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/unistd.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/select.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/sysconf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/linux/capability.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/pathconf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES_Android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/SLES/OpenSLES.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/PcmData.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/vector:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/memory:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/mutex:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/condition_variable:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/AudioMixerController.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/audio/android/../../audio/android/utils/Errors.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/thread:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/atomic:

@@ -1,0 +1,51 @@
+2017-06-28T05:47:13.452Z - normal: Load ~/.CocosCreator/settings.json
+2017-06-28T05:47:13.456Z - normal: checking language setting...
+2017-06-28T05:47:13.456Z - normal: Language: zh
+2017-06-28T05:47:14.906Z - success: protocol editor-framework registered
+2017-06-28T05:47:14.906Z - success: protocol app registered
+2017-06-28T05:47:14.906Z - success: protocol theme registered
+2017-06-28T05:47:14.906Z - success: protocol profile registered
+2017-06-28T05:47:14.906Z - success: protocol packages registered
+2017-06-28T05:47:14.906Z - success: protocol unpack registerred
+2017-06-28T05:47:14.906Z - success: protocol disable-commonjs registerred
+2017-06-28T05:47:15.110Z - normal: connected!
+2017-06-28T05:47:15.115Z - normal: Check project F:\Work\Q7Game
+2017-06-28T05:47:15.119Z - normal: Initializing Cocos2d
+2017-06-28T05:47:15.353Z - normal: Initializing Asset Database
+2017-06-28T05:47:15.387Z - success: protocol uuid registerred
+2017-06-28T05:47:15.387Z - success: protocol db registerred
+2017-06-28T05:47:15.387Z - success: protocol thumbnail registerred
+2017-06-28T05:47:15.388Z - normal: Loading editor/builtin packages
+2017-06-28T05:47:15.417Z - success: anysdk loaded
+2017-06-28T05:47:15.541Z - success: assets loaded
+2017-06-28T05:47:15.543Z - success: builder loaded
+2017-06-28T05:47:15.547Z - success: hierarchy loaded
+2017-06-28T05:47:15.550Z - success: inspector loaded
+2017-06-28T05:47:15.551Z - success: keystore loaded
+2017-06-28T05:47:15.554Z - success: node-library loaded
+2017-06-28T05:47:15.555Z - success: package-asset loaded
+2017-06-28T05:47:15.557Z - success: preferences loaded
+2017-06-28T05:47:15.570Z - success: project-importer loaded
+2017-06-28T05:47:15.571Z - success: project-settings loaded
+2017-06-28T05:47:15.573Z - success: ui-kit loaded
+2017-06-28T05:47:15.575Z - success: ui-grid loaded
+2017-06-28T05:47:15.578Z - success: scene loaded
+2017-06-28T05:47:15.580Z - success: sprite-editor loaded
+2017-06-28T05:47:15.583Z - success: store loaded
+2017-06-28T05:47:15.586Z - success: timeline loaded
+2017-06-28T05:47:15.587Z - normal: Loading builtin packages
+2017-06-28T05:47:15.589Z - success: asset-db-debugger loaded
+2017-06-28T05:47:15.590Z - success: code-editor loaded
+2017-06-28T05:47:15.591Z - success: color-picker loaded
+2017-06-28T05:47:15.594Z - success: console loaded
+2017-06-28T05:47:15.596Z - success: package-manager loaded
+2017-06-28T05:47:15.598Z - success: tester loaded
+2017-06-28T05:47:15.600Z - success: ui-kit-preview-extra loaded
+2017-06-28T05:47:15.603Z - success: ui-kit-preview loaded
+2017-06-28T05:47:15.605Z - success: ui-tree loaded
+2017-06-28T05:47:15.649Z - normal: Initializing project F:\Work\Q7Game
+2017-06-28T05:47:15.651Z - normal: Loading packages
+2017-06-28T05:47:15.654Z - normal: Watching packages
+2017-06-28T05:47:15.666Z - normal: Run Application
+2017-06-28T05:47:16.137Z - success: preview server running at http://localhost:7456
+2017-06-28T05:47:19.808Z - normal: 1.5.0

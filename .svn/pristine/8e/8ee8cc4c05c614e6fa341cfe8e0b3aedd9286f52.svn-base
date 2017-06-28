@@ -1,0 +1,35 @@
+obj/local/armeabi-v7a/objs/pvmp3dec/src/pvmp3_mpeg2_get_scale_factors.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mpeg2_get_scale_factors.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mpeg2_get_scale_factors.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_dec_defs.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3decoder_api.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_dec_defs.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/s_mp3bits.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mpeg2_get_scale_data.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mpeg2_get_scale_factors.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_dec_defs.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3decoder_api.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_dec_defs.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/s_mp3bits.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_mpeg2_get_scale_data.h:

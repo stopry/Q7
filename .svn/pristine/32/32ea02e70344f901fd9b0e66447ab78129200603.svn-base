@@ -1,0 +1,5 @@
+obj/local/armeabi-v7a/objs/cocos2dx_internal_static/base/ccFPSImages.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccFPSImages.c \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccFPSImages.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccFPSImages.h:

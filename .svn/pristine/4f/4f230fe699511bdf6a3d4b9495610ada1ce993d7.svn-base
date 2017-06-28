@@ -1,0 +1,140 @@
+obj/local/armeabi-v7a/objs/cocos2dx_internal_static/renderer/ccShaders.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShaders.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShaders.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGL.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Position_uColor.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Position_uColor.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColor.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColor.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColorTextureAsPointsize.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureA8Color.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureA8Color.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor_noMVP.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor_noMVP.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColorAlphaTest.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture_uColor.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture_uColor.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColorLengthTexture.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColorLengthTexture.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_UI_Gray.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_SpriteDistortion.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_df.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_df_glow.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_normal.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_outline.frag \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_CameraClear.vert \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_CameraClear.frag
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShaders.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCGL.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCGL-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/api-level.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformMacros.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/base/ccConfig.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/CCPlatformDefine.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/platform/android/CCPlatformDefine-android.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/android/log.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Position_uColor.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Position_uColor.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColor.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColor.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColorTextureAsPointsize.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureA8Color.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureA8Color.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor_noMVP.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColor_noMVP.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTextureColorAlphaTest.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture_uColor.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionTexture_uColor.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColorLengthTexture.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_PositionColorLengthTexture.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_UI_Gray.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_SpriteDistortion.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_df.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_df_glow.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_normal.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_Label_outline.frag:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_CameraClear.vert:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/renderer/ccShader_CameraClear.frag:

@@ -1,0 +1,17 @@
+obj/local/armeabi-v7a/objs/pvmp3dec/src/pvmp3_normalize.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_normalize.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_normalize.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/include/pvmp3_audio_type_defs.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/external/sources/pvmp3dec/src/pvmp3_normalize.h:

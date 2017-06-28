@@ -1,0 +1,131 @@
+obj/local/armeabi-v7a/objs/dragonbones_static/__/animation/Animation.o: \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/Animation.cpp \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/Animation.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../core/BaseObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../core/DragonBones.h \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cmath \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/string \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/sstream \
+ C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/assert.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/AnimationData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/TimelineData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../core/BaseObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/FrameData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/Transform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/../core/DragonBones.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/Matrix.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/Point.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/ColorTransform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/Armature.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../core/BaseObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/ArmatureData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../core/BaseObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../geom/Transform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../geom/Point.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../geom/ColorTransform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/TextureData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/../core/BaseObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/../geom/Rectangle.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/../geom/../core/DragonBones.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/AnimationData.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../animation/IAnimateble.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../animation/../core/DragonBones.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../events/EventObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../events/../core/BaseObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/IArmatureDisplay.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../core/DragonBones.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/Slot.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/TransformObject.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../geom/Matrix.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../geom/Transform.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/Bone.h \
+ F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/AnimationState.h
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/Animation.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../core/BaseObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../core/DragonBones.h:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/cmath:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/string:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/algorithm:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/map:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/functional:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/sstream:
+
+C:/Users/Administrator/Downloads/android-ndk-r10e/platforms/android-9/arch-arm/usr/include/assert.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/AnimationData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/TimelineData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../core/BaseObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/FrameData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/Transform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/../core/DragonBones.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/Matrix.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/Point.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../model/../geom/ColorTransform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/Armature.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../core/BaseObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/ArmatureData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../core/BaseObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../geom/Transform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../geom/Point.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../geom/ColorTransform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/TextureData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/../core/BaseObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/../geom/Rectangle.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/../textures/../geom/../core/DragonBones.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../model/AnimationData.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../animation/IAnimateble.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../animation/../core/DragonBones.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../events/EventObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../events/../core/BaseObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/IArmatureDisplay.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../core/DragonBones.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/Slot.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/TransformObject.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../geom/Matrix.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/../geom/Transform.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/../armature/Bone.h:
+
+F:/Work/Q7Game/build/jsb-default/frameworks/cocos2d-x/cocos/editor-support/dragonbones/proj.android/../animation/AnimationState.h:
