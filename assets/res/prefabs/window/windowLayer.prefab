@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "littleTip",
+    "_name": "windowLayer",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -31,12 +31,12 @@
       "__id__": 5
     },
     "_id": "",
-    "_opacity": 255,
+    "_opacity": 100,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 1,
-      "b": 1,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -47,8 +47,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 120,
-      "height": 30
+      "width": 640,
+      "height": 1136
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -67,38 +67,30 @@
     "groupIndex": 0
   },
   {
-    "__type__": "cc.Label",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 30,
-    "_fontSize": 30,
-    "_lineHeight": 30,
-    "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_spacingX": 0,
-    "_N$string": "提示内容",
-    "_N$horizontalAlign": 0,
-    "_N$verticalAlign": 0,
-    "_N$fontFamily": "Arial",
-    "_N$overflow": 0
-  },
-  {
-    "__type__": "e9a5e+hv+9K87b/Xf+6gppp",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
+    "_spriteFrame": {
+      "__uuid__": "765536cf-da82-4bf7-a017-30718dacf89a"
     },
-    "_enabled": true,
-    "label": {
-      "__id__": 2
-    }
+    "_type": 0,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
   },
   {
     "__type__": "8c9d7QyaKdAGaz0vPzRDRcH",
@@ -108,7 +100,19 @@
       "__id__": 1
     },
     "_enabled": true,
-    "text": "提示文字"
+    "text": "弹框的遮罩层"
+  },
+  {
+    "__type__": "785d59sn6xOYY5tCJXpyCpY",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "touchTarget": {
+      "__id__": 1
+    }
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -116,9 +120,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "880aa5bd-e154-4aee-aa6e-b5752831a969"
+      "__uuid__": "ca732ffd-ad3e-4dca-a1b0-450173064bed"
     },
-    "fileId": "f0845S8/c9AUow0WfG/WT5M",
+    "fileId": "c9a09m3YGtBmrFnjvkuzeGl",
     "sync": false
   }
 ]

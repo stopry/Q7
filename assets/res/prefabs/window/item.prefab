@@ -29,10 +29,13 @@
       },
       {
         "__id__": 11
+      },
+      {
+        "__id__": 12
       }
     ],
     "_prefab": {
-      "__id__": 12
+      "__id__": 13
     },
     "_id": "",
     "_opacity": 255,
@@ -185,7 +188,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8c42bd34-dd3c-4907-acaa-07e443ba8321"
     },
     "fileId": "8921dJvhFZPTb4ncFPJB58s",
     "sync": false
@@ -301,7 +304,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8c42bd34-dd3c-4907-acaa-07e443ba8321"
     },
     "fileId": "e6dcakYlYtClLStiaj8JExa",
     "sync": false
@@ -356,12 +359,22 @@
     ]
   },
   {
+    "__type__": "8c9d7QyaKdAGaz0vPzRDRcH",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "text": "仓库列表项"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8c42bd34-dd3c-4907-acaa-07e443ba8321"
     },
     "fileId": "0b5c0IFDg5JV4Nt6etvLN1V",
     "sync": false
