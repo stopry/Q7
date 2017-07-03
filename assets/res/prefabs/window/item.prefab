@@ -349,6 +349,12 @@
     "num": {
       "__id__": 7
     },
+    "littleTip": {
+      "__uuid__": "a308784b-e573-4c3c-a5c6-8c7b541eb985"
+    },
+    "title": "String",
+    "desc": null,
+    "imgIndex": "Float",
     "spriteList": [
       {
         "__uuid__": "2c8dc46f-784c-4a9b-88a9-d20d0e6ea5b8"
@@ -356,7 +362,10 @@
       {
         "__uuid__": "dc6633ad-bfe8-4521-9c10-1a058c855e25"
       }
-    ]
+    ],
+    "descPrefab": {
+      "__uuid__": "e804fde7-c9c4-45c4-ab62-d68a80c37437"
+    }
   },
   {
     "__type__": "8c9d7QyaKdAGaz0vPzRDRcH",

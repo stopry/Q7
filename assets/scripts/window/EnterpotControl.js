@@ -22,7 +22,7 @@ cc.Class({
         for(let i = 0;i<30;++i){
             let item = cc.instantiate(this.itemTemplate);
             this.content.addChild(item);
-            item.getComponent('SetEnterpotItem').setItme(1,k);
+            item.getComponent('SetEnterpotItem').setItme(0,k,k+"",k+"");
             k++;
             this.items.push(item);
         }

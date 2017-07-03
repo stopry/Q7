@@ -424,7 +424,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": -1,
       "y": 0
     },
     "_skewX": 0,
@@ -1028,7 +1028,7 @@
     },
     "_enabled": true,
     "clickAudio": {
-      "__uuid__": "f93589d3-9882-47c3-9df6-6fa926fb4a80"
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
     }
   },
   {
@@ -1128,7 +1128,7 @@
     "_top": 0,
     "_bottom": 0,
     "_verticalCenter": 0,
-    "_horizontalCenter": 0,
+    "_horizontalCenter": -1,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,
@@ -1678,7 +1678,7 @@
     },
     "_enabled": true,
     "clickAudio": {
-      "__uuid__": "f93589d3-9882-47c3-9df6-6fa926fb4a80"
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
     }
   },
   {
