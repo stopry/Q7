@@ -20,5 +20,7 @@
   "renderMode": "0",
   "startScene": "52a1e663-1e6c-4e6b-aea2-343c4216bb40",
   "title": "Q7_Game",
-  "webOrientation": "auto"
+  "webOrientation": "auto",
+  "inlineSpriteFrames_native": true,
+  "optimizeHotUpdate": false
 }

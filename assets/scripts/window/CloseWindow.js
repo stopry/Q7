@@ -22,7 +22,15 @@ cc.Class({
             Global.layer = cc.instantiate(this.alertLayer);
         }
         Global.layer.active = false;
-        this.alertBox.active = false;
+
+        var scaleTo = cc.scaleTo(0.1,1.1,1.1);
+        var scaleTo2 = cc.scaleTo(0.1,0,0);
+        var fadeOut = cc.fadeTo(0.1,0);
+        var finished = cc.callFunc(function () {
+            this.alertBox.active = false;
+        }, this);
+        var action = cc.sequence(scaleTo,scaleTo2, finished);
+        this.alertBox.runAction(action);
     }
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

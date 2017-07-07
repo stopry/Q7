@@ -349,9 +349,6 @@
     "num": {
       "__id__": 7
     },
-    "littleTip": {
-      "__uuid__": "a308784b-e573-4c3c-a5c6-8c7b541eb985"
-    },
     "title": "String",
     "desc": null,
     "imgIndex": "Float",

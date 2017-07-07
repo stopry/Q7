@@ -42,10 +42,18 @@ var Util = (function(util){
         }
         var time = hours+"小时"+mins+"分钟"+secs+"秒";
         return time;
+    };
+    //手机号正则
+    utl.mobileReg = /^1[3-9][\d]{9}$/;
+    //验证手机号码
+    utl.regMobile = function(mobile){
+        return this.mobileReg.test(mobile);
+    };
+    //拆分字符串
+    utl.splitStr = function(str){
+        return str.split('_')[1];
     }
     return new util;
 })(Util);
 
-module.exports = {
-    Util:Util
-};
+module.exports = Util;
