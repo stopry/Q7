@@ -32,10 +32,13 @@
       },
       {
         "__id__": 12
+      },
+      {
+        "__id__": 13
       }
     ],
     "_prefab": {
-      "__id__": 13
+      "__id__": 14
     },
     "_id": "",
     "_opacity": 255,
@@ -373,6 +376,18 @@
     },
     "_enabled": true,
     "text": "仓库列表项"
+  },
+  {
+    "__type__": "785d59sn6xOYY5tCJXpyCpY",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "touchTarget": {
+      "__id__": 1
+    }
   },
   {
     "__type__": "cc.PrefabInfo",

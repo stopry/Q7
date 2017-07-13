@@ -66,7 +66,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 41
+        "__id__": 42
       }
     ],
     "_prefab": null,
@@ -266,6 +266,9 @@
       },
       {
         "__id__": 40
+      },
+      {
+        "__id__": 41
       }
     ],
     "_prefab": null,
@@ -1462,6 +1465,21 @@
       "__id__": 37
     },
     "littleTip": {
+      "__uuid__": "a308784b-e573-4c3c-a5c6-8c7b541eb985"
+    },
+    "root": {
+      "__id__": 2
+    }
+  },
+  {
+    "__type__": "e9a5e+hv+9K87b/Xf+6gppp",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 6
+    },
+    "_enabled": true,
+    "tipPrefab": {
       "__uuid__": "a308784b-e573-4c3c-a5c6-8c7b541eb985"
     },
     "root": {

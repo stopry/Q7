@@ -146,13 +146,6 @@ cc.Class({
     //    cc.eventManager.addListener(listener,self.verImg.node);
     //},
     showLittleTip:function(str){//显示提示
-        var _little = cc.instantiate(this.littleTip);
-        var actionShow = cc.fadeTo(0.2,255);
-        var actionHold = cc.fadeTo(1.5,255);
-        var actionHide = cc.fadeTo(0.5,0);
-        var seq = cc.sequence(actionShow,actionHold,actionHide);
-        _little.getChildByName('littleTip').getComponent('LittleTip').setContent(str);
-        _little.parent = this.root;
-        _little.runAction(seq);
+        this.getComponent('LittleTip').setContent(str);
     }
 });

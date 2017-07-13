@@ -22,12 +22,21 @@ cc.Class({
     onLoad: function () {
 
     },
-    open:function(){//打开弹窗
-        if(!Global.layer){
-            Global.layer = cc.instantiate(this.alertLayer);
+    open:function(event,type){//打开弹窗
+        if(type=="3"){
+            if(!Global.layerRecharge||!Global.layerRecharge.name){
+                Global.layerRecharge = cc.instantiate(this.alertLayer);
+            }
+            Global.layerRecharge.parent = this.root;
+            Global.layerRecharge.active = true;
+        }else{
+            if(!Global.layer||!Global.layer.name){
+                Global.layer = cc.instantiate(this.alertLayer);
+            }
             Global.layer.parent = this.root;
+            Global.layer.active = true;
         }
-        Global.layer.active = true;
+
         var _alertBox = cc.instantiate(this.alertBox);
         //如果弹框是webview
         if(_alertBox.name=="webPage"){

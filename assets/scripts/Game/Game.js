@@ -26,6 +26,9 @@ cc.Class({
         //this.setHeader();
 
     },
+    close(){
+        cc.director.end()
+    },
     setHeader(){//设置头部
         var perNode = cc.director.getScene().getChildByName('PersistNode');
         if(perNode.getComponent('PersistNode').userData.nickName){
@@ -36,6 +39,7 @@ cc.Class({
     back:function(){
         if(Global.layer){
             Global.layer = null;
+            cc.log(1)
         }
         cc.director.loadScene("LogIn");
     }

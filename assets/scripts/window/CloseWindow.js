@@ -17,12 +17,24 @@ cc.Class({
     onLoad: function () {
 
     },
-    close:function(){//关闭
-        if(!Global.layer){
-            Global.layer = cc.instantiate(this.alertLayer);
+    close:function(event,type){//关闭
+        //type为1为弹窗，2为确认框
+        if(type=="1"){
+            if(!Global.layer||!Global.layer.name){
+                Global.layer = cc.instantiate(this.alertLayer);
+            }
+            Global.layer.active = false;
+        }else if(type=="2"){
+            if(!Global.conLayer||!Global.conLayer.name){
+                Global.conLayer = cc.instantiate(this.alertLayer);
+            }
+            Global.conLayer.active = false;
+        }else if(type=="3"){
+            if(!Global.layerRecharge||!Global.layerRecharge.name){
+                Global.layerRecharge = cc.instantiate(this.alertLayer);
+            }
+            Global.layerRecharge.active = false;
         }
-        Global.layer.active = false;
-
         var scaleTo = cc.scaleTo(0.1,1.1,1.1);
         var scaleTo2 = cc.scaleTo(0.1,0,0);
         var fadeOut = cc.fadeTo(0.1,0);

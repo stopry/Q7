@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "farmCut_l",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.06666666666666667,
+  "sample": 60,
+  "speed": 0.15,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "e0d2ea90-9ffa-4b4e-92d6-619e37dd988f"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "418b5a13-68a3-4769-84ce-61dfbfa282ed"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "eefa3fac-7f73-42d4-8257-afa3007ab3d4"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "d8d07bb5-d9ff-4b2c-8cf3-940fdcb4f74e"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

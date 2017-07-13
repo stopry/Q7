@@ -28,11 +28,13 @@ cc.Class({
         this.goodsImg.spriteFrame = this.spriteList[img];
         this.goodsTitle.string = title;
         this.goodsDesc.string = desc;
-        var spawn = cc.sequence(cc.scaleTo(0.3,1,1));
+        //var spawn = cc.sequence(cc.scaleTo(0.2,1,1));
+        var spawn = cc.scaleTo(0.2,1,1);
         this.node.runAction(spawn);
     },
     hideGoodInfo(){
-        var spawns = cc.spawn(cc.scaleTo(0.1,0,0));
+        //var spawns = cc.spawn(cc.scaleTo(0.2,0,0));
+        var spawns = cc.scaleTo(0.2,0,0);
         this.node.runAction(spawns);
     }
     // called every frame, uncomment this function to activate update callback

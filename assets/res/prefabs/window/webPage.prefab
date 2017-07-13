@@ -311,7 +311,7 @@
     },
     "component": "CloseWindow",
     "handler": "close",
-    "customEventData": ""
+    "customEventData": "1"
   },
   {
     "__type__": "5aff1KbhKxDaZDexGmBVLRB",
