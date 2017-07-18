@@ -4444,8 +4444,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -15,
-      "y": 151
+      "x": 258,
+      "y": 490
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4763,6 +4763,12 @@
     },
     "openLogBtn": {
       "__id__": 53
+    },
+    "friends": {
+      "__uuid__": "23731e82-1b5f-4310-aa2d-11d7aa61be4d"
+    },
+    "openFriendsBtn": {
+      "__id__": 103
     }
   },
   {

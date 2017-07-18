@@ -13,7 +13,7 @@ cc.Class({
         },
         title:cc.String,//标题
         desc:cc.String,//介绍
-        imgIndex:cc.Number,//物品图片索引
+        imgIndex:cc.Integer,//物品图片索引
         spriteList: {//图片列表
             default: [],
             type: [cc.SpriteFrame]

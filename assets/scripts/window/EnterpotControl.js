@@ -36,7 +36,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.items = [];
-        this.initialize();;
+        this.initialize();
     },
     initialize:function(){
         var k = 0
@@ -45,7 +45,7 @@ cc.Class({
             this.content[1].addChild(item);
             item.getComponent('SetEnterpotItem').setItme(0,k,k+"",k+"");
             k++;
-            this.items.push(item);
+            //this.items.push(item);
         }
     },
     showThis(){//显示动画

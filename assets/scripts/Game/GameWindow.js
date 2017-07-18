@@ -53,6 +53,17 @@ cc.Class({
             type:cc.Node
         },
         //日志end
+
+        //好友start
+        friends:{//仓库弹框
+            default:null,
+            type:cc.Prefab
+        },
+        openFriendsBtn:{//打开仓库弹框按钮
+            default:null,
+            type:cc.Node
+        },
+        //好友end
     },
 
     // use this for initialization
@@ -61,6 +72,7 @@ cc.Class({
         this.openEnterpotBtn.on(cc.Node.EventType.TOUCH_END,this.openEnterpot,this);
         this.openStudyRoomBtn.on(cc.Node.EventType.TOUCH_END,this.openStudyRoom,this);
         this.openLogBtn.on(cc.Node.EventType.TOUCH_END,this.openLog,this);
+        this.openFriendsBtn.on(cc.Node.EventType.TOUCH_END,this.openFriends,this);
     },
     opendNormalLayer(){//打开普通遮罩层
         if(!Global.layer||!Global.layer.name){
@@ -97,7 +109,14 @@ cc.Class({
         var log = cc.instantiate(this.log);
         log.parent = this.root;
         log.getComponent('Log').showThis();
+    },
+    openFriends(){//打开好友
+        this.opendNormalLayer();
+        var friends = cc.instantiate(this.friends);
+        friends.parent = this.root;
+        friends.getComponent('Friends').showThis();
     }
+
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 
