@@ -64,6 +64,28 @@ cc.Class({
             type:cc.Node
         },
         //好友end
+
+        //商店start
+        shop:{//商店弹框
+            default:null,
+            type:cc.Prefab
+        },
+        openShopBtn:{//打开商店弹框按钮
+            default:null,
+            type:cc.Node
+        },
+        //商店end
+
+        //排行榜start
+        rank:{//排行榜弹框
+            default:null,
+            type:cc.Prefab
+        },
+        openRankBtn:{//打开排行榜弹框按钮
+            default:null,
+            type:cc.Node
+        },
+        //商店end
     },
 
     // use this for initialization
@@ -73,6 +95,8 @@ cc.Class({
         this.openStudyRoomBtn.on(cc.Node.EventType.TOUCH_END,this.openStudyRoom,this);
         this.openLogBtn.on(cc.Node.EventType.TOUCH_END,this.openLog,this);
         this.openFriendsBtn.on(cc.Node.EventType.TOUCH_END,this.openFriends,this);
+        this.openShopBtn.on(cc.Node.EventType.TOUCH_END,this.openShop,this);
+        this.openRankBtn.on(cc.Node.EventType.TOUCH_END,this.openRank,this);
     },
     opendNormalLayer(){//打开普通遮罩层
         if(!Global.layer||!Global.layer.name){
@@ -115,8 +139,19 @@ cc.Class({
         var friends = cc.instantiate(this.friends);
         friends.parent = this.root;
         friends.getComponent('Friends').showThis();
+    },
+    openShop(){//打开商店
+        this.opendNormalLayer();
+        var shop = cc.instantiate(this.shop);
+        shop.parent = this.root;
+        shop.runAction(Global.openAction);
+    },
+    openRank(){//打开排行榜
+        this.opendNormalLayer();
+        var rank = cc.instantiate(this.rank);
+        rank.parent = this.root;
+        rank.runAction(Global.openAction);
     }
-
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

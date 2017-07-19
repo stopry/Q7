@@ -14,6 +14,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.root = cc.find('Canvas');
     },
     setContent:function(str){//设置提示内容
         var _little = cc.instantiate(this.tipPrefab);

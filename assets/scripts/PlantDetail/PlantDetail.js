@@ -19,7 +19,11 @@ cc.Class({
         // 关闭fps
         cc.director.setDisplayStats(false);
     },
+    back(){
+        cc.director.loadScene("Game",function(){//回调
 
+        });
+    },
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

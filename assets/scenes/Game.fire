@@ -4769,6 +4769,18 @@
     },
     "openFriendsBtn": {
       "__id__": 103
+    },
+    "shop": {
+      "__uuid__": "33369ede-754e-4ce6-a30f-307494d4e68b"
+    },
+    "openShopBtn": {
+      "__id__": 78
+    },
+    "rank": {
+      "__uuid__": "a4fa557e-6884-4710-9e5e-cfba225ad948"
+    },
+    "openRankBtn": {
+      "__id__": 63
     }
   },
   {
