@@ -19,7 +19,7 @@ cc.Class({
             var action = cc.scaleTo(0.05, 1, 1);
             //var action = cc.scaleTo(0.05, 1.1, 1.1);
             // 调用声音引擎播放声音
-            if(this.clickAudio){
+            if(this.clickAudio&&Global.openAudio){
                 cc.audioEngine.playEffect(this.clickAudio, false);
             }
             this.node.runAction(action);

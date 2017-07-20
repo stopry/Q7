@@ -30,20 +30,19 @@ cc.Class({
             default:null,
             type:cc.Prefab
         },
-
     },
-
     // use this for initialization
     onLoad: function () {
         this.items = [];
-        this.initialize();
+        this.initialize(0);
     },
-    initialize:function(){
+    initialize:function(type){//0123——树苗-道具-木材-碳汇
+        this.type = type;//仓库类型
         var k = 0
         for(let i = 0;i<30;++i){
             let item = cc.instantiate(this.itemTemplate);
-            this.content[1].addChild(item);
-            item.getComponent('SetEnterpotItem').setItme(0,k,k+"",k+"");
+            this.content[type].addChild(item);
+            item.getComponent('SetEnterpotItem').setItme(type,k,k+"",k+"");
             k++;
             //this.items.push(item);
         }
@@ -71,13 +70,15 @@ cc.Class({
     },
     changeBox(event,customEventData){//切换列表容器
         var index = parseInt(customEventData)||0;
+        if(this.type==index){//不是切换不做任何请求
+            return;
+        };
         for(let i = 0;i<this.content.length;i++){
             this.content[i].active = false;
         }
         this.content[index].active = true;
-        if(index==3){
-            this.showConDia();
-        }
+        this.content[index].removeAllChildren();
+        this.initialize(index);
     }
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

@@ -85,7 +85,18 @@ cc.Class({
             default:null,
             type:cc.Node
         },
-        //商店end
+        //排行榜end
+
+        //设置start
+        set:{//设置框
+            default:null,
+            type:cc.Prefab
+        },
+        openSetBtn:{//打开设置弹框按钮
+            default:null,
+            type:cc.Node
+        },
+        //设置end
     },
 
     // use this for initialization
@@ -97,6 +108,7 @@ cc.Class({
         this.openFriendsBtn.on(cc.Node.EventType.TOUCH_END,this.openFriends,this);
         this.openShopBtn.on(cc.Node.EventType.TOUCH_END,this.openShop,this);
         this.openRankBtn.on(cc.Node.EventType.TOUCH_END,this.openRank,this);
+        this.openSetBtn.on(cc.Node.EventType.TOUCH_END,this.openSet,this);
     },
     opendNormalLayer(){//打开普通遮罩层
         if(!Global.layer||!Global.layer.name){
@@ -150,7 +162,15 @@ cc.Class({
         this.opendNormalLayer();
         var rank = cc.instantiate(this.rank);
         rank.parent = this.root;
-        rank.runAction(Global.openAction);
+        rank.getComponent('Rank').showThis();
+    },
+    openSet(){//打开设置
+        this.opendNormalLayer();
+        if(!Global.setBox||!Global.setBox.name){
+            Global.setBox = cc.instantiate(this.set);
+            Global.setBox.parent = this.root;
+        }
+        Global.setBox.getComponent('Set').showThis();
     }
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
