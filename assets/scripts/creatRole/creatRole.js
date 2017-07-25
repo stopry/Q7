@@ -34,19 +34,22 @@ cc.Class({
             return;
         }
 
-        //设置常驻节点参数
-        //if(!this.persistNode){
-        //    this.persistNode = cc.director.getScene().getChildByName('PersistNode');
-        //}
-        //this.persistNode.getComponent('PersistNode').userData.nickName = userName;
-        //this.persistNode.getComponent('PersistNode').userData.userPic = this.headIndex;
-
         this.showLittleTip("创建角色成功");
+
+        if(this.getPerNode()){
+            this.perNode.getComponent('PersistNode').userData.headerInfo.nickname = userName;
+            this.perNode.getComponent('PersistNode').userData.headerInfo.pic = this.headIndex;
+        }
+
         this.scheduleOnce(function() {//延迟0.5s执行
             cc.director.loadScene("Game",function(){//回调
 
             });
         }, 0.5);
+    },
+    getPerNode(){//得到常驻节点
+        this.perNode = cc.director.getScene().getChildByName('PersistNode');
+        return this.perNode;
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);

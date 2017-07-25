@@ -15,8 +15,8 @@ cc.Class({
             type:cc.Prefab
         },
         id:{//商品id
-            default:null,
-            type:cc.String
+            default:0,
+            type:cc.Integer
         },
         img:{//商品图片
             default:null,

@@ -38,15 +38,20 @@ cc.Class({
         persistNode:{//常驻节点
             default:null,
             type:cc.Node
+        },
+        reqAni:{//网络请求加载遮罩层
+            default:null,
+            type:cc.Node
         }
     },
     // use this for initialization
     onLoad: function () {
         cc.director.setDisplayStats(false);
         //添加常驻节点
-        cc.game.addPersistRootNode(this.persistNode);
+        cc.game.addPersistRootNode(this.persistNode);//场景切换数据传递
+        cc.game.addPersistRootNode(this.reqAni);//网络请求加载遮罩层
         this.autoInput();
-        this.changeVer();
+        this.changeVer(); 
     },
     logIn:function(){
         // 登录
@@ -73,23 +78,26 @@ cc.Class({
             this.removeStorage();
         }
 
+        this.getComponent('ReqAni').showReqAni();
         this.showLittleTip("登录成功");
 
         //cc.log()
-        if(!account) account = '用户名为空';
-        var a = {
-            '场景切换传参用户名':account
+        if(!account) account = '无名';
+        var userData = {
+            nickname:account,
+            level:14,
+            jewel:500,
+            gold:400
         };
         if(!this.persistNode.name){
             this.persistNode = cc.director.getScene().getChildByName('PersistNode');
         }
-        this.persistNode.getComponent('PersistNode').userData = a;
-
-
+        this.persistNode.getComponent('PersistNode').userData.headerInfo = userData;
         this.scheduleOnce(function() {//延迟0.5s执行
+            this.getComponent('ReqAni').hideReqAni();
             cc.director.loadScene("CreatRole",function(){//回调
 
-            });
+            }.bind(this));
         }, 0.5);
     },
     autoInput(){//记住密码状态下自动填充账号密码

@@ -33,17 +33,30 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
+        this.createEntItemPool();
         this.items = [];
         this.initialize(0);
     },
+    createEntItemPool(){//仓库item对象池
+        this.itemPool = [[],[],[],[]];
+    },
     initialize:function(type){//0123——树苗-道具-木材-碳汇
         this.type = type;//仓库类型
-        var k = 0
-        for(let i = 0;i<30;++i){
-            let item = cc.instantiate(this.itemTemplate);
+        cc.log(this.type);
+        var itemLen = this.content[this.type].getChildren().length;//子节点数量
+        for(var l = 0;l<itemLen;l++){
+            (this.itemPool[this.type]).push(this.content[this.type].getChildren()[l]);
+        }
+        this.content[this.type].removeAllChildren();//移除所有子节点
+        var item = null;
+        for(var i = 0;i<30;++i){
+            if((this.itemPool[this.type]).length>0){
+                item = (this.itemPool[this.type]).shift();
+            }else{
+                item = cc.instantiate(this.itemTemplate);
+            }
             this.content[type].addChild(item);
-            item.getComponent('SetEnterpotItem').setItme(type,k,k+"",k+"");
-            k++;
+            item.getComponent('SetEnterpotItem').setItme(type,i,i+"",i+"");
             //this.items.push(item);
         }
     },

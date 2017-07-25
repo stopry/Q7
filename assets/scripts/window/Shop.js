@@ -48,6 +48,10 @@ cc.Class({
             default:[],
             type:[cc.Node]
         },
+        shopType:{//当前显示的容器类型
+            default:1,
+            type:cc.Integer
+        }
     },
 
     // use this for initialization
@@ -64,6 +68,11 @@ cc.Class({
         },this);
     },
     changeBox(event,customEventData){//切换列表容器
+        if(customEventData=='0'){
+            this.shopType=1;//树苗
+        }else{
+            this.shopType=2;//道具
+        }
         var index = parseInt(customEventData)||0;
         for(let i = 0;i<this.content.length;i++){
             this.content[i].active = false;

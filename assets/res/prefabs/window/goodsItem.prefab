@@ -661,7 +661,7 @@
     "littleTip": null,
     "alertLayer": null,
     "conDia": null,
-    "id": null,
+    "id": 0,
     "img": {
       "__id__": 3
     },
@@ -1171,7 +1171,7 @@
     "conDia": {
       "__uuid__": "a74d2935-f9c2-483a-9655-fc5c13a5755a"
     },
-    "id": null,
+    "id": 0,
     "img": {
       "__id__": 3
     },

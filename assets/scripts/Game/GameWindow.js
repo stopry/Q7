@@ -101,6 +101,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+
         this.openRechargeBtn.on(cc.Node.EventType.TOUCH_END,this.openRechargeBox,this);
         this.openEnterpotBtn.on(cc.Node.EventType.TOUCH_END,this.openEnterpot,this);
         this.openStudyRoomBtn.on(cc.Node.EventType.TOUCH_END,this.openStudyRoom,this);
@@ -123,46 +124,63 @@ cc.Class({
         }
         Global.layerRecharge.parent = this.root;
         Global.layerRecharge.active = true;
-        var dia = cc.instantiate(this.recharge);
-        dia.parent = this.root;
-        dia.getComponent('Recharge').showThis();
+
+        if(!Global.recharge||!Global.recharge.name){
+            Global.recharge = cc.instantiate(this.recharge);
+            Global.recharge.parent = this.root;
+        }
+        Global.recharge.getComponent('Recharge').showThis();
 
     },
     openEnterpot(){//打开仓库
         this.opendNormalLayer();
-        var ent = cc.instantiate(this.enterpot);
-        ent.parent = this.root;
-        ent.getComponent('EnterpotControl').showThis();
+        if(!Global.ent||!Global.ent.name){
+            Global.ent = cc.instantiate(this.enterpot);
+            Global.ent.parent = this.root;
+        }
+        Global.ent.getComponent('EnterpotControl').showThis();
     },
     openStudyRoom(){//打开科研所
         this.opendNormalLayer();
-        var ent = cc.instantiate(this.studyRoom);
-        ent.parent = this.root;
-        ent.getComponent('StudyRoom').showThis();
+        if(!Global.studyRoom||!Global.studyRoom.name){
+            Global.studyRoom = cc.instantiate(this.studyRoom);
+            Global.studyRoom.parent = this.root;
+        }
+        Global.studyRoom.getComponent('StudyRoom').showThis();
     },
     openLog(){//打开日志
         this.opendNormalLayer();
-        var log = cc.instantiate(this.log);
-        log.parent = this.root;
-        log.getComponent('Log').showThis();
+        if(!Global.log||!Global.log.name){
+            Global.log = cc.instantiate(this.log);
+            Global.log.parent = this.root;
+        }
+        Global.log.getComponent('Log').showThis();
     },
     openFriends(){//打开好友
         this.opendNormalLayer();
-        var friends = cc.instantiate(this.friends);
-        friends.parent = this.root;
-        friends.getComponent('Friends').showThis();
+
+        if(!Global.friends||!Global.friends.name){
+            Global.friends = cc.instantiate(this.friends);
+            Global.friends.parent = this.root;
+        }
+        Global.friends.getComponent('Friends').showThis();
     },
     openShop(){//打开商店
         this.opendNormalLayer();
-        var shop = cc.instantiate(this.shop);
-        shop.parent = this.root;
-        shop.runAction(Global.openAction);
+        if(!Global.shop||!Global.shop.name){
+            Global.shop = cc.instantiate(this.shop);
+            Global.shop.parent = this.root;
+            cc.game.addPersistRootNode(Global.shop);
+        }
+        Global.shop.getChildByName('prop').getComponent('Shop').showThis();
     },
     openRank(){//打开排行榜
         this.opendNormalLayer();
-        var rank = cc.instantiate(this.rank);
-        rank.parent = this.root;
-        rank.getComponent('Rank').showThis();
+        if(!Global.rank||!Global.rank.name){
+            Global.rank = cc.instantiate(this.rank);
+            Global.rank.parent = this.root;
+        }
+        Global.rank.getComponent('Rank').showThis();
     },
     openSet(){//打开设置
         this.opendNormalLayer();

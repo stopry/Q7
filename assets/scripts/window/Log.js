@@ -49,6 +49,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.creatNodePool();
         this.curPageNum = 1;//默认当前页
         this.allPageNum = 10;//默认总页数
         this.isLoading = false;//默认不在加载中
@@ -60,13 +61,30 @@ cc.Class({
             this.prePage();
         },this);
     },
+    creatNodePool(){//创建日志item列表对象池
+        this.logItemArray = [];
+    },
     renderLogList(){//渲染日志列表
-        this.logItemBox.removeAllChildren();
-        for(let i = 0;i<10;i++){
-            let logItem = cc.instantiate(this.logItemPre);
-            this.logItemBox.addChild(logItem);
-            logItem.getComponent('SetLogItem').setItem('06/05','12:21','被打',2);
+        var itemLen = this.logItemBox.getChildren().length;
+        for(var l = 0;l<itemLen;l++){
+            this.logItemArray.push(this.logItemBox.getChildren()[l]);
         }
+        cc.log(this.logItemArray.length,"对象数组长度1");
+        this.logItemBox.removeAllChildren();
+        var logItem = null;
+        for(var i = 0;i<10;i++){
+            if(this.logItemArray.length>0){
+                logItem = this.logItemArray.shift();
+                cc.log('有');
+            }else{
+                logItem = cc.instantiate(this.logItemPre);
+                cc.log('没有');
+                //this.logItemPool.put(this.logItem);
+            }
+            this.logItemBox.addChild(logItem);
+            logItem.getComponent('SetLogItem').setItem('06/05',i,'被打',i);
+        }
+        cc.log(this.logItemArray.length,"对象池长度2");
         this.allPage.string = this.allPageNum;
         this.cuurentPage.string = this.curPageNum;
     },

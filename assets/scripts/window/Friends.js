@@ -49,6 +49,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.createItemPool();
         this.curPageNum = 1;//默认当前页
         this.allPageNum = 10;//默认总页数
         this.isLoading = false;//默认不在加载中
@@ -60,12 +61,23 @@ cc.Class({
             this.prePage();
         },this);
     },
+    createItemPool(){//对象池
+        this.itemPool = new cc.NodePool();
+    },
     renderFriendsList(){//渲染日志列表
-        this.friendsItemBox.removeAllChildren();
+        var itemLen = this.friendsItemBox.getChildren().length;
+        for(var l = 0;l<itemLen;l++){
+            this.itemPool.put(this.friendsItemBox.getChildren()[0]);
+        }
+        var item = null;
         for(let i = 0;i<10;i++){
-            let friendsItem = cc.instantiate(this.friendsItemPre);
-            this.friendsItemBox.addChild(friendsItem);
-            friendsItem.getComponent('SetFriendsItem').setItem('10086','我的名字'+i,i);
+            if(this.itemPool.size()>0){
+                item = this.itemPool.get();
+            }else{
+                item = cc.instantiate(this.friendsItemPre);
+            }
+            this.friendsItemBox.addChild(item);
+            item.getComponent('SetFriendsItem').setItem('10086','我的名字'+i,i);
         }
         this.allPage.string = this.allPageNum;
         this.cuurentPage.string = this.curPageNum;

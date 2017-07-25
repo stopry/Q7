@@ -1,6 +1,5 @@
 cc.Class({
     extends: cc.Component,
-
     properties: {
         //确认框资源start
         conDia:{//确认对话框
@@ -49,6 +48,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.createItemPool();
         this.curPageNum = 1;//默认当前页
         this.allPageNum = 10;//默认总页数
         this.isLoading = false;//默认不在加载中
@@ -60,12 +60,23 @@ cc.Class({
             this.prePage();
         },this);
     },
+    createItemPool(){//对象池
+        this.itemPool = new cc.NodePool();
+    },
     renderRankList(){//渲染日志列表
-        this.rankItemBox.removeAllChildren();
+        var itemLen = this.rankItemBox.getChildren().length;
+        for(var l = 0;l<itemLen;l++){
+            this.itemPool.put(this.rankItemBox.getChildren()[0]);
+        }
+        var item = null;
         for(let i = 0;i<10;i++){
-            let rankItem = cc.instantiate(this.rankItemPre);
-            this.rankItemBox.addChild(rankItem);
-            rankItem.getComponent('SetRankItem').setItem('10086','我的名字'+i,i,i);
+            if(this.itemPool.size()>0){
+                item = this.itemPool.get();
+            }else{
+                item = cc.instantiate(this.rankItemPre);
+            }
+            this.rankItemBox.addChild(item);
+            item.getComponent('SetRankItem').setItem('10086','我的名字'+i,i,i);
         }
         this.allPage.string = this.allPageNum;
         this.cuurentPage.string = this.curPageNum;
