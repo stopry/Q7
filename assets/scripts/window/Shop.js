@@ -1,3 +1,4 @@
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -79,27 +80,40 @@ cc.Class({
         }
         this.content[index].active = true;
     },
-    renderShopList(){//渲染日志列表
+    renderShopList(){//渲染商店列表
         if(this.shopItemBox.name=='treeBox'){
-            this.shopItemBox.removeAllChildren();
-            for(let i = 0;i<10;i++){
-                let shopItem = cc.instantiate(this.ItemPre);
-                this.shopItemBox.addChild(shopItem);
-                shopItem.getComponent('SetShopItem').setItem(1,'树苗1','五元一棵产出木材','<color=#ff0000>'+i+'</c><color=#000000>元/颗</color>',1);
-            }
-            this.allPage.string = this.allPageNum;
-            this.cuurentPage.string = this.curPageNum;
+            this.loadShopData(1);
         }else{
-            cc.log(3);
-            this.shopItemBox.removeAllChildren();
-            for(let i = 0;i<10;i++){
-                let shopItem = cc.instantiate(this.ItemPre);
-                this.shopItemBox.addChild(shopItem);
-                shopItem.getComponent('SetShopItem').setItem(1,'道具一','五元一件可以砍树','<color=#ff0000>'+i+'</c><color=#000000>元/件</color>',1);
-            }
-            this.allPage.string = this.allPageNum;
-            this.cuurentPage.string = this.curPageNum;
+            this.loadShopData(2);
         }
+    },
+    loadShopData(type){//加载商店数据
+        Net.get('/api/game/store/list',1,{type:type},function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+                return
+            }else{
+                this.shopItemBox.removeAllChildren();
+                var shopList = data.obj;
+                if(shopList.length<=0)return;
+                for(let i = 0;i<shopList.length;i++){
+                    let shopItem = cc.instantiate(this.ItemPre);
+                    this.shopItemBox.addChild(shopItem);
+                    shopItem.getComponent('SetShopItem').setItem(
+                        parseInt(((shopList[i].itemId).toString()).split('')[3])-1,//商品图片
+                        shopList[i].name,//商品名字
+                        shopList[i].desc,//商品介绍
+                        '<color=#ff0000>'+shopList[i].price+'</c><color=#000000>元/个</color>',//商品价格
+                        shopList[i].itemId,//商品id
+                        shopList[i].itemType//商品类型
+                    );
+                }
+                this.allPage.string = this.allPageNum;
+                this.cuurentPage.string = this.curPageNum;
+            }
+        }.bind(this),function(err){
+
+        }.bind(this))
     },
     nextPage(){
         if(this.curPageNum>=this.allPageNum){

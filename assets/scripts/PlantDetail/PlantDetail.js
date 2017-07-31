@@ -1,6 +1,6 @@
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
-
     properties: {
         plane:{//飞机
             default:null,
@@ -20,7 +20,6 @@ cc.Class({
         },
         _stage:0//树的生长阶段
     },
-
     // use this for initialization
     onLoad: function () {
         this.greenPool = new cc.NodePool();
@@ -37,9 +36,7 @@ cc.Class({
     renderTree(status,type){
         this.status = status;
         this.type = type;
-        if(this.getPerNode()){
-            cc.log("林场id为",this.perNode.getComponent('PersistNode').userData.curTreeId);
-        }
+
     },
     createGreenEnergy(){//创建绿能
         var greenEne = null;
@@ -58,7 +55,6 @@ cc.Class({
             this.plane.getComponent(cc.Animation).stop();
             this.plane.active = false;
             this.plantBtn.interactable = true;
-            this.showLittleTip('播种成功');
         },4.1);
     },
     playPlane(){//播放飞机
@@ -83,7 +79,128 @@ cc.Class({
                 cc.log(null);
         }
     },
+    plant(){//种植
+        var self = this;
+        var plantData = {//种植提交数据
+            "landId": (function(){if(this.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+            }})()||0,
+            "treeId": 1001
+        };
+        Net.post('/api/game/plant',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('播种成功');
+            }
+        }.bind(this),function(data){
+            this.showLittleTip('网络错误');
+        }.bind(this));
+    },
+    apply(){//施肥
+        var self = this;
+        var plantData = {//
+            "landId": (function(){if(this.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+            }})()||0,
+            "itemId": 1001
+        };
+        Net.post('/api/game/apply',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('施肥成功')
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
+    debug(){//除虫
+        var self = this;
+        var plantData = {//
+            "landId": (function(){if(this.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+            }})()||0
+        };
+        Net.post('/api/game/debug',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('除虫成功')
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
+    grass(){//除草
+        var self = this;
+        var plantData = {//
+            "landId": (function(){if(this.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+            }})()||0
+        };
+        Net.post('/api/game/grass',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('除草成功');
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
+    pick(){//收取绿能
+        var self = this;
+        var plantData = {//
+            "greenId": 1
+        };
+        Net.post('/api/game/pick',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('收取成功');
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
+    shovel(){//收获树木
+        var self = this;
+        var plantData = {//
+            "landId": (function(){if(this.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+            }})()||0,
+            "neglectSts": false
+        };
+        Net.post('/api/game/shovel',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('收取成功');
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
+    water(){//收获树木
+        var self = this;
+        var plantData = {//
+            "landId": (function(){if(this.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+            }})()||0,
+        };
+        Net.post('/api/game/water',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('浇水成功');
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
     back(){//返回主游戏界面
+
         cc.director.loadScene("Game",function(){//回调
 
         });

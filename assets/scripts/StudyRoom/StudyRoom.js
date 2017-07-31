@@ -1,7 +1,6 @@
 var util = require('Util');
 cc.Class({
     extends: cc.Component,
-
     properties: {
         //确认框资源start
         conDia:{//确认对话框
@@ -146,7 +145,6 @@ cc.Class({
         }
         Global.conLayer.parent = this.root;
         Global.conLayer.active = true;
-
         var dia = cc.instantiate(this.conDia);
         dia.parent = this.root;
         dia.getComponent('ConfirmDia').setBoxFun(msg,fn1,fn2);

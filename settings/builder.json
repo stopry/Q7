@@ -22,5 +22,6 @@
   "title": "Q7_Game",
   "webOrientation": "auto",
   "inlineSpriteFrames_native": true,
-  "optimizeHotUpdate": false
+  "optimizeHotUpdate": false,
+  "includeSDKBox": false
 }

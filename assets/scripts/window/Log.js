@@ -1,3 +1,4 @@
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -46,14 +47,12 @@ cc.Class({
         },
 
     },
-
     // use this for initialization
     onLoad: function () {
         this.creatNodePool();
         this.curPageNum = 1;//默认当前页
         this.allPageNum = 10;//默认总页数
         this.isLoading = false;//默认不在加载中
-        this.renderLogList();
         this.nextBtn.on(cc.Node.EventType.TOUCH_END,function(){
             this.nextPage();
         },this);
@@ -71,22 +70,38 @@ cc.Class({
         }
         cc.log(this.logItemArray.length,"对象数组长度1");
         this.logItemBox.removeAllChildren();
-        var logItem = null;
-        for(var i = 0;i<10;i++){
-            if(this.logItemArray.length>0){
-                logItem = this.logItemArray.shift();
-                cc.log('有');
+        this.getLogData();
+    },
+    getLogData(){//得到日志数据
+        this.isLoading = true;
+        this.getComponent('ReqAni').showReqAni();
+        Net.get('/api/game/log/list',1,null,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else if(!data.obj||data.obj.records<=0){
+                this.showLittleTip('没有数据');
             }else{
-                logItem = cc.instantiate(this.logItemPre);
-                cc.log('没有');
-                //this.logItemPool.put(this.logItem);
+                var logItem = null;
+                var recs = data.obj.records;
+                for(var i = 0;i<recs.length;i++){
+                    if(this.logItemArray.length>0){
+                        logItem = this.logItemArray.shift();
+                    }else{
+                        logItem = cc.instantiate(this.logItemPre);
+                    }
+                    this.logItemBox.addChild(logItem);
+                    logItem.getComponent('SetLogItem').setItem('06/05',i,'被打',i);
+                }
+                this.allPage.string = data.obj.pages;
+                this.allPageNum = data.obj.pages;
+                this.cuurentPage.string = data.obj.current;
             }
-            this.logItemBox.addChild(logItem);
-            logItem.getComponent('SetLogItem').setItem('06/05',i,'被打',i);
-        }
-        cc.log(this.logItemArray.length,"对象池长度2");
-        this.allPage.string = this.allPageNum;
-        this.cuurentPage.string = this.curPageNum;
+            this.isLoading = false;
+            this.getComponent('ReqAni').hideReqAni();
+        }.bind(this),function(data){
+            this.isLoading = false;
+            this.getComponent('ReqAni').hideReqAni();
+        }.bind(this));
     },
     nextPage(){
         if(this.curPageNum>=this.allPageNum){
@@ -107,6 +122,7 @@ cc.Class({
     showThis(){
         this.root.active = true;
         this.root.runAction(Global.openAction);
+        this.renderLogList()
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);

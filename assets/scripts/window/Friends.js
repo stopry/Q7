@@ -1,3 +1,4 @@
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -44,7 +45,6 @@ cc.Class({
             default:null,
             type:cc.Prefab
         },
-
     },
 
     // use this for initialization
@@ -53,7 +53,6 @@ cc.Class({
         this.curPageNum = 1;//默认当前页
         this.allPageNum = 10;//默认总页数
         this.isLoading = false;//默认不在加载中
-        this.renderFriendsList();
         this.nextBtn.on(cc.Node.EventType.TOUCH_END,function(){
             this.nextPage();
         },this);
@@ -64,23 +63,49 @@ cc.Class({
     createItemPool(){//对象池
         this.itemPool = new cc.NodePool();
     },
-    renderFriendsList(){//渲染日志列表
+    renderFriendsList(){//渲染好友列表
+        if(this.isLoading) return;
         var itemLen = this.friendsItemBox.getChildren().length;
         for(var l = 0;l<itemLen;l++){
             this.itemPool.put(this.friendsItemBox.getChildren()[0]);
         }
-        var item = null;
-        for(let i = 0;i<10;i++){
-            if(this.itemPool.size()>0){
-                item = this.itemPool.get();
+        this.getFriendList();
+
+    },
+    getFriendList(){//得到好友列表
+        var self = this;
+        this.getComponent('ReqAni').showReqAni();
+        this.isLoading = true;
+        Net.get('/api/game/friend/list',1,{pageNum:self.curPageNum},function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg)
+            }else if(data.obj.records.length<=0){
+                this.showLittleTip('没有好友')
+                this.allPage.string = 0;
+                this.cuurentPage.string = 0;
             }else{
-                item = cc.instantiate(this.friendsItemPre);
+                cc.log(data);
+                var recs = data.obj.records
+                var _len = recs.length;
+                var item = null;
+                for(let i = 0;i<_len;i++){
+                    if(this.itemPool.size()>0){
+                        item = this.itemPool.get();
+                    }else{
+                        item = cc.instantiate(this.friendsItemPre);
+                    }
+                    this.friendsItemBox.addChild(item);
+                    item.getComponent('SetFriendsItem').setItem(recs[i].playerId,recs[i].nickname,recs[i].certLev);
+                }
+                this.allPage.string = data.obj.pages;
+                this.allPageNum = data.obj.pages;
+                this.cuurentPage.string = data.obj.current;
             }
-            this.friendsItemBox.addChild(item);
-            item.getComponent('SetFriendsItem').setItem('10086','我的名字'+i,i);
-        }
-        this.allPage.string = this.allPageNum;
-        this.cuurentPage.string = this.curPageNum;
+            this.isLoading = false;
+            this.getComponent('ReqAni').hideReqAni();
+        }.bind(this),function(data){
+            this.isLoading = false;
+        }.bind(this))
     },
     nextPage(){
         if(this.curPageNum>=this.allPageNum){
@@ -101,6 +126,7 @@ cc.Class({
     showThis(){
         this.root.active = true;
         this.root.runAction(Global.openAction);
+        this.renderFriendsList();
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);

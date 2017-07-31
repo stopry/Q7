@@ -1,3 +1,4 @@
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
     properties: {
@@ -48,11 +49,11 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.isLoading = false;//默认不在加载中
         this.createItemPool();
         this.curPageNum = 1;//默认当前页
         this.allPageNum = 10;//默认总页数
         this.isLoading = false;//默认不在加载中
-        this.renderRankList();
         this.nextBtn.on(cc.Node.EventType.TOUCH_END,function(){
             this.nextPage();
         },this);
@@ -63,23 +64,39 @@ cc.Class({
     createItemPool(){//对象池
         this.itemPool = new cc.NodePool();
     },
-    renderRankList(){//渲染日志列表
+    renderRankList(){//渲染排行榜列表
         var itemLen = this.rankItemBox.getChildren().length;
         for(var l = 0;l<itemLen;l++){
             this.itemPool.put(this.rankItemBox.getChildren()[0]);
         }
-        var item = null;
-        for(let i = 0;i<10;i++){
-            if(this.itemPool.size()>0){
-                item = this.itemPool.get();
+        this.getRankData();
+    },
+    getRankData(){//得到排行榜数据
+        this.isLoading = true;
+        Net.get('/api/game/ranking/list',1,null,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else if(!data.obj||data.obj.records<=0){
+                this.showLittleTip('没有数据');
             }else{
-                item = cc.instantiate(this.rankItemPre);
+                var item = null;
+                for(let i = 0;i<10;i++){
+                    if(this.itemPool.size()>0){
+                        item = this.itemPool.get();
+                    }else{
+                        item = cc.instantiate(this.rankItemPre);
+                    }
+                    this.rankItemBox.addChild(item);
+                    item.getComponent('SetRankItem').setItem('10086','我的名字'+i,i,i);
+                }
+                this.allPage.string = data.obj.pages;
+                this.allPageNum = data.obj.pages;
+                this.cuurentPage.string = data.obj.current;
             }
-            this.rankItemBox.addChild(item);
-            item.getComponent('SetRankItem').setItem('10086','我的名字'+i,i,i);
-        }
-        this.allPage.string = this.allPageNum;
-        this.cuurentPage.string = this.curPageNum;
+            this.isLoading = false;
+        }.bind(this),function(data){
+            this.isLoading = false;
+        }.bind(this));
     },
     nextPage(){
         if(this.curPageNum>=this.allPageNum){
@@ -100,6 +117,7 @@ cc.Class({
     showThis(){
         this.root.active = true;
         this.root.runAction(Global.openAction);
+        this.renderRankList();
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);

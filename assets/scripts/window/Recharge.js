@@ -1,4 +1,5 @@
 var util = require('Util');//导入工具库
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -32,8 +33,12 @@ cc.Class({
             default:null,//被选充值金额边框
             type:cc.Node
         },
-        exchangeType:{//兑换类型
-            default:1,
+        exchangeJewel:{//兑换类型
+            default:20000,
+            type:cc.Integer
+        },//兑换类型
+        needMoney:{//需要的金币
+            default:200,
             type:cc.Integer
         },//兑换类型
         exchangeBtn:{//兑换按钮
@@ -53,7 +58,8 @@ cc.Class({
                 var pos = item.getPosition();
                 var action = cc.moveTo(0.08,pos);
                 self.itemBorder.runAction(action);
-                self.exchangeType = parseInt(util.splitStr(item.name));
+                self.exchangeJewel = parseInt(util.splitStr(item.jewel));
+                self.needMoney = parseInt(util.splitStr(item.money));
             },self);
         });
     },
@@ -69,17 +75,49 @@ cc.Class({
 
         var dia = cc.instantiate(this.conDia);
         dia.parent = this.root;
-        dia.getComponent('ConfirmDia').setBoxFun(this.exchangeType,function(){
+        dia.getComponent('ConfirmDia').setBoxFun('确定要用'+this.needMoney+'金币兑换'+this.exchangeJewel+'砖石吗？',function(){
             cc.log('ok');
-            this.showLittleTip('兑换成功');
+            this.confirmExh();
         }.bind(this),function(){
             cc.log('no');
         });
         dia.getComponent('ConfirmDia').showThis();
     },
+    confirmExh(){//确认兑换钻石
+        var self = this;
+        Net.get('/api/game/jewel/convert',1,{num:self.exchangeJewel},function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+                return
+            }
+            this.showLittleTip('兑换成功');
+            cc.find('Game').getComponent('UpdateUserInfo').refresh(1);//更新界面信息
+        }.bind(this),function(err){
+
+        }.bind(this));
+    },
+    intRecharge(){//渲染钻石框
+        Net.get('/api/game/jewel/list',1,null,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+                return;
+            }
+            for(var i = 0;i<data.obj.length;i++){
+                this.item[i].getChildByName('jewel').getComponent(cc.Label).string = data.obj[i].jewel+'钻石';
+                this.item[i].getChildByName('money').getComponent(cc.Label).string = data.obj[i].money+'金币';
+                this.item[i].jewel = 'gold_'+ data.obj[i].jewel;
+                this.item[i].money = 'gold_'+ data.obj[i].money;
+            }
+            this.exchangeJewel = data.obj[0].jewel;//默认兑换砖石数量
+            this.needMoney = data.obj[0].money;//默认兑换砖石数量
+        }.bind(this), function (err) {
+
+        }.bind(this));
+    },
     showThis(){//显示动画
         this.recharge.active = true;
         this.recharge.runAction(Global.openAction);
+        this.intRecharge();
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);

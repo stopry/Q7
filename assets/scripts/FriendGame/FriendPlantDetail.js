@@ -56,6 +56,22 @@ cc.Class({
                 cc.log(null);
         }
     },
+    steal(){//偷玩家绿能
+        var self = this;
+        var plantData = {//
+            "greenId": 0,
+            "toId": 0
+        };
+        Net.post('/api/game/steal',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('偷取成功');
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
     back(){//返回我的家园
         cc.director.loadScene("Game",function(){//回调
 

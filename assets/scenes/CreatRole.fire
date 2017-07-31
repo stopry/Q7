@@ -66,7 +66,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 42
+        "__id__": 43
       }
     ],
     "_prefab": null,
@@ -269,6 +269,9 @@
       },
       {
         "__id__": 41
+      },
+      {
+        "__id__": 42
       }
     ],
     "_prefab": null,
@@ -1485,6 +1488,15 @@
     "root": {
       "__id__": 2
     }
+  },
+  {
+    "__type__": "d3961Y3ErlAnZr1UJ61NBe1",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 6
+    },
+    "_enabled": true
   },
   {
     "__type__": "cc.Canvas",

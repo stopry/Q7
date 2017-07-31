@@ -40,11 +40,11 @@ cc.Class({
     },
     setHeader(){//设置头部
         if(this.getPerNode()){
-            this.headerInfo[0].string = this.perNode.getComponent('PersistNode').userData.headerInfo.nickname;
-            this.headerInfo[1].string = this.perNode.getComponent('PersistNode').userData.headerInfo.level;
-            this.headerInfo[2].string = this.perNode.getComponent('PersistNode').userData.headerInfo.jewel;
-            this.headerInfo[3].string = this.perNode.getComponent('PersistNode').userData.headerInfo.gold;
-            this.userPic.spriteFrame = this.spriteList[this.perNode.getComponent('PersistNode').userData.headerInfo.pic-1||0];
+            this.headerInfo[0].string = this.perNode.getComponent('PersistNode').userData.selfInfo.nickname;
+            this.headerInfo[1].string = this.perNode.getComponent('PersistNode').userData.selfInfo.level||10;
+            this.headerInfo[2].string = this.perNode.getComponent('PersistNode').userData.selfInfo.jewel;
+            this.headerInfo[3].string = this.perNode.getComponent('PersistNode').userData.selfInfo.money;
+            this.userPic.spriteFrame = this.spriteList[this.perNode.getComponent('PersistNode').userData.selfInfo.pic-1||0];
         };
     },
     renderAllTree(){//渲染整个林场
@@ -115,6 +115,7 @@ cc.Class({
         tree.on(cc.Node.EventType.TOUCH_END,function(){
             if(this.getPerNode()){
                 this.perNode.getComponent('PersistNode').userData.curTreeId = id;
+                cc.log(this.perNode.getComponent('PersistNode').userData.curTreeId);
             }
             //场景跳转
             cc.director.loadScene("PlantDetail",function(){//回调

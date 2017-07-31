@@ -1,3 +1,4 @@
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -35,7 +36,6 @@ cc.Class({
     onLoad: function () {
         this.createEntItemPool();
         this.items = [];
-        this.initialize(0);
     },
     createEntItemPool(){//仓库item对象池
         this.itemPool = [[],[],[],[]];
@@ -48,21 +48,57 @@ cc.Class({
             (this.itemPool[this.type]).push(this.content[this.type].getChildren()[l]);
         }
         this.content[this.type].removeAllChildren();//移除所有子节点
-        var item = null;
-        for(var i = 0;i<30;++i){
-            if((this.itemPool[this.type]).length>0){
-                item = (this.itemPool[this.type]).shift();
+        this.getEnterData(type);
+
+    },
+    getEnterData(type){//得到仓库信息
+        var type = type+1||1;
+        Net.get('/api/game/getPlayerItemList',1,{type:type},function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else if(data.obj.length<=0){
+                this.showLittleTip('没有物品信息');
             }else{
-                item = cc.instantiate(this.itemTemplate);
+                var _len = data.obj.length;
+                var item = null;
+                for(var i = 0;i<_len;i++){
+                    if((this.itemPool[this.type]).length>0){
+                        item = (this.itemPool[this.type]).shift();
+                    }else{
+                        item = cc.instantiate(this.itemTemplate);
+                    }
+                    cc.log('ccc');
+                    this.content[type-1].addChild(item);
+                    item.getComponent('SetEnterpotItem').setItme(
+                        parseInt(((data.obj[i].itemTypeId).toString()).split('')[3])-1,//物品图片
+                        data.obj[i].cnt,//物品数量
+                        data.obj[i].name,//物品名字
+                        data.obj[i].desc//物品描述
+                    );
+                    //this.items.push(item);
+                }
             }
-            this.content[type].addChild(item);
-            item.getComponent('SetEnterpotItem').setItme(type,i,i+"",i+"");
-            //this.items.push(item);
+        }.bind(this),function(err){
+
+        }.bind(this))
+
+    },
+    changeBox(event,customEventData){//切换列表容器
+        var index = parseInt(customEventData)||0;
+        if(this.type==index){//不是切换不做任何请求
+            return;
+        };
+        for(let i = 0;i<this.content.length;i++){
+            this.content[i].active = false;
         }
+        this.content[index].active = true;
+        this.content[index].removeAllChildren();
+        this.initialize(index);
     },
     showThis(){//显示动画
         this.enterpot.active = true;
         this.enterpot.runAction(Global.openAction);
+        this.initialize(0);
     },
     showConDia(){//弹出确认对话框
         if(!Global.conLayer||!Global.conLayer.name){
@@ -81,18 +117,9 @@ cc.Class({
         });
         dia.getComponent('ConfirmDia').showThis();
     },
-    changeBox(event,customEventData){//切换列表容器
-        var index = parseInt(customEventData)||0;
-        if(this.type==index){//不是切换不做任何请求
-            return;
-        };
-        for(let i = 0;i<this.content.length;i++){
-            this.content[i].active = false;
-        }
-        this.content[index].active = true;
-        this.content[index].removeAllChildren();
-        this.initialize(index);
-    }
+    showLittleTip:function(str){//显示提示
+        this.getComponent('LittleTip').setContent(str);
+    },
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

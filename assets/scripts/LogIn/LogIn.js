@@ -1,4 +1,5 @@
 var util = require('Util');
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -51,9 +52,18 @@ cc.Class({
         cc.game.addPersistRootNode(this.persistNode);//场景切换数据传递
         cc.game.addPersistRootNode(this.reqAni);//网络请求加载遮罩层
         this.autoInput();
-        this.changeVer(); 
+        this.changeVer();
     },
     logIn:function(){
+        var logdata =  {
+            "captchaCode": " ",
+            "captchaValue": " ",
+            "clientId": "098f6bcd4621d373cade4e832627b4f6",
+            "login_channel": " ",
+            "password": "123456",
+            "userName": "13632473925"
+        };
+        var self = this;
         // 登录
         var account = (this.userName.string).trim();//账号
         var password = (this.password.string).trim();//密码
@@ -71,34 +81,52 @@ cc.Class({
             this.showLittleTip("请填写验证码")
             return;
         }
+        logdata.password = password;
+        logdata.userName = account;
 
-        if(isRemPwd){
-            this.remActPwd(account,password);
-        }else{
-            this.removeStorage();
-        }
+        this.getComponent('ReqAni').showReqAni();//显示加载动画
+        Net.post('/api/oauth/token',!1,logdata,function(data){
+            cc.log(data);
+            if(!data.success){//请求失败
+                this.showLittleTip(data.msg);
+                return
+            }
+            cc.sys.localStorage.setItem('token',data.obj.token_type+" "+data.obj.access_token);//保存数据到本地
+            cc.log(cc.sys.localStorage.getItem('token'),444);
+            if(isRemPwd){
+                this.remActPwd(account,password);
+            }else{
+                this.removeStorage();
+            }
+            //加载玩家信息
+            this.loadPlayer();
+        }.bind(this),function(err){
+            self.showLittleTip("网络错误");
+        }.bind(this));
+    },
+    loadPlayer(){//加载玩家信息
+        Net.get('/api/game/loadPlayer',1,null,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+                if(!data.obj){//未创建角色
+                    this.getComponent('ReqAni').hideReqAni();
+                    cc.director.loadScene("CreatRole",function(){//进入创建角色场景
 
-        this.getComponent('ReqAni').showReqAni();
-        this.showLittleTip("登录成功");
+                    }.bind(this));
+                }
+            }else{
+                if(!this.persistNode.name){
+                    this.persistNode = cc.director.getScene().getChildByName('PersistNode');
+                }
+                this.persistNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
+                cc.director.loadScene("Game",function(){//进入主场景
 
-        //cc.log()
-        if(!account) account = '无名';
-        var userData = {
-            nickname:account,
-            level:14,
-            jewel:500,
-            gold:400
-        };
-        if(!this.persistNode.name){
-            this.persistNode = cc.director.getScene().getChildByName('PersistNode');
-        }
-        this.persistNode.getComponent('PersistNode').userData.headerInfo = userData;
-        this.scheduleOnce(function() {//延迟0.5s执行
+                }.bind(this));
+            }
             this.getComponent('ReqAni').hideReqAni();
-            cc.director.loadScene("CreatRole",function(){//回调
-
-            }.bind(this));
-        }, 0.5);
+        }.bind(this),function(err){
+            this.showLittleTip('网络异常');
+        }.bind(this))
     },
     autoInput(){//记住密码状态下自动填充账号密码
         if(cc.sys.localStorage.getItem('act')&&cc.sys.localStorage.getItem('pwd')){

@@ -1,3 +1,4 @@
+var Net = require("Net");
 cc.Class({
     extends: cc.Component,
 
@@ -33,19 +34,39 @@ cc.Class({
             this.showLittleTip('角色名不能大于5个字符');
             return;
         }
+        var self = this
+        var creater = {
+            "nickname": userName,
+            "pic": self.headIndex
+        };
+        this.getComponent('ReqAni').showReqAni();
+        Net.post('/api/game/createPlayer',1,creater,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+                return;
+            }
+            this.loadPlayer();
+        }.bind(this),function(err){
+            this.showLittleTip("网络错误");
+        }.bind(this));
 
-        this.showLittleTip("创建角色成功");
+    },
+    loadPlayer(){//加载玩家信息
+        Net.get('/game/loadPlayer',1,null,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                if(!this.getPerNode()){
+                    this.perNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
+                }
+                cc.director.loadScene("Game",function(){//进入主场景
 
-        if(this.getPerNode()){
-            this.perNode.getComponent('PersistNode').userData.headerInfo.nickname = userName;
-            this.perNode.getComponent('PersistNode').userData.headerInfo.pic = this.headIndex;
-        }
-
-        this.scheduleOnce(function() {//延迟0.5s执行
-            cc.director.loadScene("Game",function(){//回调
-
-            });
-        }, 0.5);
+                }.bind(this));
+            }
+            this.getComponent('ReqAni').hideReqAni();
+        }.bind(this),function(err){
+            this.showLittleTip('网络异常');
+        }.bind(this))
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');

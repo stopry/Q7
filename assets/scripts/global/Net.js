@@ -3,38 +3,51 @@ var Net = {
     timeOut:5000,
     //请求地址、请求头、发送数据、成功回调、失败回调
     get:function(url,header,data,succCallBack,errCallBack){//get请求
+        var host = 'http://192.168.19.106:8080';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
-                var response = xhr.responseText;
-                console.log(response);
-                succCallBack&&succCallBack(response);
-            }else{
-                errCallBack&&errCallBack();
+            if (xhr.readyState == 4) {
+                if(xhr.status >= 200 && xhr.status < 400){
+                    var response = JSON.parse(xhr.responseText);
+                    //var response = xhr.responseText;
+                    succCallBack&&succCallBack(response);
+                }else{
+                    errCallBack&&errCallBack();
+                }
             }
         };
-        xhr.open("GET", url+this.toUrlPar(data), true);
+        xhr.open("GET", host+url+(data?this.toUrlPar(data):''), true);
         if (cc.sys.isNative) {
             xhr.setRequestHeader("Accept-Encoding","gzip,deflate");
+        }
+        xhr.setRequestHeader("Content-Type","application/json;charset=utf-8");
+        if(header){
+            xhr.setRequestHeader('Authorization',cc.sys.localStorage.getItem('token'));
         }
         xhr.timeout = this.timeOut;
         xhr.send();
     },
 
-    post:function(url,header,data,callBack,errCallBack){//post请求
+    post:function(url,header,data,succCallBack,errCallBack){//post请求
+        var host = 'http://192.168.19.106:8080';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
-                var response = xhr.responseText;
-                console.log(response);
-                succCallBack&&succCallBack(response);
-            }else{
-                errCallBack&&errCallBack();
+            if (xhr.readyState == 4) {
+                if(xhr.status >= 200 && xhr.status < 400){
+                    var response = JSON.parse(xhr.responseText);
+                    succCallBack&&succCallBack(response);
+                }else{
+                    errCallBack&&errCallBack();
+                }
             }
         };
-        xhr.open("POST", url, true);
+        xhr.open("POST", host+url, true);
+        xhr.setRequestHeader("Content-Type","application/json;charset=utf-8");
         if (cc.sys.isNative) {
             xhr.setRequestHeader("Accept-Encoding","gzip,deflate");
+        }
+        if(header){
+            xhr.setRequestHeader('Authorization',cc.sys.localStorage.getItem('token'));
         }
         xhr.timeout = this.timeOut;
         xhr.send(JSON.stringify(data));
@@ -97,6 +110,4 @@ var Net = {
     },
 };
 
-module.exports = {
-  Net:Net
-};
+module.exports = Net;

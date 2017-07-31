@@ -68,10 +68,13 @@
       },
       {
         "__id__": 72
+      },
+      {
+        "__id__": 73
       }
     ],
     "_prefab": {
-      "__id__": 73
+      "__id__": 74
     },
     "_id": "",
     "_opacity": 255,
@@ -509,7 +512,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "propBox",
+    "_name": "woodBox",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -573,7 +576,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "452ddd1d-b176-407e-8592-52847fa9096c"
+      "__uuid__": "c9e798c8-e08a-4135-89f1-3d2417a7611c"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -629,12 +632,12 @@
     "asset": {
       "__uuid__": "33013cc9-e610-4649-a794-c2a03d22b7ef"
     },
-    "fileId": "c757aXeWn5I/6TPGFe/j8Sk",
+    "fileId": "3ff332bZUBNhaHu2+Gv2tFj",
     "sync": false
   },
   {
     "__type__": "cc.Node",
-    "_name": "woodBox",
+    "_name": "propBox",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -698,7 +701,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "c9e798c8-e08a-4135-89f1-3d2417a7611c"
+      "__uuid__": "452ddd1d-b176-407e-8592-52847fa9096c"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -754,7 +757,7 @@
     "asset": {
       "__uuid__": "33013cc9-e610-4649-a794-c2a03d22b7ef"
     },
-    "fileId": "3ff332bZUBNhaHu2+Gv2tFj",
+    "fileId": "c757aXeWn5I/6TPGFe/j8Sk",
     "sync": false
   },
   {
@@ -1140,7 +1143,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "prop",
+    "_name": "wood",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -1189,8 +1192,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -71,
-      "y": 273
+      "x": -61,
+      "y": 274
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1269,7 +1272,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "道具",
+    "_N$string": "木材",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -1283,7 +1286,7 @@
     "asset": {
       "__uuid__": "33013cc9-e610-4649-a794-c2a03d22b7ef"
     },
-    "fileId": "3861b2a72BP65YwF4ukC6AZ",
+    "fileId": "fab97y6NU5BWYh1GovNyGJ1",
     "sync": false
   },
   {
@@ -1391,12 +1394,12 @@
     "asset": {
       "__uuid__": "33013cc9-e610-4649-a794-c2a03d22b7ef"
     },
-    "fileId": "0bd6bhbO6ZBGaQMj9h/kHJU",
+    "fileId": "fe72aN/ojlOyKaqlDlX8KgQ",
     "sync": false
   },
   {
     "__type__": "cc.Node",
-    "_name": "wood",
+    "_name": "prop",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -1445,8 +1448,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 49,
-      "y": 274
+      "x": 55,
+      "y": 275
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1525,7 +1528,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "木材",
+    "_N$string": "道具",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -1539,7 +1542,7 @@
     "asset": {
       "__uuid__": "33013cc9-e610-4649-a794-c2a03d22b7ef"
     },
-    "fileId": "fab97y6NU5BWYh1GovNyGJ1",
+    "fileId": "3861b2a72BP65YwF4ukC6AZ",
     "sync": false
   },
   {
@@ -1647,7 +1650,7 @@
     "asset": {
       "__uuid__": "33013cc9-e610-4649-a794-c2a03d22b7ef"
     },
-    "fileId": "fe72aN/ojlOyKaqlDlX8KgQ",
+    "fileId": "0bd6bhbO6ZBGaQMj9h/kHJU",
     "sync": false
   },
   {
@@ -2263,6 +2266,19 @@
       "__id__": 1
     },
     "webUrl": "https://www.baidu.com"
+  },
+  {
+    "__type__": "e9a5e+hv+9K87b/Xf+6gppp",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tipPrefab": {
+      "__uuid__": "a308784b-e573-4c3c-a5c6-8c7b541eb985"
+    },
+    "root": null
   },
   {
     "__type__": "cc.PrefabInfo",
