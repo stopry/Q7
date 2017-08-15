@@ -17,7 +17,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.animationCtr();
+        //this.animationCtr();
     },
     animationCtr(){
         var self = this;

@@ -47,6 +47,9 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
+        cc._initDebugSetting(cc.DebugMode.INFO);
+
+        cc.log('print log info ...');
         cc.director.setDisplayStats(false);
         //添加常驻节点
         cc.game.addPersistRootNode(this.persistNode);//场景切换数据传递
@@ -63,6 +66,7 @@ cc.Class({
             "password": "123456",
             "userName": "13632473925"
         };
+        console.log(4);
         var self = this;
         // 登录
         var account = (this.userName.string).trim();//账号
