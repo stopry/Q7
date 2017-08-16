@@ -1,4 +1,5 @@
 var Net = require('Net');
+var util = require('Util');
 cc.Class({
     extends: cc.Component,
     properties: {
@@ -19,29 +20,117 @@ cc.Class({
             type:cc.Prefab
         },
         _stage:0,//树的生长阶段
+        trees:[cc.Node],//全部的树节点
         tree_1:[cc.SpriteFrame],//柳树
         tree_2:[cc.SpriteFrame],//松树
         tree_3:[cc.SpriteFrame],//槐树
         tree_4:[cc.SpriteFrame],//梧桐
         tree_5:[cc.SpriteFrame],//杉树
         tree_6:[cc.SpriteFrame],//银杏
+        stump:cc.SpriteFrame,//树桩
     },
     // use this for initialization
     onLoad: function () {
+        eruda.get('console').config.set('overrideConsole', false);
         this.greenPool = new cc.NodePool();
         this.greenEnergyArray = [];//存放绿能数组
         // 关闭fps
         cc.director.setDisplayStats(false);
-        this.renderTree(1,1);
+        this.renderTree();
         this.createGreenEnergy();
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');
         return this.perNode;
     },
-    renderTree(status,type){
-        this.status = status;
-        this.type = type;
+    renderTree(){
+        if(this.getPerNode()){
+            this.curLandId = this.perNode.getComponent('PersistNode').userData.curLandId;//得到当前土地的id
+            this.pdId = this.perNode.getComponent('PersistNode').userData.curPdId;//得到当前土地的pdId
+            this.treeDetails = this.perNode.getComponent('PersistNode').userData.selfInfo.playerPlantingDetail;//得到全部种植详情
+            if(this.treeDetails.length<=0){//如果全部种植详情为空
+                this.initTree(this.stump);
+            }else{//如果全部种植详情不为空
+                //查找当前种植详情
+                this.plantDetail = util.getCurPlantDetail(this.pdId,this.treeDetails)
+                if(!this.plantDetail){//没有种植详情
+                    this.initTree(this.stump);
+                }else{//有种植详情
+                    var type = (parseInt(this.plantDetail.treeId)-1000);//树的类型 123456
+                    var status = this.plantDetail.status;//树的状态0-种植期 1-成长期 2-成熟期 3-死亡期
+                    var disaster = this.plantDetail.disaster;//树的灾害类型 0-无 1-虫 2-草 3-干旱
+
+                    if(status==3){//死亡期
+                        this.initTree(this.stump);
+                        return;
+                    }
+                    if(type==1&&disaster==0){
+                        this.initTree(this.tree_1[status])
+                    }else if(type==1&&disaster==1){
+                        this.initTree(this.tree_1[4])
+                    }else if(type==1&&disaster==2){
+                        this.initTree(this.tree_1[6])
+                    }else if(type==1&&disaster==3){
+                        this.initTree(this.tree_1[5])
+                    }
+
+                    if(type==2&&disaster==0){
+                        this.initTree(this.tree_2[status])
+                    }else if(type==2&&disaster==1){
+                        this.initTree(this.tree_2[4])
+                    }else if(type==2&&disaster==2){
+                        this.initTree(this.tree_2[6])
+                    }else if(type==2&&disaster==3){
+                        this.initTree(this.tree_2[5])
+                    }
+
+                    if(type==3&&disaster==0){
+                        this.initTree(this.tree_3[status])
+                    }else if(type==3&&disaster==1){
+                        this.initTree(this.tree_3[4])
+                    }else if(type==3&&disaster==2){
+                        this.initTree(this.tree_3[6])
+                    }else if(type==3&&disaster==3){
+                        this.initTree(this.tree_3[5])
+                    }
+
+                    if(type==4&&disaster==0){
+                        this.initTree(this.tree_4[status])
+                    }else if(type==4&&disaster==1){
+                        this.initTree(this.tree_4[4])
+                    }else if(type==4&&disaster==2){
+                        this.initTree(this.tree_4[6])
+                    }else if(type==4&&disaster==3){
+                        this.initTree(this.tree_4[5])
+                    }
+
+                    if(type==5&&disaster==0){
+                        this.initTree(this.tree_5[status])
+                    }else if(type==5&&disaster==1){
+                        this.initTree(this.tree_5[4])
+                    }else if(type==5&&disaster==2){
+                        this.initTree(this.tree_5[6])
+                    }else if(type==5&&disaster==3){
+                        this.initTree(this.tree_5[5])
+                    }
+
+                    if(type==6&&disaster==0){
+                        this.initTree(this.tree_6[status])
+                    }else if(type==6&&disaster==1){
+                        this.initTree(this.tree_6[4])
+                    }else if(type==6&&disaster==2){
+                        this.initTree(this.tree_6[6])
+                    }else if(type==6&&disaster==3){
+                        this.initTree(this.tree_6[5])
+                    }
+                }
+            }
+        }
+    },
+    initTree(_sprite){
+        for(let i = 0;i<this.trees.length;i++){
+            (this.trees[i].getComponent(cc.Sprite)).spriteFrame = _sprite;
+        }
     },
     createGreenEnergy(){//创建绿能
         var greenEne = null;
@@ -88,7 +177,7 @@ cc.Class({
         var self = this;
         var plantData = {//种植提交数据
             "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0,
             "treeId": 1001
         };
@@ -106,7 +195,7 @@ cc.Class({
         var self = this;
         var plantData = {//
             "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0,
             "itemId": 1001
         };
@@ -124,7 +213,7 @@ cc.Class({
         var self = this;
         var plantData = {//
             "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0
         };
         Net.post('/api/game/debug',1,plantData,function(data){
@@ -141,7 +230,7 @@ cc.Class({
         var self = this;
         var plantData = {//
             "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0
         };
         Net.post('/api/game/grass',1,plantData,function(data){
@@ -169,15 +258,15 @@ cc.Class({
 
         }.bind(this));
     },
-    shovel(){//收获树木
+    cut(){//砍伐树木
         var self = this;
         var plantData = {//
             "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0,
             "neglectSts": false
         };
-        Net.post('/api/game/shovel',1,plantData,function(data){
+        Net.post('/api/game/cut',1,plantData,function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
@@ -187,11 +276,11 @@ cc.Class({
 
         }.bind(this));
     },
-    water(){//收获树木
+    water(){//浇水
         var self = this;
         var plantData = {//
             "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curTreeId;
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0,
         };
         Net.post('/api/game/water',1,plantData,function(data){

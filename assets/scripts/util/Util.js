@@ -43,6 +43,18 @@ var Util = (function(util){
         var time = hours+"小时"+mins+"分钟"+secs+"秒";
         return time;
     };
+    //得到当前土地的种植详情->有则返回种植详情否者返回false
+    utl.getCurPlantDetail = function(pdId,allDetails){//传入当前土地pdId和全部种植详情
+        //cc.log(pdId,allDetails);
+        var curDetails = null;
+        for(var i = 0;i<allDetails.length;i++){
+            if(allDetails[i].id==pdId){
+                curDetails = allDetails[i];
+                break;
+            }
+        }
+        return curDetails;
+    };
     //手机号正则
     utl.mobileReg = /^1[3-9][\d]{9}$/;
     //验证手机号码

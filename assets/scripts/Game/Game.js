@@ -42,65 +42,27 @@ cc.Class({
         if(this.getPerNode()){
             this.headerInfo[0].string = this.perNode.getComponent('PersistNode').userData.selfInfo.nickname;
             this.headerInfo[1].string = this.perNode.getComponent('PersistNode').userData.selfInfo.level||10;
-            this.headerInfo[2].string = this.perNode.getComponent('PersistNode').userData.selfInfo.jewel;
-            this.headerInfo[3].string = this.perNode.getComponent('PersistNode').userData.selfInfo.money;
+            this.headerInfo[2].string = this.perNode.getComponent('PersistNode').userData.selfInfo.jewel||0;
+            this.headerInfo[3].string = this.perNode.getComponent('PersistNode').userData.selfInfo.money||0;
             this.userPic.spriteFrame = this.spriteList[this.perNode.getComponent('PersistNode').userData.selfInfo.pic-1||0];
         };
     },
     renderAllTree(){//渲染整个林场
-        var json = [
-            {
-                type:1,
-                status:1
-            },
-            {
-                type:2,
-                status:2
-            },
-            {
-                type:3,
-                status:2
-            },
-            {
-                type:4,
-                status:3
-            },
-            {
-                type:5,
-                status:3
-            },
-            {
-                type:5,
-                status:4
-            },
-            {
-                type:6,
-                status:2
-            },
-            {
-                type:2,
-                status:4
-            },
-            {
-                type:4,
-                status:2
-            },
-            {
-                type:5,
-                status:5
-            },
-            {
-                type:2,
-                status:2
-            },
-            {
-                type:1,
-                status:6
-            },
-        ];
-        for(var i = 0;i<this.treeList.length;i++){
-            this.renderTree(this.treeList[i],json[i].type,json[i].status,i);
+
+
+        if(this.getPerNode()){
+            this.lands = this.getPerNode().getComponent('PersistNode').userData.selfInfo.lands;//土地列表
         }
+        for(var i = 0;i<this.treeList.length;i++){
+            this.renderTree(
+                this.treeList[i],
+                this.lands[i].status,
+                this.lands[i].status,
+                this.lands[i].id,
+                this.lands[i].pdId
+            );
+        }
+
         //var self = this;
         //;[].forEach.call(this.treeList,function(item){
         //    item.on(cc.Node.EventType.TOUCH_END,function(event){
@@ -109,13 +71,14 @@ cc.Class({
         //});
         //this.renderTree(this.treeList[0],1,1);
     },
-    renderTree(tree,type,status,id){//渲染单个林场——类型-状态
+    renderTree(tree,type,status,id,pdId){//渲染单个林场——类型-状态
         tree.getChildByName('tree').getComponent(cc.Sprite).spriteFrame = this.treePic[type-1];
         tree.getChildByName('status').getComponent(cc.Sprite).spriteFrame = this.statusPic[status-1];
         tree.on(cc.Node.EventType.TOUCH_END,function(){
             if(this.getPerNode()){
-                this.perNode.getComponent('PersistNode').userData.curTreeId = id;
-                cc.log(this.perNode.getComponent('PersistNode').userData.curTreeId);
+                this.perNode.getComponent('PersistNode').userData.curLandId = id;//当前进入的土地id
+                this.perNode.getComponent('PersistNode').userData.curPdId = pdId;//当前进入的pId
+                cc.log(this.perNode.getComponent('PersistNode').userData.curLandId,this.perNode.getComponent('PersistNode').userData.curPdId = id);
             }
             //场景跳转
             cc.director.loadScene("PlantDetail",function(){//回调

@@ -49,7 +49,6 @@ cc.Class({
     onLoad: function () {
         cc._initDebugSetting(cc.DebugMode.INFO);
 
-        cc.log('print log info ...');
         cc.director.setDisplayStats(false);
         //添加常驻节点
         cc.game.addPersistRootNode(this.persistNode);//场景切换数据传递
@@ -140,6 +139,7 @@ cc.Class({
             this.userName.string = '';
             this.password.string = '';
         }
+        this.verCode.string = '1'
     },
     remActPwd(act,pwd){//记住账号密码
         cc.sys.localStorage.setItem('act', act);

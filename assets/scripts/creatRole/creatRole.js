@@ -31,7 +31,7 @@ cc.Class({
             this.showLittleTip('角色名不能大于5个字符');
             return;
         }
-        var self = this
+        var self = this;
         var creater = {
             "nickname": userName,
             "pic": self.headIndex
