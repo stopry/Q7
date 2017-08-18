@@ -44,7 +44,6 @@ cc.Class({
             default:null,
             type:cc.Prefab
         },
-
     },
 
     // use this for initialization
@@ -53,7 +52,6 @@ cc.Class({
         this.createItemPool();
         this.curPageNum = 1;//默认当前页
         this.allPageNum = 10;//默认总页数
-        this.isLoading = false;//默认不在加载中
         this.nextBtn.on(cc.Node.EventType.TOUCH_END,function(){
             this.nextPage();
         },this);
@@ -76,7 +74,7 @@ cc.Class({
         Net.get('/api/game/ranking/list',1,null,function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
-            }else if(!data.obj||data.obj.records<=0){
+            }else if(!data.obj||data.obj.records.length<=0){
                 this.showLittleTip('没有数据');
             }else{
                 var item = null;

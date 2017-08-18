@@ -44,7 +44,7 @@ cc.Class({
             this.headerInfo[1].string = this.perNode.getComponent('PersistNode').userData.selfInfo.level||10;
             this.headerInfo[2].string = this.perNode.getComponent('PersistNode').userData.selfInfo.jewel||0;
             this.headerInfo[3].string = this.perNode.getComponent('PersistNode').userData.selfInfo.money||0;
-            this.userPic.spriteFrame = this.spriteList[this.perNode.getComponent('PersistNode').userData.selfInfo.pic-1||0];
+            this.userPic.spriteFrame = this.spriteList[parseInt(this.perNode.getComponent('PersistNode').userData.selfInfo.pic)-1||0];
         };
     },
     renderAllTree(){//渲染整个林场

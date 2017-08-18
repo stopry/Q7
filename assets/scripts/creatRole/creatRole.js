@@ -7,7 +7,7 @@ cc.Class({
             default:1,
             type:cc.Integer
         },
-        userName:[cc.EditBox],
+        userName:cc.EditBox,
         littleTip:{
             default:null,
             type:cc.Prefab
@@ -23,7 +23,7 @@ cc.Class({
         cc.director.setDisplayStats(false);
     },
     toCreat(){//创建
-        var userName = (this.userName[this.headIndex-1].string).trim();
+        var userName = (this.userName.string).trim();
         if(!userName){
             this.showLittleTip('请填写角色名');
             return;

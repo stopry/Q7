@@ -19,7 +19,6 @@ cc.Class({
             type:cc.Label
         },
     },
-
     // use this for initialization
     onLoad: function () {
 

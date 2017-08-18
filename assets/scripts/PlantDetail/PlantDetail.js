@@ -3,6 +3,18 @@ var util = require('Util');
 cc.Class({
     extends: cc.Component,
     properties: {
+        alertLayer:{//遮罩层
+            default:null,
+            type:cc.Prefab
+        },
+        selTreeBox:{//选择树苗框
+            default:null,
+            type:cc.Prefab
+        },
+        root:{//根节点
+            default:null,
+            type:cc.Node
+        },
         plane:{//飞机
             default:null,
             type:cc.Node
@@ -28,6 +40,22 @@ cc.Class({
         tree_5:[cc.SpriteFrame],//杉树
         tree_6:[cc.SpriteFrame],//银杏
         stump:cc.SpriteFrame,//树桩
+        digAni:[cc.Node],//铲地动画列表
+        waterAni:[cc.Node],//浇水动画列表
+        cutAni:[cc.Node],//砍树动画列表
+        liftAni:{//抬树动画
+            default:null,
+            type:cc.Node
+        },
+        walkAni:{//走路动画
+            default:null,
+            type:cc.Node
+        },
+        wood:{//木材堆
+            default:null,
+            type:cc.Node
+        },//木材堆
+        woodPics:[cc.SpriteFrame]//木材推图片
     },
     // use this for initialization
     onLoad: function () {
@@ -36,8 +64,11 @@ cc.Class({
         this.greenEnergyArray = [];//存放绿能数组
         // 关闭fps
         cc.director.setDisplayStats(false);
+        this.resetAni();
         this.renderTree();
-        this.createGreenEnergy();
+        for(var i = 0;i<3;i++){
+            this.createGreenEnergy();
+        }
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');
@@ -140,8 +171,23 @@ cc.Class({
             greenEne = cc.instantiate(this.energyPre);
         }
         greenEne.parent = cc.find('Canvas');
+        //状态 倒计时 树木容器的位置 类型(好友的0，我的1) id(绿能id)
+        greenEne.getComponent('GreenEnergy').initGreenEnergy(1,2,this.treeBox.getPosition(),1,10086);
+        greenEne.setPosition(this.getRandomPos());
         this.greenEnergyArray.push(greenEne);//生成的绿能加入数组
-        greenEne.getComponent('GreenEnergy').initGreenEnergy(1,2,this.treeBox.getPosition(),1);
+    },
+    getRandomPos(){//得到一个随机位置
+        var randX = 0;
+        var randY = 0;
+
+        var maxX = cc.find('Canvas').width/2-75;//不会跑出屏幕外
+        var maxY = cc.find('Canvas').height/2-208;//不遮盖上下的按钮
+
+        randX = cc.randomMinus1To1()*maxX;
+        randY = cc.randomMinus1To1()*maxY;
+
+        //返回随机坐标
+        return cc.p(randX,randY);
     },
     resetPlane(vec){//重置飞机
         this.scheduleOnce(function() {
@@ -149,11 +195,13 @@ cc.Class({
             this.plane.getComponent(cc.Animation).stop();
             this.plane.active = false;
             this.plantBtn.interactable = true;
+            this.plantBtn.node.color = cc.Color.WHITE;
         },4.1);
     },
     playPlane(){//播放飞机
         //this.plantBtn.enabled = false;
         this.plantBtn.interactable = false ;
+        this.plantBtn.node.color = cc.Color.GRAY;
         var pos = this.plane.getPosition();
         var finished = cc.callFunc(this.resetPlane(pos));
         this.plane.active = true;
@@ -173,37 +221,143 @@ cc.Class({
                 cc.log(null);
         }
     },
-    plant(){//种植
+    resetAni(){//重置动画
+        this.digAniCtr(!1);
+        this.waterAniCtr(!1);
+        this.cutAniCtr(!1);
+        this.liftAniCtr(!1);
+        this.walkAniCtr(!1);
+    },
+    digAniCtr(_bool){//铲地动画控制
+        if(!_bool){
+            for(var i = 0;i<this.digAni.length;i++){
+                this.digAni[i].active = false;
+            }
+            return;
+        }
+        for(var k = 0;k<this.digAni.length;k++){
+            this.digAni[k].active = true;
+            this.digAni[k].getComponent(cc.Animation).play();
+        }
+    },
+    waterAniCtr(_bool){//浇水动画控制
+        if(!_bool){
+            for(var i = 0;i<this.waterAni.length;i++){
+                this.waterAni[i].active = false;
+            }
+            return;
+        }
+        for(var k = 0;k<this.waterAni.length;k++){
+            this.waterAni[k].active = true;
+            this.waterAni[k].getComponent(cc.Animation).play();
+        }
+    },
+    cutAniCtr(_bool){//砍树动画控制
+        if(!_bool){
+            for(var i = 0;i<this.cutAni.length;i++){
+                this.cutAni[i].active = false;
+            }
+            return;
+        }
+        for(var k = 0;k<this.cutAni.length;k++){
+            this.cutAni[k].active = true;
+            this.cutAni[k].getComponent(cc.Animation).play();
+        }
+    },
+    liftAniCtr(_bool){//抬树动画控制
+        if(!_bool){
+            this.liftAni.active = false;
+            return
+        }
+        this.liftAni.active = true;
+        this.liftAni.getComponent(cc.Animation).play();
+        this.scheduleOnce(function(){
+            this.wood.getComponent(cc.Sprite).spriteFrame = this.woodPics[1];
+        },4.4)
+    },
+    walkAniCtr(_bool){//走路动画控制
         var self = this;
-        var plantData = {//种植提交数据
-            "landId": (function(){if(this.getPerNode()){
+        if(!_bool){
+            if(self){
+                clearInterval(self.interVal)
+            }
+            this.walkAni.active = false;
+            return;
+        }
+        this.walkAni.active = true;
+        this.interVal = setInterval(function(){
+            self.walkAni.getComponent(cc.Animation).play();
+        },20000)
+    },
+    openTreeBox(){//打开树苗选择框
+        if(!Global.layer||!Global.layer.name){
+            Global.layer = cc.instantiate(this.alertLayer);
+        }
+        Global.layer.parent = this.root;
+        Global.layer.active = true;
+        if(!Global.selTreeBox||!Global.selTreeBox.name){
+            Global.selTreeBox = cc.instantiate(this.selTreeBox);
+            Global.selTreeBox.parent = this.root;
+        }
+        Global.selTreeBox.getComponent('SelTreeBox').showThis();
+    },
+    cut(){//砍伐树木
+        this.resetAni();
+        this.cutAniCtr(1);
+        this.liftAniCtr(1);
+        var self = this;
+        var plantData = {//
+            "landId": (function(){if(self.getPerNode()){
                 return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0,
-            "treeId": 1001
+            "neglectSts": false
+        };
+        Net.post('/api/game/cut',1,plantData,function(data){
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.showLittleTip('收取成功');
+            }
+        }.bind(this),function(){
+
+        }.bind(this));
+    },
+    plant(treeId){//种植
+        this.playPlane();
+        this.resetAni();
+        this.digAniCtr(1);
+        var self = this;
+        var plantData = {//种植提交数据
+            "landId": (function(){if(self.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
+            }})()||0,
+            "treeId": treeId
         };
         Net.post('/api/game/plant',1,plantData,function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
                 this.showLittleTip('播种成功');
+                Global.selTreeBox.getComponent('CloseWindow').close(event,1);//播种成功后关闭选择种子弹出层
             }
         }.bind(this),function(data){
             this.showLittleTip('网络错误');
         }.bind(this));
     },
-    apply(){//施肥
+    water(){//浇水
+        this.resetAni();
+        this.waterAniCtr(1);
         var self = this;
         var plantData = {//
-            "landId": (function(){if(this.getPerNode()){
+            "landId": (function(){if(self.getPerNode()){
                 return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0,
-            "itemId": 1001
         };
-        Net.post('/api/game/apply',1,plantData,function(data){
+        Net.post('/api/game/water',1,plantData,function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
-                this.showLittleTip('施肥成功')
+                this.showLittleTip('浇水成功');
             }
         }.bind(this),function(){
 
@@ -212,7 +366,7 @@ cc.Class({
     debug(){//除虫
         var self = this;
         var plantData = {//
-            "landId": (function(){if(this.getPerNode()){
+            "landId": (function(){if(self.getPerNode()){
                 return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0
         };
@@ -229,7 +383,7 @@ cc.Class({
     grass(){//除草
         var self = this;
         var plantData = {//
-            "landId": (function(){if(this.getPerNode()){
+            "landId": (function(){if(self.getPerNode()){
                 return self.perNode.getComponent('PersistNode').userData.curLandId;
             }})()||0
         };
@@ -253,41 +407,6 @@ cc.Class({
                 this.showLittleTip(data.msg);
             }else{
                 this.showLittleTip('收取成功');
-            }
-        }.bind(this),function(){
-
-        }.bind(this));
-    },
-    cut(){//砍伐树木
-        var self = this;
-        var plantData = {//
-            "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curLandId;
-            }})()||0,
-            "neglectSts": false
-        };
-        Net.post('/api/game/cut',1,plantData,function(data){
-            if(!data.success){
-                this.showLittleTip(data.msg);
-            }else{
-                this.showLittleTip('收取成功');
-            }
-        }.bind(this),function(){
-
-        }.bind(this));
-    },
-    water(){//浇水
-        var self = this;
-        var plantData = {//
-            "landId": (function(){if(this.getPerNode()){
-                return self.perNode.getComponent('PersistNode').userData.curLandId;
-            }})()||0,
-        };
-        Net.post('/api/game/water',1,plantData,function(data){
-            if(!data.success){
-                this.showLittleTip(data.msg);
-            }else{
-                this.showLittleTip('浇水成功');
             }
         }.bind(this),function(){
 

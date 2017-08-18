@@ -37,7 +37,7 @@ cc.Class({
         }
 
     },
-    initGreenEnergy(status,countDown,treeBoxPos,type){//初始化绿能
+    initGreenEnergy(status,countDown,treeBoxPos,type,id){//初始化绿能
         //take
         var finished = cc.callFunc(this.takeOk,this);
         this.takeAction = cc.spawn(cc.moveTo(2,treeBoxPos),cc.scaleTo(2,0.3),cc.fadeTo(2,0),finished);//收取自己绿能时动作
