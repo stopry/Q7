@@ -76,6 +76,7 @@ var Net = {
         //    }
         //}, 3);
     },
+    //js对象字面量转化为url请求参数
     toUrlPar:function(obj) {
         var s = ""
         for (var itm in obj) {
