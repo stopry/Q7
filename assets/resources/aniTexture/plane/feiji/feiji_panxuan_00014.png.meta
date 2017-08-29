@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "196880ca-5639-4162-9373-7fb4f08f26a1",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "feiji_panxuan_00014": {
+      "ver": "1.0.3",
+      "uuid": "754997f0-3fdb-4c5d-b80f-f66e355f2bb2",
+      "rawTextureUuid": "196880ca-5639-4162-9373-7fb4f08f26a1",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -25.5,
+      "offsetY": -158,
+      "trimX": 437,
+      "trimY": 403,
+      "width": 375,
+      "height": 330,
+      "rawWidth": 1300,
+      "rawHeight": 820,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

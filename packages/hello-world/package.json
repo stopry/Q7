@@ -1,0 +1,15 @@
+{
+  "name": "hello-world",
+  "version": "0.0.1",
+  "description": "一份简单的扩展包",
+  "author": "Cocos Creator",
+  "main": "main.js",
+  "main-menu": {
+    "Examples/Hello World": {
+      "message": "hello-world:say-hello"
+    }
+  },
+  "gizmos": {
+        "CustomComponent": "packages://hello-world/custom-gizmo.js"
+    } 
+}

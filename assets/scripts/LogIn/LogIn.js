@@ -65,7 +65,6 @@ cc.Class({
             "password": "123456",
             "userName": "13632473925"
         };
-        console.log(4);
         var self = this;
         // 登录
         var account = (this.userName.string).trim();//账号
@@ -73,7 +72,7 @@ cc.Class({
         var verCode = (this.verCode.string).trim();//图形验证码
 
         // 记住密码
-        var isRemPwd = this.remPwd.children[1].active;
+        var isRemPwd = this.remPwd.children[2].active;//checkbox最后一个子节点钩号图片
         if(!util.regMobile(account)){
             this.showLittleTip("请填写正确手机号");
             return;

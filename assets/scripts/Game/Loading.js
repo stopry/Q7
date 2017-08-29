@@ -24,7 +24,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         cc.loader.loadResDir('/', function (num, totalNum, item) {
-            cc.log(num,totalNum,item)
+            //cc.log(num,totalNum,item)
             var pge = num/totalNum;
             this.progress.progress = pge;
             this.plane.x = this.maxDistance*pge*2;

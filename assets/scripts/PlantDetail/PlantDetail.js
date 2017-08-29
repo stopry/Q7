@@ -15,10 +15,6 @@ cc.Class({
             default:null,
             type:cc.Node
         },
-        plane:{//飞机
-            default:null,
-            type:cc.Node
-        },
         plantBtn:{//种植按钮
             default:null,
             type:cc.Button
@@ -55,108 +51,128 @@ cc.Class({
             default:null,
             type:cc.Node
         },//木材堆
-        woodPics:[cc.SpriteFrame]//木材推图片
+        woodPics:[cc.SpriteFrame],//木材推图片
+        plane:{//飞机
+            default:null,
+            type:cc.Node
+        },
+        shed:{//喷洒物
+            default:null,
+            type:cc.Node
+        },
+        sprayList:[cc.Node],//地面水花列表
     },
     // use this for initialization
     onLoad: function () {
-        eruda.get('console').config.set('overrideConsole', false);
+        //eruda.get('console').config.set('overrideConsole', false);//打印信息对应到js文件
+        this.isLoading = false;//防重复提交
         this.greenPool = new cc.NodePool();
         this.greenEnergyArray = [];//存放绿能数组
         // 关闭fps
         cc.director.setDisplayStats(false);
         this.resetAni();
-        this.renderTree();
-        for(var i = 0;i<3;i++){
+        this.walkAniCtr(1);
+        this.renderTree();//初始化林场
+        for(var i = 0;i<1;i++){
             this.createGreenEnergy();
-        }
+        };
+        this.closeSpray();//关闭水花
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');
         return this.perNode;
     },
+    //渲染林场
     renderTree(){
-        if(this.getPerNode()){
-            this.curLandId = this.perNode.getComponent('PersistNode').userData.curLandId;//得到当前土地的id
-            this.pdId = this.perNode.getComponent('PersistNode').userData.curPdId;//得到当前土地的pdId
-            this.treeDetails = this.perNode.getComponent('PersistNode').userData.selfInfo.playerPlantingDetail;//得到全部种植详情
-            if(this.treeDetails.length<=0){//如果全部种植详情为空
-                this.initTree(this.stump);
-            }else{//如果全部种植详情不为空
-                //查找当前种植详情
-                this.plantDetail = util.getCurPlantDetail(this.pdId,this.treeDetails)
-                if(!this.plantDetail){//没有种植详情
+        this.getComponent('UpdateUserInfo').refresh().then(function(data){
+            if(this.getPerNode()){
+                this.curLandId = this.perNode.getComponent('PersistNode').userData.curLandId;//得到当前土地的id
+                this.pdId = this.perNode.getComponent('PersistNode').userData.curPdId;//得到当前土地的pdId
+                this.treeDetails = this.perNode.getComponent('PersistNode').userData.selfInfo.playerPlantingDetail;//得到全部种植详情
+                if(this.treeDetails.length<=0){//如果全部种植详情为空
                     this.initTree(this.stump);
-                }else{//有种植详情
-                    var type = (parseInt(this.plantDetail.treeId)-1000);//树的类型 123456
-                    var status = this.plantDetail.status;//树的状态0-种植期 1-成长期 2-成熟期 3-死亡期
-                    var disaster = this.plantDetail.disaster;//树的灾害类型 0-无 1-虫 2-草 3-干旱
-
-                    if(status==3){//死亡期
+                }else{//如果全部种植详情不为空
+                    //查找当前种植详情
+                    this.plantDetail = util.getCurPlantDetail(this.pdId,this.treeDetails)
+                    if(!this.plantDetail){//没有种植详情
                         this.initTree(this.stump);
-                        return;
-                    }
-                    if(type==1&&disaster==0){
-                        this.initTree(this.tree_1[status])
-                    }else if(type==1&&disaster==1){
-                        this.initTree(this.tree_1[4])
-                    }else if(type==1&&disaster==2){
-                        this.initTree(this.tree_1[6])
-                    }else if(type==1&&disaster==3){
-                        this.initTree(this.tree_1[5])
-                    }
+                    }else{//有种植详情
+                        var type = (parseInt(this.plantDetail.treeId)-1000);//树的类型 123456
+                        var status = this.plantDetail.status;//树的状态0-种植期 1-成长期 2-成熟期 3-死亡期
+                        var disaster = this.plantDetail.disaster;//树的灾害类型 0-无 1-虫 2-草 3-干旱
 
-                    if(type==2&&disaster==0){
-                        this.initTree(this.tree_2[status])
-                    }else if(type==2&&disaster==1){
-                        this.initTree(this.tree_2[4])
-                    }else if(type==2&&disaster==2){
-                        this.initTree(this.tree_2[6])
-                    }else if(type==2&&disaster==3){
-                        this.initTree(this.tree_2[5])
-                    }
+                        if(status==3){//死亡期
+                            this.initTree(this.stump);
+                            return;
+                        }
+                        //显示砍伐动画->如果有砍伐状态
+                        if(this.plantDetail.cutStatus!=null){
+                            this.showStage(this.plantDetail.cutStatus);
+                        }
+                        //根据树的类型显示树的ui
+                        if(type==1&&disaster==0){
+                            this.initTree(this.tree_1[status])
+                        }else if(type==1&&disaster==1){
+                            this.initTree(this.tree_1[4])
+                        }else if(type==1&&disaster==2){
+                            this.initTree(this.tree_1[6])
+                        }else if(type==1&&disaster==3){
+                            this.initTree(this.tree_1[5])
+                        }
 
-                    if(type==3&&disaster==0){
-                        this.initTree(this.tree_3[status])
-                    }else if(type==3&&disaster==1){
-                        this.initTree(this.tree_3[4])
-                    }else if(type==3&&disaster==2){
-                        this.initTree(this.tree_3[6])
-                    }else if(type==3&&disaster==3){
-                        this.initTree(this.tree_3[5])
-                    }
+                        if(type==2&&disaster==0){
+                            this.initTree(this.tree_2[status])
+                        }else if(type==2&&disaster==1){
+                            this.initTree(this.tree_2[4])
+                        }else if(type==2&&disaster==2){
+                            this.initTree(this.tree_2[6])
+                        }else if(type==2&&disaster==3){
+                            this.initTree(this.tree_2[5])
+                        }
 
-                    if(type==4&&disaster==0){
-                        this.initTree(this.tree_4[status])
-                    }else if(type==4&&disaster==1){
-                        this.initTree(this.tree_4[4])
-                    }else if(type==4&&disaster==2){
-                        this.initTree(this.tree_4[6])
-                    }else if(type==4&&disaster==3){
-                        this.initTree(this.tree_4[5])
-                    }
+                        if(type==3&&disaster==0){
+                            this.initTree(this.tree_3[status])
+                        }else if(type==3&&disaster==1){
+                            this.initTree(this.tree_3[4])
+                        }else if(type==3&&disaster==2){
+                            this.initTree(this.tree_3[6])
+                        }else if(type==3&&disaster==3){
+                            this.initTree(this.tree_3[5])
+                        }
 
-                    if(type==5&&disaster==0){
-                        this.initTree(this.tree_5[status])
-                    }else if(type==5&&disaster==1){
-                        this.initTree(this.tree_5[4])
-                    }else if(type==5&&disaster==2){
-                        this.initTree(this.tree_5[6])
-                    }else if(type==5&&disaster==3){
-                        this.initTree(this.tree_5[5])
-                    }
+                        if(type==4&&disaster==0){
+                            this.initTree(this.tree_4[status])
+                        }else if(type==4&&disaster==1){
+                            this.initTree(this.tree_4[4])
+                        }else if(type==4&&disaster==2){
+                            this.initTree(this.tree_4[6])
+                        }else if(type==4&&disaster==3){
+                            this.initTree(this.tree_4[5])
+                        }
 
-                    if(type==6&&disaster==0){
-                        this.initTree(this.tree_6[status])
-                    }else if(type==6&&disaster==1){
-                        this.initTree(this.tree_6[4])
-                    }else if(type==6&&disaster==2){
-                        this.initTree(this.tree_6[6])
-                    }else if(type==6&&disaster==3){
-                        this.initTree(this.tree_6[5])
+                        if(type==5&&disaster==0){
+                            this.initTree(this.tree_5[status])
+                        }else if(type==5&&disaster==1){
+                            this.initTree(this.tree_5[4])
+                        }else if(type==5&&disaster==2){
+                            this.initTree(this.tree_5[6])
+                        }else if(type==5&&disaster==3){
+                            this.initTree(this.tree_5[5])
+                        }
+
+                        if(type==6&&disaster==0){
+                            this.initTree(this.tree_6[status])
+                        }else if(type==6&&disaster==1){
+                            this.initTree(this.tree_6[4])
+                        }else if(type==6&&disaster==2){
+                            this.initTree(this.tree_6[6])
+                        }else if(type==6&&disaster==3){
+                            this.initTree(this.tree_6[5])
+                        }
                     }
                 }
             }
-        }
+        }.bind(this));
     },
     initTree(_sprite){
         for(let i = 0;i<this.trees.length;i++){
@@ -189,33 +205,73 @@ cc.Class({
         //返回随机坐标
         return cc.p(randX,randY);
     },
-    resetPlane(vec){//重置飞机
-        this.scheduleOnce(function() {
-            this.plane.setPosition(vec);
-            this.plane.getComponent(cc.Animation).stop();
-            this.plane.active = false;
-            this.plantBtn.interactable = true;
-            this.plantBtn.node.color = cc.Color.WHITE;
-        },4.1);
+    closeSpray(){//关闭水花
+        for(var k = 0;k<this.sprayList.length;k++){
+            this.sprayList[k].active = false;
+        }
     },
-    playPlane(){//播放飞机
-        //this.plantBtn.enabled = false;
+    playSpray(){//播放水花
+        for(let i = 0;i<this.sprayList.length;i++){
+            this.scheduleOnce(function(){
+                this.sprayList[i].active = true;
+            },i*0.4);
+        }
+        this.scheduleOnce(function(){this.closeSpray()},15*0.4);
+    },
+    resetPlane(){//重置飞机
+        this.plane.getComponent(cc.Animation).stop();
+        this.plane.active = false;
+        this.plantBtn.interactable = true;
+        this.plantBtn.node.color = cc.Color.WHITE;
+        //播种，浇水，除虫害，除草害 之后会重置飞机动画，在此之后会重新渲染林场
+        this.renderTree();
+    },
+    playPlane(type){//播放飞机type:123 除虫 除草 浇水
         this.plantBtn.interactable = false ;
         this.plantBtn.node.color = cc.Color.GRAY;
-        var pos = this.plane.getPosition();
-        var finished = cc.callFunc(this.resetPlane(pos));
         this.plane.active = true;
         this.plane.getComponent(cc.Animation).play();
-        var actionTo = cc.sequence(cc.moveBy(4, cc.p(840, 0)), cc.fadeIn(0), finished);
-        this.plane.runAction(actionTo);
+        if(type==1){//除虫
+            this.playShed('planeBug');
+            this.plane.getComponent(cc.Animation).on('finished',function(){
+                this.resetPlane();
+                this.showLittleTip('除虫成功');
+            },this);
+        }else if(type==2){//除草
+            this.playShed('planeGrass');
+            this.plane.getComponent(cc.Animation).on('finished',function(){
+                this.resetPlane();
+                this.showLittleTip('除草成功');
+            },this);
+        }else{//浇水
+            this.playShed('planeWater');
+            this.playSpray();//水花
+            this.plane.getComponent(cc.Animation).on('finished',function(){
+                this.resetPlane();
+            },this);
+        }
+    },
+    playShed(aniName){//播放喷洒
+        this.shed.getComponent(cc.Animation).play(aniName);
     },
     showStage(stage){//根据树的生长阶段显示画面
+        //cutStatus->砍伐状态 0 1 2 未砍伐 砍伐中 砍伐结束
         switch (stage){
+            case 0:
+                cc.log(0);
+                this.resetAni();
+                this.walkAniCtr(1);
+                break;
             case 1:
                 cc.log(1);
+                this.resetAni();
+                this.cutAniCtr(1);
+                this.liftAniCtr(1);
                 break;
             case 2:
-                cc.log(1);
+                cc.log(2);
+                this.resetAni();
+                this.walkAniCtr(1);
                 break;
             default:
                 cc.log(null);
@@ -287,7 +343,7 @@ cc.Class({
         this.walkAni.active = true;
         this.interVal = setInterval(function(){
             self.walkAni.getComponent(cc.Animation).play();
-        },20000)
+        },20000);
     },
     openTreeBox(){//打开树苗选择框
         if(!Global.layer||!Global.layer.name){
@@ -302,30 +358,31 @@ cc.Class({
         Global.selTreeBox.getComponent('SelTreeBox').showThis();
     },
     cut(){//砍伐树木
-        this.resetAni();
-        this.cutAniCtr(1);
-        this.liftAniCtr(1);
+        if(this.isLoading) return;
+        this.isLoading = true;
         var self = this;
         var plantData = {//
             "landId": (function(){if(self.getPerNode()){
                 return self.perNode.getComponent('PersistNode').userData.curLandId;
-            }})()||0,
-            "neglectSts": false
+            }})()||0
         };
         Net.post('/api/game/cut',1,plantData,function(data){
+            this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
-                this.showLittleTip('收取成功');
+                this.resetAni();
+                this.cutAniCtr(1);
+                this.liftAniCtr(1);
+                //this.showLittleTip('收取成功');
             }
         }.bind(this),function(){
-
+            this.isLoading = false;
         }.bind(this));
     },
     plant(treeId){//种植
-        this.playPlane();
-        this.resetAni();
-        this.digAniCtr(1);
+        if(this.isLoading) return;
+        this.isLoading = true;
         var self = this;
         var plantData = {//种植提交数据
             "landId": (function(){if(self.getPerNode()){
@@ -334,19 +391,26 @@ cc.Class({
             "treeId": treeId
         };
         Net.post('/api/game/plant',1,plantData,function(data){
+            this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
-                this.showLittleTip('播种成功');
+                this.playPlane(3);
+                this.resetAni();
+                this.digAniCtr(1);
+                this.scheduleOnce(function(){
+                    this.showLittleTip('播种成功');
+                },5);
                 Global.selTreeBox.getComponent('CloseWindow').close(event,1);//播种成功后关闭选择种子弹出层
             }
         }.bind(this),function(data){
+            this.isLoading = false;
             this.showLittleTip('网络错误');
         }.bind(this));
     },
     water(){//浇水
-        this.resetAni();
-        this.waterAniCtr(1);
+        if(this.isLoading) return;
+        this.isLoading = true;
         var self = this;
         var plantData = {//
             "landId": (function(){if(self.getPerNode()){
@@ -354,16 +418,25 @@ cc.Class({
             }})()||0,
         };
         Net.post('/api/game/water',1,plantData,function(data){
+            this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
-                this.showLittleTip('浇水成功');
+                this.playPlane(3);
+                this.resetAni();
+                this.waterAniCtr(1);
+                this.scheduleOnce(function(){
+                    this.showLittleTip('浇水成功');
+                },5);
             }
         }.bind(this),function(){
-
+            this.isLoading = false;
+            this.showLittleTip('网络错误');
         }.bind(this));
     },
     debug(){//除虫
+        if(this.isLoading) return;
+        this.isLoading = true;
         var self = this;
         var plantData = {//
             "landId": (function(){if(self.getPerNode()){
@@ -371,16 +444,20 @@ cc.Class({
             }})()||0
         };
         Net.post('/api/game/debug',1,plantData,function(data){
+            this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
-                this.showLittleTip('除虫成功')
+                this.playPlane(1);
             }
         }.bind(this),function(){
-
+            this.isLoading = false;
+            this.showLittleTip('网络错误');
         }.bind(this));
     },
     grass(){//除草
+        if(this.isLoading) return;
+        this.isLoading = true;
         var self = this;
         var plantData = {//
             "landId": (function(){if(self.getPerNode()){
@@ -388,35 +465,39 @@ cc.Class({
             }})()||0
         };
         Net.post('/api/game/grass',1,plantData,function(data){
+            this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
-                this.showLittleTip('除草成功');
+                this.playPlane(2);
             }
         }.bind(this),function(){
-
+            this.isLoading = false;
+            this.showLittleTip('网络错误');
         }.bind(this));
     },
     pick(){//收取绿能
+        if(this.isLoading) return;
+        this.isLoading = true;
         var self = this;
         var plantData = {//
             "greenId": 1
         };
         Net.post('/api/game/pick',1,plantData,function(data){
+            this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{
                 this.showLittleTip('收取成功');
             }
         }.bind(this),function(){
-
+            this.isLoading = false;
         }.bind(this));
     },
     back(){//返回主游戏界面
-
         cc.director.loadScene("Game",function(){//回调
-
-        });
+            clearInterval(this.interVal);
+        }.bind(this));
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);

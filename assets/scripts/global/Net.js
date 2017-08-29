@@ -3,7 +3,7 @@ var Net = {
     timeOut:5000,
     //请求地址、请求头、发送数据、成功回调、失败回调
     get:function(url,header,data,succCallBack,errCallBack){//get请求
-        var host = 'http://192.168.19.47:8080';
+        var host = 'http://192.168.19.89:8081';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
@@ -29,7 +29,7 @@ var Net = {
     },
 
     post:function(url,header,data,succCallBack,errCallBack){//post请求
-        var host = 'http://192.168.19.47:8080';
+        var host = 'http://192.168.19.89:8081';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {

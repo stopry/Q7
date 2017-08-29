@@ -14,21 +14,27 @@ cc.Class({
     },
     refresh(_bool){//加载玩家信息
         var _bool = _bool||false;
-        Net.get('/api/game/loadPlayer',1,null,function(data){
-            if(!data.success){
-                return;
-            }else{
-                if(this.getPerNode()){
-                    this.perNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
-                    if(_bool){
-                        cc.log('update');
-                        this.gameCom.getComponent('Game').setHeader();
+        var self = this;
+        var promise = new Promise(function(resolve,reject){
+            Net.get('/api/game/loadPlayer',1,null,function(data){
+                if(!data.success){
+                    reject(data.msg);
+                    return;
+                }else{
+                    if(self.getPerNode()){
+                        self.perNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
+                        if(_bool){
+                            cc.log('update');
+                            self.gameCom.getComponent('Game').setHeader();
+                        }
                     }
+                    resolve(data.obj);
                 }
-            }
-        }.bind(this),function(err){
-
-        }.bind(this))
+            }.bind(self),function(err){
+                reject(false)
+            }.bind(self))
+        });
+        return promise;//返回promise
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');

@@ -12,9 +12,7 @@ cc.Class({
         },
         _speed:0,//小人移动速度
         _direction:1,//小人移动方向
-
     },
-
     // use this for initialization
     onLoad: function () {
         //this.animationCtr();

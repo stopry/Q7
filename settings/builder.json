@@ -3,12 +3,16 @@
   "appSecret": "",
   "excludeScenes": [],
   "includeAnySDK": false,
+  "includeSDKBox": false,
   "includeSdk": [
     "anysdk"
   ],
   "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
   "mergeStartScene": false,
   "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
   "orientation": {
     "landscapeLeft": false,
     "landscapeRight": false,
@@ -18,10 +22,7 @@
   "packageName": "org.cocos2d.Q7Game",
   "privateKey": "",
   "renderMode": "0",
-  "startScene": "52a1e663-1e6c-4e6b-aea2-343c4216bb40",
+  "startScene": "0e8e454b-5177-4a67-b63a-c3626ff21b5e",
   "title": "Q7_Game",
-  "webOrientation": "auto",
-  "inlineSpriteFrames_native": true,
-  "optimizeHotUpdate": false,
-  "includeSDKBox": false
+  "webOrientation": "auto"
 }

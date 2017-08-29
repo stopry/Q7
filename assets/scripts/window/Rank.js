@@ -74,7 +74,7 @@ cc.Class({
         Net.get('/api/game/ranking/list',1,null,function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
-            }else if(!data.obj||data.obj.records.length<=0){
+            }else if(!data.obj||data.obj.length<=0||data.obj.records.length<=0){
                 this.showLittleTip('没有数据');
             }else{
                 var item = null;

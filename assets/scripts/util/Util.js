@@ -43,6 +43,11 @@ var Util = (function(util){
         var time = hours+"小时"+mins+"分钟"+secs+"秒";
         return time;
     };
+    //得到某个范围内随机整数
+    utl.getRandInt = function(n,m){
+        var c = m-n+1;
+        return Math.floor(Math.random() * c + n);
+    };
     //得到当前土地的种植详情->有则返回种植详情否者返回false
     utl.getCurPlantDetail = function(pdId,allDetails){//传入当前土地pdId和全部种植详情
         //cc.log(pdId,allDetails);
