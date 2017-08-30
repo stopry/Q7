@@ -52,9 +52,16 @@ cc.Class({
         shopType:{//当前显示的容器类型
             default:1,
             type:cc.Integer
+        },
+        btnBgList:{
+            default:[],
+            type:[cc.SpriteFrame],//table切换按钮背景图
+        },
+        tableBtn:{//切换按钮
+            default:[],
+            type:[cc.Node]
         }
     },
-
     // use this for initialization
     onLoad: function () {
         this.curPageNum = 1;//默认当前页
@@ -71,8 +78,12 @@ cc.Class({
     changeBox(event,customEventData){//切换列表容器
         if(customEventData=='0'){
             this.shopType=1;//树苗
+            this.tableBtn[0].getComponent(cc.Sprite).spriteFrame = this.btnBgList[1];
+            this.tableBtn[1].getComponent(cc.Sprite).spriteFrame = this.btnBgList[2];
         }else{
             this.shopType=2;//道具
+            this.tableBtn[0].getComponent(cc.Sprite).spriteFrame = this.btnBgList[0];
+            this.tableBtn[1].getComponent(cc.Sprite).spriteFrame = this.btnBgList[3];
         }
         var index = parseInt(customEventData)||0;
         for(let i = 0;i<this.content.length;i++){
@@ -101,36 +112,36 @@ cc.Class({
                     this.shopItemBox.addChild(shopItem);
                     shopItem.getComponent('SetShopItem').setItem(
                         parseInt(((shopList[i].itemId).toString()).split('')[3])-1,//商品图片
-                        shopList[i].name,//商品名字
+                        '<outline color=#562B04 width=2>'+shopList[i].name+'</outline>',//商品名字
                         shopList[i].desc,//商品介绍
-                        '<color=#ff0000>'+shopList[i].price+'</c><color=#000000>元/个</color>',//商品价格
+                        '<color=#ff0000>'+shopList[i].price+'</c><color=#ffffff><outline color=#562B04 width=2>元/个</outline></color>',//商品价格
                         shopList[i].itemId,//商品id
                         shopList[i].itemType//商品类型
                     );
                 }
-                this.allPage.string = this.allPageNum;
-                this.cuurentPage.string = this.curPageNum;
+                //this.allPage.string = this.allPageNum;
+                //this.cuurentPage.string = this.curPageNum;
             }
         }.bind(this),function(err){
 
         }.bind(this))
     },
-    nextPage(){
-        if(this.curPageNum>=this.allPageNum){
-            this.showLittleTip('没有下一页了');
-            return
-        };
-        this.curPageNum++;
-        this.renderShopList();
-    },
-    prePage(){
-        if(this.curPageNum<=1){
-            this.showLittleTip('没有上一页');
-            return
-        };
-        this.curPageNum--;
-        this.renderShopList();
-    },
+    //nextPage(){
+    //    if(this.curPageNum>=this.allPageNum){
+    //        this.showLittleTip('没有下一页了');
+    //        return
+    //    };
+    //    this.curPageNum++;
+    //    this.renderShopList();
+    //},
+    //prePage(){
+    //    if(this.curPageNum<=1){
+    //        this.showLittleTip('没有上一页');
+    //        return
+    //    };
+    //    this.curPageNum--;
+    //    this.renderShopList();
+    //},
     showThis(){
         this.root.active = true;
         this.root.runAction(Global.openAction);

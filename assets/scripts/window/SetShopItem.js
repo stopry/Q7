@@ -25,7 +25,7 @@ cc.Class({
         },
         goodsName:{//商品名称
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
         goodsDesc:{//商品描述
             default:null,

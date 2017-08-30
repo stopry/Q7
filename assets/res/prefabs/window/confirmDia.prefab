@@ -641,8 +641,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 429,
-      "height": 30
+      "width": 400,
+      "height": 40
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -661,26 +661,20 @@
     "groupIndex": 0
   },
   {
-    "__type__": "cc.Label",
+    "__type__": "cc.RichText",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 20
     },
     "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 30,
-    "_fontSize": 30,
-    "_lineHeight": 30,
-    "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_spacingX": 0,
     "_N$string": "",
     "_N$horizontalAlign": 0,
-    "_N$verticalAlign": 1,
-    "_N$fontFamily": "Arial",
-    "_N$overflow": 3
+    "_N$fontSize": 40,
+    "_N$font": null,
+    "_N$maxWidth": 400,
+    "_N$lineHeight": 40,
+    "_N$imageAtlas": null
   },
   {
     "__type__": "cc.PrefabInfo",

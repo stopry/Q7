@@ -80,7 +80,7 @@ cc.Class({
             this.showLittleTip("请填写密码");
             return;
         }else if(!verCode){
-            this.showLittleTip("请填写验证码")
+            this.showLittleTip("请填写验证码");
             return;
         }
         logdata.password = password;

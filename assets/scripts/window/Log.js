@@ -1,4 +1,5 @@
 var Net = require('Net');
+var Util = require('Util');
 cc.Class({
     extends: cc.Component,
 
@@ -45,6 +46,10 @@ cc.Class({
             default:null,
             type:cc.Prefab
         },
+        pageBtnBgList:{//分页按钮四张背景图
+            default:[],
+            type:[cc.SpriteFrame]
+        }
 
     },
     // use this for initialization
@@ -75,10 +80,11 @@ cc.Class({
     getLogData(){//得到日志数据
         this.isLoading = true;
         this.getComponent('ReqAni').showReqAni();
-        Net.get('/api/game/log/list',1,null,function(data){
+        var self = this;
+        Net.get('/api/game/log/list',1,{pageNum:self.curPageNum},function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
-            }else if(!data.obj||data.obj.records<=0){
+            }else if(!data.obj||!data.obj.records||data.obj.records.length<=0){
                 this.showLittleTip('没有数据');
             }else{
                 var logItem = null;
@@ -90,7 +96,12 @@ cc.Class({
                         logItem = cc.instantiate(this.logItemPre);
                     }
                     this.logItemBox.addChild(logItem);
-                    logItem.getComponent('SetLogItem').setItem('06/05',i,'被打',i);
+                    logItem.getComponent('SetLogItem').setItem(
+                        Util.getDate(recs[i].createTime).date,//日期
+                        Util.getDate(recs[i].createTime).time,//时间
+                        recs[i].content,//内容
+                        i//
+                    );
                 }
                 this.allPage.string = data.obj.pages;
                 this.allPageNum = data.obj.pages;
@@ -106,16 +117,24 @@ cc.Class({
     nextPage(){
         if(this.curPageNum>=this.allPageNum){
             this.showLittleTip('没有下一页了');
+            this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
+            this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[1];
             return
         };
+        this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
+        this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
         this.curPageNum++;
         this.renderLogList();
     },
     prePage(){
         if(this.curPageNum<=1){
             this.showLittleTip('没有上一页');
+            this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
+            this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
             return
         };
+        this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
+        this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[1];
         this.curPageNum--;
         this.renderLogList();
     },
@@ -126,6 +145,20 @@ cc.Class({
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);
+    },
+    openDeleteLogBox(){//弹出清空日志对话框
+        this.showConDia('确定清空日志吗？',()=>{
+            Net.get('/api/game/log/empty',1,null,(data)=>{
+                if(!data.success){
+                    this.showLittleTip(data.msg);
+                }else{
+                    this.showLittleTip('清除成功');
+                    this.renderLogList();
+                }
+            });
+        },()=>{
+
+        });
     },
     showConDia(msg,fn1,fn2){//弹出确认对话框
         if(!Global.conLayer||!Global.conLayer.name){

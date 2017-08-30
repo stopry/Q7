@@ -31,6 +31,30 @@ cc.Class({
             default:null,
             type:cc.Prefab
         },
+        boxTitile:{//仓库标题
+            default:null,
+            type:cc.Sprite
+        },
+        titlePic:{//标题图片
+            default:[],
+            type:[cc.SpriteFrame]
+        },
+        cBtn:{//四个切换按钮
+            default:[],
+            type:[cc.Node]
+        },
+        btnNormal:{//切换按钮正常状态
+            default:[],
+            type:[cc.SpriteFrame]
+        },
+        btnActive:{//切换按钮激活状态
+            default:[],
+            type:[cc.SpriteFrame]
+        },
+        activeBtnBg:{//激活按钮的背景
+            default:null,
+            type:cc.Node
+        }
     },
     // use this for initialization
     onLoad: function () {
@@ -84,15 +108,27 @@ cc.Class({
 
     },
     changeBox(event,customEventData){//切换列表容器
+        //customEventData——0 1 2 3 树苗 道具 木材 碳汇
         var index = parseInt(customEventData)||0;
         if(this.type==index){//不是切换不做任何请求
             return;
         };
         for(let i = 0;i<this.content.length;i++){
             this.content[i].active = false;
+            this.cBtn[i].getComponent(cc.Sprite).spriteFrame = this.btnNormal[i];
         }
+        //仓库标题设置
+        this.boxTitile.spriteFrame = this.titlePic[index];
+        //切换按钮激活状态设置
+        this.cBtn[index].getComponent(cc.Sprite).spriteFrame = this.btnActive[index];
+        //显示切换到的仓库
         this.content[index].active = true;
         this.content[index].removeAllChildren();
+        //设置激活按钮背景图位置
+        var pos = event.target.getPosition();
+        var action = cc.moveTo(0.1,pos);
+        //this.activeBtnBg.setPosition(pos);
+        this.activeBtnBg.runAction(action);
         this.initialize(index);
     },
     showThis(){//显示动画

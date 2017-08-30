@@ -41,7 +41,6 @@ cc.Class({
         //回调
         var finished = cc.callFunc(function () {
             this.shortAnnoWrap.active = false;
-            cc.log('动画结束')
         }, this);
         //设置Label运动action
         var _action = cc.sequence(

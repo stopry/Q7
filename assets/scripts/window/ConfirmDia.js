@@ -4,7 +4,7 @@ cc.Class({
     properties: {
         msgBox:{//消息框
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
         confirm:{//确定按钮
             default:null,

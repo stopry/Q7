@@ -33,9 +33,9 @@ cc.Class({
 
     },
     setItem(day,time,con,img){//设置日志item显示
-        this.day.string = day;
-        this.time.string = time;
-        this.con.string = con;
+        this.day.string = day;//日期
+        this.time.string = time;//时间
+        this.con.string = con;//内容
         this.img.spriteFrame = this.spriteList[img];
     }
     // called every frame, uncomment this function to activate update callback

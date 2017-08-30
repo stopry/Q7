@@ -2,12 +2,14 @@
 var Util = (function(util){
     util = util||function(){};
     var utl = util.prototype;
+    //生成uuid
     utl.createUUID = function() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
             var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
             return v.toString(16);
         });
     };
+    //时间戳生成日期
     utl.formatTimeForH5 = function (now) {
         var year = new Date(now).getFullYear();
         var month = new Date(now).getMonth() + 1 >= 10 ? new Date(now).getMonth() + 1 : '0' + (new Date(now).getMonth() + 1);
@@ -18,6 +20,40 @@ var Util = (function(util){
 
         return [year + "-" + month + "-" + date,(hour == '0' ? '00' : hour)
         + ":" + (minute == '0' ? '00' : minute)  + ":" + (second == '0' ? '00' : second)];
+    };
+    //得到时间戳是昨天还是今天time->指定时间戳
+    utl.compareDay = function(time){
+        var _now  = new Date().getTime();//当前时间戳
+        var _nowYear = new Date().getFullYear();//当前年份
+        var _nowMonth = new Date().getMonth()+1;//当前月份
+        var _nowDay = new Date().getDate();//指定天
+
+        var _year = new Date(time).getFullYear();//指定年份
+        var _month = new Date(time).getMonth()+1;//指定月份
+        var _day = new Date(time).getDate();//指定天
+
+        if(_nowYear==_year&&_nowMonth==_month&&_nowDay==_day){//同一天
+            return '今天';
+        }else if(_nowYear==_year&&_nowMonth==_month&&_nowDay-1==_day){
+            return '昨天';
+        }else{
+            var m =  _month>10?_month:'0'+_month;
+            var d = _day>10?_day:'0'+_day;
+            return m+'-'+d;
+        }
+    };
+    //根据时间戳得到日期是今天或昨天
+    utl.getDate = function(time){
+        var d = this.compareDay(time);
+        var hour = new Date(time).getHours();//得到小时
+        var minute = new Date(time).getMinutes();//得到分钟
+        var second = new Date(time).getSeconds();//得到秒数
+        return{
+            date:d,
+            time:(hour+1 >10 ? hour :'0' + hour)
+            + ":" + (minute+1 > 10 ? minute : '0' + minute)
+            + ":" + (second+1 > 10 ? second :'0'+ second)
+        }
     };
     //得到现在到未来某个时间点的倒计时
     utl.getCountDown = function(future){

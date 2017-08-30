@@ -42,7 +42,7 @@ cc.Class({
         },
         boxTitle:{//介绍区域标题
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
         boxDesc:{//介绍区域文字介绍
             default:null,
@@ -61,15 +61,15 @@ cc.Class({
     onLoad: function () {
         this.upBtn.on(cc.Node.EventType.TOUCH_END,function(){
             cc.log(this.upType);
-            var msgStr = '确认升级种植大全吗!';
+            var msgStr = '确认升级种植技术吗!';
             if(this.upType==0){
-                msgStr = '确认升级种植大全吗!';
+                msgStr = '确认升级种植技术吗!';
             }else if(this.upType==1){
                 msgStr = '确认升级林权证书吗!';
             }else if(this.upType==2){
-                msgStr = '确认升级木材市场运营证吗!';
+                msgStr = '确认升级木材市场准入证吗!';
             }else if(this.upType==3){
-                msgStr = '确认升级碳汇市场运营证吗!';
+                msgStr = '确认升级碳汇市场准入证吗!';
             }
             this.showConDia(msgStr,function(){
                 this.showLittleTip('升级成功');
@@ -106,19 +106,19 @@ cc.Class({
         this.renderUpAni(0);
         if(type==0){
             this.renderUpAni(1);
-            this.boxTitle.string = '种植大全';
-            this.boxDesc.string = '种植大全';
+            this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>种植技术</outline></color>";
+            this.boxDesc.string = '种植技术';
         }else if(type==1){
-            this.boxTitle.string = '林权证书';
+            this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>林权证书</outline></color>";
             this.boxDesc.string = '林权证书';
         }else if(type==2){
-            this.boxTitle.string = '木材市场运营证';
-            this.boxDesc.string = '木材市场运营证';
+            this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>木材市场准入证</outline></color>";
+            this.boxDesc.string = '木材市场准入证';
         }else if(type==3){
-            this.boxTitle.string = '碳汇市场运营证';
-            this.boxDesc.string = '碳汇市场运营证';
+            this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>碳汇市场准入证</outline></color>";
+            this.boxDesc.string = '碳汇市场准入证';
         }else if(type==4){
-            this.boxTitle.string = '敬请期待';
+            this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>敬请期待</outline></color>";
             this.boxDesc.string = '敬请期待';
             this.oprBtnBox.active = false;
         }
