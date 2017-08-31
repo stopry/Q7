@@ -23,7 +23,6 @@ cc.Class({
             type:cc.Prefab
         }
     },
-
     onLoad: function () {
         //this.setItme(1,'44');
         //this.node.on('touchend', function () {
@@ -54,7 +53,11 @@ cc.Class({
         let pos = this.node.getPosition();
         Global.goodsDesc.parent = this.node.parent.parent;
         Global.goodsDesc.setPosition(pos.x,pos.y+70);
-        Global.goodsDesc.getComponent('GoodsInfo').showGoodInfo(this.imgIndex,this.title,this.desc);
+        Global.goodsDesc.getComponent('GoodsInfo').showGoodInfo(
+            this.spriteList[this.imgIndex],
+            this.title,
+            this.desc
+        );
     },
     touchEnd(){
         Global.goodsDesc.getComponent('GoodsInfo').hideGoodInfo();

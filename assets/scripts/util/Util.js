@@ -96,6 +96,18 @@ var Util = (function(util){
         }
         return curDetails;
     };
+    //通过wood_id得到玩家仓库中的对应木材数量
+    //有则返回对应数量，没有就返回0
+    utl.getCntByWoodId = function(woodList,id){
+        var num = 0;
+        for(var i = 0;i<woodList.length;i++){
+            if(id==woodList[i].itemTypeId){
+                num = woodList[i].cnt;
+                break;
+            }
+        }
+        return num;
+    };
     //手机号正则
     utl.mobileReg = /^1[3-9][\d]{9}$/;
     //验证手机号码

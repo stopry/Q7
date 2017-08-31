@@ -25,7 +25,8 @@ cc.Class({
         this.node.scale = 0;
     },
     showGoodInfo(img,title,desc){//显示物品信息
-        this.goodsImg.spriteFrame = this.spriteList[img];
+        //this.goodsImg.spriteFrame = this.spriteList[img];
+        this.goodsImg.spriteFrame = img;
         this.goodsTitle.string = title;
         this.goodsDesc.string = desc;
         //var spawn = cc.sequence(cc.scaleTo(0.2,1,1));
