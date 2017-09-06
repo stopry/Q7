@@ -55,6 +55,9 @@ cc.Class({
         cc.game.addPersistRootNode(this.reqAni);//网络请求加载遮罩层
         this.autoInput();
         this.changeVer();
+        //cc.director.preloadScene("Game", function () {
+        //    cc.log("Game scene preloaded");
+        //});
     },
     logIn:function(){
         var logdata =  {
@@ -111,9 +114,8 @@ cc.Class({
             if(!data.success){
                 this.showLittleTip(data.msg);
                 if(!data.obj){//未创建角色
-                    this.getComponent('ReqAni').hideReqAni();
                     cc.director.loadScene("CreatRole",function(){//进入创建角色场景
-
+                        cc.director.getScene().getChildByName('ReqAni').active = false;
                     }.bind(this));
                 }
             }else{
@@ -122,10 +124,9 @@ cc.Class({
                 }
                 this.persistNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
                 cc.director.loadScene("Game",function(){//进入主场景
-
+                    cc.director.getScene().getChildByName('ReqAni').active = false;
                 }.bind(this));
             }
-            this.getComponent('ReqAni').hideReqAni();
         }.bind(this),function(err){
             this.showLittleTip('网络异常');
         }.bind(this))

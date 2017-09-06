@@ -26,7 +26,7 @@ cc.Class({
         treePicList:[cc.SpriteFrame],//树苗图片列表
         treeId:{//树苗id
             default:null,
-            type:cc.Integer
+            type:Number
         },
     },
     // use this for initialization
@@ -95,7 +95,7 @@ cc.Class({
             },self);
         });
     },
-    confirmPlant(){//点击确定种植
+    confirmPlant(){//点击确定种植;
         var self = this;
         if(!this.treeId){
             this.showLittleTip('请先选择树苗');

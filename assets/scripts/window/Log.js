@@ -79,7 +79,7 @@ cc.Class({
     },
     getLogData(){//得到日志数据
         this.isLoading = true;
-        this.getComponent('ReqAni').showReqAni();
+        //this.getComponent('ReqAni').showReqAni();//关闭了加载动画
         var self = this;
         Net.get('/api/game/log/list',1,{pageNum:self.curPageNum},function(data){
             if(!data.success){
@@ -108,10 +108,10 @@ cc.Class({
                 this.cuurentPage.string = data.obj.current;
             }
             this.isLoading = false;
-            this.getComponent('ReqAni').hideReqAni();
+            //this.getComponent('ReqAni').hideReqAni();//关闭加载动画
         }.bind(this),function(data){
             this.isLoading = false;
-            this.getComponent('ReqAni').hideReqAni();
+            //this.getComponent('ReqAni').hideReqAni();//关闭加载动画
         }.bind(this));
     },
     nextPage(){

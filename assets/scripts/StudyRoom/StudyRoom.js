@@ -73,6 +73,11 @@ cc.Class({
             default:null,
             type:cc.ProgressBar
         },//进度条
+        picAni:{//pic动画
+            default:null,
+            type:cc.Node
+        },
+        picAniMaxDis:320,//pic动画x最大距离
     },
     // use this for initialization
     onLoad: function () {
@@ -249,6 +254,7 @@ cc.Class({
         if(type==1){
             this.upAniBox.active = true;
             this.progress.progress = proVal;
+            this.picAni.x = this.picAniMaxDis*proVal;
             this.upAniBox.getChildByName('upAni').getComponent(cc.Animation).play();
         }else{
             this.upAniBox.getChildByName('upAni').getComponent(cc.Animation).stop();
@@ -261,6 +267,7 @@ cc.Class({
             var _now = new Date().getTime();//得到现在时间戳
             var proVal = (_now-this.startTime)/(this.endTime-this.startTime);//进度值
             this.progress.progress = proVal;
+            this.picAni.x = this.picAniMaxDis*proVal;
             if(proVal>=1){
                 this.endUpdateUpAni();
             }

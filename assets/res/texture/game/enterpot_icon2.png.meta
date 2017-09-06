@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "ea9b9799-941a-4f12-bfb5-f838ee5906cb",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "enterpot_icon2": {
+      "ver": "1.0.3",
+      "uuid": "411ec6ce-7652-456f-8b09-44bff44933eb",
+      "rawTextureUuid": "ea9b9799-941a-4f12-bfb5-f838ee5906cb",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 96,
+      "height": 114,
+      "rawWidth": 96,
+      "rawHeight": 114,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

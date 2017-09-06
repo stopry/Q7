@@ -2716,7 +2716,7 @@
     "groupIndex": 0
   },
   {
-    "__type__": "1a7f5pF5TFBj7dJctSfNgXp",
+    "__type__": "8dd07H+bvVAiJAfA9Gidtkn",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -2736,6 +2736,6 @@
       "__id__": 63
     },
     "maxWidth": 538,
-    "maxDistance": 257
+    "maxDistance": 520
   }
 ]

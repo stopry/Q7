@@ -101,7 +101,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
+        this.preInsPrefabs();
         this.openRechargeBtn.on(cc.Node.EventType.TOUCH_END,this.openRechargeBox,this);
         this.openEnterpotBtn.on(cc.Node.EventType.TOUCH_END,this.openEnterpot,this);
         this.openStudyRoomBtn.on(cc.Node.EventType.TOUCH_END,this.openStudyRoom,this);
@@ -111,6 +111,45 @@ cc.Class({
         this.openRankBtn.on(cc.Node.EventType.TOUCH_END,this.openRank,this);
         this.openSetBtn.on(cc.Node.EventType.TOUCH_END,this.openSet,this);
     },
+    //预初始化预制资源（一些弹窗），解决第一次打开卡顿现象
+    preInsPrefabs(){
+        //普通遮罩层
+        if(!Global.layer||!Global.layer.name){
+            Global.layer = cc.instantiate(this.alertLayer);
+        }
+        //充值弹窗
+        if(!Global.recharge||!Global.recharge.name){
+            Global.recharge = cc.instantiate(this.recharge);
+        }
+        //仓库
+        if(!Global.ent||!Global.ent.name){
+            Global.ent = cc.instantiate(this.enterpot);
+        }
+        //科研所
+        if(!Global.studyRoom||!Global.studyRoom.name){
+            Global.studyRoom = cc.instantiate(this.studyRoom);
+        }
+        //日志
+        if(!Global.log||!Global.log.name){
+            Global.log = cc.instantiate(this.log);
+        }
+        //好友
+        if(!Global.friends||!Global.friends.name){
+            Global.friends = cc.instantiate(this.friends);
+        }
+        //商店
+        if(!Global.shop||!Global.shop.name){
+            Global.shop = cc.instantiate(this.shop);
+        }
+        //排行榜
+        if(!Global.rank||!Global.rank.name){
+            Global.rank = cc.instantiate(this.rank);
+        }
+        //设置
+        if(!Global.setBox||!Global.setBox.name){
+            Global.setBox = cc.instantiate(this.set);
+        }
+    },
     opendNormalLayer(){//打开普通遮罩层
         if(!Global.layer||!Global.layer.name){
             Global.layer = cc.instantiate(this.alertLayer);
@@ -119,16 +158,17 @@ cc.Class({
         Global.layer.active = true;
     },
     openRechargeBox(){//打开充值框
+        //充值弹窗遮罩层
         if(!Global.layerRecharge||!Global.layerRecharge.name){
             Global.layerRecharge = cc.instantiate(this.alertLayer);
         }
         Global.layerRecharge.parent = this.root;
         Global.layerRecharge.active = true;
-
+        //充值弹窗
         if(!Global.recharge||!Global.recharge.name){
             Global.recharge = cc.instantiate(this.recharge);
-            Global.recharge.parent = this.root;
         }
+        Global.recharge.parent = this.root;
         Global.recharge.getComponent('Recharge').showThis();
 
     },
@@ -136,24 +176,24 @@ cc.Class({
         this.opendNormalLayer();
         if(!Global.ent||!Global.ent.name){
             Global.ent = cc.instantiate(this.enterpot);
-            Global.ent.parent = this.root;
         }
+        Global.ent.parent = this.root;
         Global.ent.getComponent('EnterpotControl').showThis();
     },
     openStudyRoom(){//打开科研所
         this.opendNormalLayer();
         if(!Global.studyRoom||!Global.studyRoom.name){
             Global.studyRoom = cc.instantiate(this.studyRoom);
-            Global.studyRoom.parent = this.root;
         }
+        Global.studyRoom.parent = this.root;
         Global.studyRoom.getComponent('StudyRoom').showThis();
     },
     openLog(){//打开日志
         this.opendNormalLayer();
         if(!Global.log||!Global.log.name){
             Global.log = cc.instantiate(this.log);
-            Global.log.parent = this.root;
         }
+        Global.log.parent = this.root;
         Global.log.getComponent('Log').showThis();
     },
     openFriends(){//打开好友
@@ -161,33 +201,32 @@ cc.Class({
 
         if(!Global.friends||!Global.friends.name){
             Global.friends = cc.instantiate(this.friends);
-            Global.friends.parent = this.root;
         }
+        Global.friends.parent = this.root;
         Global.friends.getComponent('Friends').showThis();
     },
     openShop(){//打开商店
         this.opendNormalLayer();
         if(!Global.shop||!Global.shop.name){
             Global.shop = cc.instantiate(this.shop);
-            Global.shop.parent = this.root;
-            cc.game.addPersistRootNode(Global.shop);
         }
+        Global.shop.parent = this.root;
         Global.shop.getChildByName('prop').getComponent('Shop').showThis();
     },
     openRank(){//打开排行榜
         this.opendNormalLayer();
         if(!Global.rank||!Global.rank.name){
             Global.rank = cc.instantiate(this.rank);
-            Global.rank.parent = this.root;
         }
+        Global.rank.parent = this.root;
         Global.rank.getComponent('Rank').showThis();
     },
     openSet(){//打开设置
         this.opendNormalLayer();
         if(!Global.setBox||!Global.setBox.name){
             Global.setBox = cc.instantiate(this.set);
-            Global.setBox.parent = this.root;
         }
+        Global.setBox.parent = this.root;
         Global.setBox.getComponent('Set').showThis();
     }
     // called every frame, uncomment this function to activate update callback

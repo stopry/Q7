@@ -44,7 +44,7 @@ cc.Class({
     },
     confirmExit(){//确定退出
         cc.log('退出成功');
-        //cc.director.end()
+        cc.director.end()
     },
     exitGame(){//退出游戏
         this.showConDia('是否退出游戏?',this.confirmExit,function(){})

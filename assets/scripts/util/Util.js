@@ -96,6 +96,21 @@ var Util = (function(util){
         }
         return curDetails;
     };
+    //通过当前土地id的到到当前土地pdId
+    /**
+    @param landId->当前土地id
+    @param landArr->当前土地了列表
+    */
+    utl.getPdIdByLandId = function(landId,landArr){
+        let pdId = 0;
+        for(let i = 0;i<landArr.length;i++){
+            if(landId==landArr[i].id){
+                pdId = landArr[i].pdId;
+                break;
+            }
+        }
+        return pdId;
+    };
     //通过wood_id得到玩家仓库中的对应木材数量
     //有则返回对应数量，没有就返回0
     utl.getCntByWoodId = function(woodList,id){
@@ -108,6 +123,66 @@ var Util = (function(util){
         }
         return num;
     };
+    //通过植物的下一次状态时间定时触发任务
+    /**
+     @param now->现在时间;
+     @param future->下一个状态的时间;
+     @param task->需要执行的函数;
+     */
+    utl.updateStatusByNextStatusTime = function(now,future,task){
+        //后台传递数据有问题 暂不解决
+        var now = now||new Date().getTime();
+        var future = future||new Date().getTime();
+        if(now>=future) return;
+        var time = future-now+1000;
+        var timeOut = setTimeout(()=>{
+            alert(1);
+            task();
+            alert(2);
+        },time)
+    };
+    //得到一个Obj[]中所有的nextStsTime并压入数组
+    /**
+     * @arrList ->所有种植详情
+     * */
+    utl.getNextStsTimeFromArr = function(arrList){
+        var arr = [];
+        if(arrList.length>0){
+            for(let i = 0;i<arrList.length;i++){
+                if(arrList[i].nextStsTime){
+                    arr.push(arrList[i].nextStsTime);
+                }
+            }
+        };
+        return arr;
+    };
+    //得到一个数组中所有大于某一个值的数值
+    utl.getAllThatThanParam = function(param,arr){
+        var arr = arr||[new Date().getTime()];
+        var param = param||new Date().getTime();
+        var newArr = [];
+        if(arr.length>0){
+            for(let i = 0;i<arr.length;i++){
+                if(arr[i]>param){
+                    newArr.push(arr[i]);
+                }
+            }
+            if(newArr.length<1){
+                return [new Date().getTime()];
+            }
+            return newArr;
+        }
+        return [new Date().getTime()];
+    };
+    //得到数组中最小的数
+    utl.getMinFromArr = function(arr){
+        if(arr.length>0){
+           return Math.min(...arr);
+           //Math.min.apply(null,arr);
+        }
+        return new Date().getTime();
+    };
+
     //手机号正则
     utl.mobileReg = /^1[3-9][\d]{9}$/;
     //验证手机号码
@@ -117,7 +192,7 @@ var Util = (function(util){
     //拆分字符串
     utl.splitStr = function(str){
         return str.split('_')[1];
-    }
+    };
     return new util;
 })(Util);
 

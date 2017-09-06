@@ -2,9 +2,9 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        id:{//树苗id
+        id:{//树苗id;
             default:null,
-            type:cc.Integer
+            type:Number
         },
         pic:{//树苗图片
            default:null,

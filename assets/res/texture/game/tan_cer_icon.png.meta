@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "079ea6f7-9f68-4b9c-b355-b04af47d1f7f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "tan_cer_icon": {
+      "ver": "1.0.3",
+      "uuid": "16be23f5-1499-427d-b5b6-3a013c3dc471",
+      "rawTextureUuid": "079ea6f7-9f68-4b9c-b355-b04af47d1f7f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 35,
+      "height": 27,
+      "rawWidth": 35,
+      "rawHeight": 27,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

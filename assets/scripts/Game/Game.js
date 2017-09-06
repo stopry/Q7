@@ -32,13 +32,19 @@ cc.Class({
         statusPic:{//状态图片
             default:[],
             type:[cc.SpriteFrame]
+        },
+        cerList:{//四个证书  种植技术-林权证-木材准入-碳汇准入
+            default:[],
+            type:[cc.Button]
         }
     },
     // use this for initialization
     onLoad: function () {
         cc.director.setDisplayStats(false);
-        this.renderAllTree();
-        this.setHeader();
+        this.initGame();
+        //cc.director.preloadScene("PlantDetail", function () {
+        //    cc.info("PlantDetail scene preloaded");
+        //});
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');
@@ -46,12 +52,44 @@ cc.Class({
     },
     setHeader(){//设置头部
         if(this.getPerNode()){
+            //用户名
             this.headerInfo[0].string = this.perNode.getComponent('PersistNode').userData.selfInfo.nickname;
+            //用户等级
             this.headerInfo[1].string = this.perNode.getComponent('PersistNode').userData.selfInfo.level||10;
+            //用户钻石
             this.headerInfo[2].string = this.perNode.getComponent('PersistNode').userData.selfInfo.jewel||0;
+            //用户金币
             this.headerInfo[3].string = this.perNode.getComponent('PersistNode').userData.selfInfo.money||0;
+            //用户头像
             this.userPic.spriteFrame = this.spriteList[parseInt(this.perNode.getComponent('PersistNode').userData.selfInfo.pic)-1||0];
+            /*证书信息*/
+            //种植技术
+            this.cerList[0].interactable = this.perNode.getComponent('PersistNode').userData.selfInfo.scientific.plantLev?true:false;
+            //林权证
+            this.cerList[1].interactable = this.perNode.getComponent('PersistNode').userData.selfInfo.scientific.certLev?true:false;
+            //木材市场准入
+            this.cerList[2].interactable = this.perNode.getComponent('PersistNode').userData.selfInfo.scientific.woodCa?true:false;
+            //碳汇市场准入
+            this.cerList[3].interactable = this.perNode.getComponent('PersistNode').userData.selfInfo.scientific.greenCa?true:false;
         };
+    },
+    initGame(){
+        this.getComponent('UpdateUserInfo').refresh().then((res)=>{
+            this.renderAllTree();
+            this.setHeader();
+            //所有种植详情的下一状态时间
+            var nextStsTimeArr = util.getNextStsTimeFromArr(res.playerPlantingDetail);
+            cc.log("所有下一状态时间：",nextStsTimeArr);
+            var nextStsTimeArrFilter = util.getAllThatThanParam(!1,nextStsTimeArr);
+            var minNext = util.getMinFromArr(nextStsTimeArrFilter);
+            cc.log('最小下一状态时间：',minNext);
+            cc.log("现在时间：",new Date().getTime(),"下一状态时间",minNext)
+            util.updateStatusByNextStatusTime(
+                new Date().getTime(),
+                minNext,
+                this.initGame
+            )
+        });
     },
     renderAllTree(){//渲染整个林场
         if(this.getPerNode()){
@@ -124,10 +162,11 @@ cc.Class({
                     this.perNode.getComponent('PersistNode').userData.curLandId,
                     this.perNode.getComponent('PersistNode').userData.curPdId
                 );
-            }
+            };
+            this.getComponent('ReqAni').showReqAni();
             //场景跳转-进入种植详情
-            cc.director.loadScene("PlantDetail",function(){//回调
-
+            cc.director.loadScene("PlantDetail",()=>{//回调
+                cc.director.getScene().getChildByName('ReqAni').active = false;
             });
         },this);
     },

@@ -23,6 +23,8 @@ cc.Class({
                 }else{
                     if(self.getPerNode()){
                         self.perNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
+                        //pdId会实时变化，每次更新信息时重新给pdId赋值
+                        //self.perNode.getComponent('PersistNode').
                         if(_bool){
                             cc.log('update');
                             self.gameCom.getComponent('Game').setHeader();

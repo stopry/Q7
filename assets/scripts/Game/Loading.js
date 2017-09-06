@@ -27,7 +27,7 @@ cc.Class({
             //cc.log(num,totalNum,item)
             var pge = num/totalNum;
             this.progress.progress = pge;
-            this.plane.x = this.maxDistance*pge*2;
+            this.plane.x = this.maxDistance*pge;
             this.grass.width = this.maxWidth*pge;
             this.text.string = parseInt(pge*100)+"%";
             if(pge>=1){

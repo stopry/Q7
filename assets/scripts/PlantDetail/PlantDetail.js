@@ -73,10 +73,9 @@ cc.Class({
         this.resetAni();
         this.walkAniCtr(1);
         this.renderTree();//初始化林场
-        for(var i = 0;i<1;i++){
-            this.createGreenEnergy();
-        };
         this.closeSpray();//关闭水花
+        //添加绿能
+        this.addGreenToWood();
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');
@@ -86,17 +85,28 @@ cc.Class({
     renderTree(){
         this.getComponent('UpdateUserInfo').refresh().then(function(data){
             if(this.getPerNode()){
-                this.curLandId = this.perNode.getComponent('PersistNode').userData.curLandId;//得到当前土地的id
-                this.pdId = this.perNode.getComponent('PersistNode').userData.curPdId;//得到当前土地的pdId
-                this.treeDetails = this.perNode.getComponent('PersistNode').userData.selfInfo.playerPlantingDetail;//得到全部种植详情
+                //得到当前土地的id
+                this.curLandId = this.perNode.getComponent('PersistNode').userData.curLandId;
+                //pdId随时会发生变化,每次更新通过土地id得到当前土地的pdId
+                this.pdId
+                    = this.perNode.getComponent('PersistNode').userData.curPdId
+                    = util.getPdIdByLandId(this.curLandId,data.lands);
+                cc.log(this.pdId);
+                this.treeDetails= this.perNode.getComponent('PersistNode').userData.selfInfo.playerPlantingDetail;//得到全部种植详情
                 if(this.treeDetails.length<=0){//如果全部种植详情为空
                     this.initTree(this.stump);
                 }else{//如果全部种植详情不为空
                     //查找当前种植详情
-                    this.plantDetail = util.getCurPlantDetail(this.pdId,this.treeDetails)
+                    this.plantDetail = util.getCurPlantDetail(this.pdId,this.treeDetails);
                     if(!this.plantDetail){//没有种植详情
                         this.initTree(this.stump);
                     }else{//有种植详情
+                        var nextStatusTime = this.plantDetail.nextStsTime||new Date().getTime();
+                        util.updateStatusByNextStatusTime(
+                            new Date().getTime(),
+                            nextStatusTime,
+                            this.renderTree
+                        );
                         var type = (parseInt(this.plantDetail.treeId)-1000);//树的类型 123456
                         var status = this.plantDetail.status;//树的状态0-种植期 1-成长期 2-成熟期 3-死亡期
                         var disaster = this.plantDetail.disaster;//树的灾害类型 0-无 1-虫 2-草 3-干旱
@@ -113,61 +123,61 @@ cc.Class({
                         if(type==1&&disaster==0){
                             this.initTree(this.tree_1[status])
                         }else if(type==1&&disaster==1){
-                            this.initTree(this.tree_1[4])
+                            this.initTree(this.tree_1[3])
                         }else if(type==1&&disaster==2){
-                            this.initTree(this.tree_1[6])
-                        }else if(type==1&&disaster==3){
                             this.initTree(this.tree_1[5])
+                        }else if(type==1&&disaster==3){
+                            this.initTree(this.tree_1[4])
                         }
 
                         if(type==2&&disaster==0){
                             this.initTree(this.tree_2[status])
                         }else if(type==2&&disaster==1){
-                            this.initTree(this.tree_2[4])
+                            this.initTree(this.tree_2[3])
                         }else if(type==2&&disaster==2){
-                            this.initTree(this.tree_2[6])
-                        }else if(type==2&&disaster==3){
                             this.initTree(this.tree_2[5])
+                        }else if(type==2&&disaster==3){
+                            this.initTree(this.tree_2[4])
                         }
 
                         if(type==3&&disaster==0){
                             this.initTree(this.tree_3[status])
                         }else if(type==3&&disaster==1){
-                            this.initTree(this.tree_3[4])
+                            this.initTree(this.tree_3[3])
                         }else if(type==3&&disaster==2){
-                            this.initTree(this.tree_3[6])
-                        }else if(type==3&&disaster==3){
                             this.initTree(this.tree_3[5])
+                        }else if(type==3&&disaster==3){
+                            this.initTree(this.tree_3[4])
                         }
 
                         if(type==4&&disaster==0){
                             this.initTree(this.tree_4[status])
                         }else if(type==4&&disaster==1){
-                            this.initTree(this.tree_4[4])
+                            this.initTree(this.tree_4[3])
                         }else if(type==4&&disaster==2){
-                            this.initTree(this.tree_4[6])
-                        }else if(type==4&&disaster==3){
                             this.initTree(this.tree_4[5])
+                        }else if(type==4&&disaster==3){
+                            this.initTree(this.tree_4[4])
                         }
 
                         if(type==5&&disaster==0){
                             this.initTree(this.tree_5[status])
                         }else if(type==5&&disaster==1){
-                            this.initTree(this.tree_5[4])
+                            this.initTree(this.tree_5[3])
                         }else if(type==5&&disaster==2){
-                            this.initTree(this.tree_5[6])
-                        }else if(type==5&&disaster==3){
                             this.initTree(this.tree_5[5])
+                        }else if(type==5&&disaster==3){
+                            this.initTree(this.tree_5[4])
                         }
 
                         if(type==6&&disaster==0){
                             this.initTree(this.tree_6[status])
                         }else if(type==6&&disaster==1){
-                            this.initTree(this.tree_6[4])
+                            this.initTree(this.tree_6[3])
                         }else if(type==6&&disaster==2){
-                            this.initTree(this.tree_6[6])
-                        }else if(type==6&&disaster==3){
                             this.initTree(this.tree_6[5])
+                        }else if(type==6&&disaster==3){
+                            this.initTree(this.tree_6[4])
                         }
                     }
                 }
@@ -179,8 +189,28 @@ cc.Class({
             (this.trees[i].getComponent(cc.Sprite)).spriteFrame = _sprite;
         }
     },
-    createGreenEnergy(){//创建绿能
+    //添加绿能
+    addGreenToWood(){
+        //初始化绿能
+        if(this.getPerNode()){
+            var greenList = this.perNode.getComponent('PersistNode').userData.selfInfo.greenEnergies;
+            if(greenList.length>=0){
+                for(let l = 0;l<greenList.length;l++){
+                    this.createGreenEnergy(
+                        greenList[l].status,//状态
+                        greenList[l].createTime,//成熟倒计时
+                        this.treeBox.getPosition(),//收取时位置
+                        1,
+                        greenList[l].createTime.id
+                    );
+                }
+            }
+        }
+    },
+    //创建绿能
+    createGreenEnergy(status,countDown,treeBoxPos,type,id){//创建绿能
         var greenEne = null;
+        this.greenEnergyArray = [];
         if(this.greenPool.size()>0){
             greenEne = this.greenPool.get();
         }else{
@@ -188,7 +218,7 @@ cc.Class({
         }
         greenEne.parent = cc.find('Canvas');
         //状态 倒计时 树木容器的位置 类型(好友的0，我的1) id(绿能id)
-        greenEne.getComponent('GreenEnergy').initGreenEnergy(1,2,this.treeBox.getPosition(),1,10086);
+        greenEne.getComponent('GreenEnergy').initGreenEnergy(status,countDown,treeBoxPos,type,id);
         greenEne.setPosition(this.getRandomPos());
         this.greenEnergyArray.push(greenEne);//生成的绿能加入数组
     },
@@ -258,18 +288,18 @@ cc.Class({
         //cutStatus->砍伐状态 0 1 2 未砍伐 砍伐中 砍伐结束
         switch (stage){
             case 0:
-                cc.log(0);
+                cc.log(0);//未砍伐
                 this.resetAni();
                 this.walkAniCtr(1);
                 break;
             case 1:
-                cc.log(1);
+                cc.log(1);//砍伐中
                 this.resetAni();
                 this.cutAniCtr(1);
                 this.liftAniCtr(1);
                 break;
             case 2:
-                cc.log(2);
+                cc.log(2);//砍伐结束
                 this.resetAni();
                 this.walkAniCtr(1);
                 break;
@@ -374,6 +404,7 @@ cc.Class({
                 this.resetAni();
                 this.cutAniCtr(1);
                 this.liftAniCtr(1);
+                this.renderTree();
                 //this.showLittleTip('收取成功');
             }
         }.bind(this),function(){
