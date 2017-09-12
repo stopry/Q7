@@ -1831,7 +1831,7 @@
     },
     "component": "OpenWindow",
     "handler": "open",
-    "customEventData": ""
+    "customEventData": "4"
   },
   {
     "__type__": "5aff1KbhKxDaZDexGmBVLRB",
@@ -2698,7 +2698,7 @@
     },
     "component": "OpenWindow",
     "handler": "open",
-    "customEventData": ""
+    "customEventData": "4"
   },
   {
     "__type__": "5aff1KbhKxDaZDexGmBVLRB",

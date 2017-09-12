@@ -29,12 +29,24 @@ cc.Class({
             }
             Global.layerRecharge.parent = this.root;
             Global.layerRecharge.active = true;
-        }else{
+        }else if(type=="2"){
+            if(!Global.conLayer||!Global.conLayer.name){
+                Global.conLayer = cc.instantiate(this.alertLayer);
+            }
+            Global.conLayer.parent = this.root;
+            Global.conLayer.active = true;
+        }else if(type=="1"){
             if(!Global.layer||!Global.layer.name){
                 Global.layer = cc.instantiate(this.alertLayer);
             }
             Global.layer.parent = this.root;
             Global.layer.active = true;
+        }else if(type=="4"){
+            if(!Global.webLayer||!Global.webLayer.name){
+                Global.webLayer = cc.instantiate(this.alertLayer);
+            }
+            Global.webLayer.parent = this.root;
+            Global.webLayer.active = true;
         }
 
         var _alertBox = cc.instantiate(this.alertBox);

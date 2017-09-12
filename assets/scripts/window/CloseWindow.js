@@ -34,6 +34,11 @@ cc.Class({
                 Global.layerRecharge = cc.instantiate(this.alertLayer);
             }
             Global.layerRecharge.active = false;
+        }else if(type=="4"){
+            if(!Global.webLayer||!Global.webLayer.name){
+                Global.webLayer = cc.instantiate(this.alertLayer);
+            }
+            Global.webLayer.active = false;
         }
         var scaleTo = cc.scaleTo(0.1,1.1,1.1);
         var scaleTo2 = cc.scaleTo(0.1,0,0);

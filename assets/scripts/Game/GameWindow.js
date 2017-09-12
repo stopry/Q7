@@ -97,11 +97,22 @@ cc.Class({
             type:cc.Node
         },
         //设置end
+
+        //市场start
+        market:{//仓库弹框
+            default:null,
+            type:cc.Prefab
+        },
+        openMarketBtn:{//打开市场弹框按钮
+            default:null,
+            type:cc.Node
+        },
+        //市场end
     },
 
     // use this for initialization
     onLoad: function () {
-        this.preInsPrefabs();
+        //this.preInsPrefabs();
         this.openRechargeBtn.on(cc.Node.EventType.TOUCH_END,this.openRechargeBox,this);
         this.openEnterpotBtn.on(cc.Node.EventType.TOUCH_END,this.openEnterpot,this);
         this.openStudyRoomBtn.on(cc.Node.EventType.TOUCH_END,this.openStudyRoom,this);
@@ -110,6 +121,7 @@ cc.Class({
         this.openShopBtn.on(cc.Node.EventType.TOUCH_END,this.openShop,this);
         this.openRankBtn.on(cc.Node.EventType.TOUCH_END,this.openRank,this);
         this.openSetBtn.on(cc.Node.EventType.TOUCH_END,this.openSet,this);
+        this.openMarketBtn.on(cc.Node.EventType.TOUCH_END,this.openMarket,this);
     },
     //预初始化预制资源（一些弹窗），解决第一次打开卡顿现象
     preInsPrefabs(){
@@ -228,6 +240,14 @@ cc.Class({
         }
         Global.setBox.parent = this.root;
         Global.setBox.getComponent('Set').showThis();
+    },
+    openMarket(){//打开市场
+        this.opendNormalLayer();
+        if(!Global.Market||!Global.Market.name){
+            Global.Market = cc.instantiate(this.market);
+        }
+        Global.Market.parent = this.root;
+        Global.Market.getComponent('Market').showThis();
     }
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

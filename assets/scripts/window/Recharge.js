@@ -18,20 +18,26 @@ cc.Class({
             type:cc.Prefab
         },
         //确认框资源end
-
         littleTip:{//小提示
             default:null,
             type:cc.Prefab
         },
-
         recharge:{//充值框
             default:null,
             type:cc.Node
         },
         item:[cc.Node],
+        bgPic:{
+            default:[],
+            type:[cc.SpriteFrame]
+        },
         itemBorder:{
             default:null,//被选充值金额边框
             type:cc.Node
+        },
+        myMoney:{
+            default:null,
+            type:cc.Label
         },
         exchangeJewel:{//兑换类型
             default:20000,
@@ -46,7 +52,6 @@ cc.Class({
             type:cc.Node
         }
     },
-
     // use this for initialization
     onLoad: function () {
         this.selMoney();
@@ -55,9 +60,13 @@ cc.Class({
         var self = this;
         ;[].forEach.call(self.item,function(item){
             item.on(cc.Node.EventType.TOUCH_END,function(event){
-                var pos = item.getPosition();
-                var action = cc.moveTo(0.08,pos);
-                self.itemBorder.runAction(action);
+                //var pos = item.getPosition();
+                //var action = cc.moveTo(0.08,pos);
+                //self.itemBorder.runAction(action);
+                this.item[0].getComponent(cc.Sprite).spriteFrame = this.bgPic[0];
+                this.item[1].getComponent(cc.Sprite).spriteFrame = this.bgPic[0];
+                this.item[2].getComponent(cc.Sprite).spriteFrame = this.bgPic[0];
+                item.getComponent(cc.Sprite).spriteFrame = this.bgPic[1];
                 self.exchangeJewel = parseInt(util.splitStr(item.jewel));
                 self.needMoney = parseInt(util.splitStr(item.money));
             },self);
@@ -92,6 +101,7 @@ cc.Class({
             }
             this.showLittleTip('兑换成功');
             cc.find('Game').getComponent('UpdateUserInfo').refresh(1);//更新界面信息
+            this.intRecharge();//更新砖石框
         }.bind(this),function(err){
 
         }.bind(this));
@@ -102,14 +112,18 @@ cc.Class({
                 this.showLittleTip(data.msg);
                 return;
             }
-            for(var i = 0;i<data.obj.length;i++){
-                this.item[i].getChildByName('jewel').getComponent(cc.Label).string = data.obj[i].jewel+'钻石';
-                this.item[i].getChildByName('money').getComponent(cc.Label).string = data.obj[i].money+'金币';
-                this.item[i].jewel = 'gold_'+ data.obj[i].jewel;
-                this.item[i].money = 'gold_'+ data.obj[i].money;
+            this.myMoney.string = data.obj.money;
+            for(var i = 0;i<data.obj.list.length;i++){
+                this.item[i].getChildByName('jewel').getComponent(cc.Label).string = data.obj.list[i].jewel;
+                this.item[i].getChildByName('money').getComponent(cc.Label).string = data.obj.list[i].money;
+                this.item[i].jewel = 'gold_'+ data.obj.list[i].jewel;
+                this.item[i].money = 'gold_'+ data.obj.list[i].money;
             }
-            this.exchangeJewel = data.obj[0].jewel;//默认兑换砖石数量
-            this.needMoney = data.obj[0].money;//默认兑换砖石数量
+            this.exchangeJewel = data.obj.list[0].jewel;//默认兑换砖石数量
+            this.needMoney = data.obj.list[0].money;//默认兑换砖石数量
+            this.item[0].getComponent(cc.Sprite).spriteFrame = this.bgPic[1];
+            this.item[1].getComponent(cc.Sprite).spriteFrame = this.bgPic[0];
+            this.item[2].getComponent(cc.Sprite).spriteFrame = this.bgPic[0];
         }.bind(this), function (err) {
 
         }.bind(this));
