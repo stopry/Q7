@@ -123,6 +123,14 @@ var Util = (function(util){
         }
         return num;
     };
+    //组合市场中的商品列表
+    utl.assemMarketList = function(obj){
+        var newArr = [];
+        for(var item in obj){
+            newArr.push(obj[item]);
+        }
+        return newArr;
+    };
     //通过植物的下一次状态时间定时触发任务
     /**
      @param now->现在时间;

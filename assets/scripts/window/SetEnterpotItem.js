@@ -34,10 +34,6 @@ cc.Class({
         //    //var action = cc.scaleTo(0.05, 1.1, 1.1);
         //    this.node.runAction(action);
         //}, this);
-
-        this.node.on(cc.Node.EventType.TOUCH_START,this.touchStart,this);
-        this.node.on(cc.Node.EventType.TOUCH_END,this.touchEnd,this);
-        this.node.on(cc.Node.EventType.TOUCH_CANCEL,this.touchEnd,this);
     },
     setItme:function(img,num,title,desc){//设置item的显示数据
         this.imgIndex = img;
@@ -45,6 +41,9 @@ cc.Class({
         this.num.string = num;
         this.title = title;
         this.desc = desc;
+        this.node.on(cc.Node.EventType.TOUCH_START,this.touchStart,this);
+        this.node.on(cc.Node.EventType.TOUCH_END,this.touchEnd,this);
+        this.node.on(cc.Node.EventType.TOUCH_CANCEL,this.touchEnd,this);
     },
     touchStart(){
         if(!Global.goodsDesc||!Global.goodsDesc.name){

@@ -64,16 +64,17 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
-        this.curPageNum = 1;//默认当前页
-        this.allPageNum = 10;//默认总页数
+        //this.curPageNum = 1;//默认当前页
+        //this.allPageNum = 10;//默认总页数
         this.isLoading = false;//默认不在加载中
+        this.itemPool = new cc.NodePool();//商品列表项对象池
         this.renderShopList();
-        this.nextBtn.on(cc.Node.EventType.TOUCH_END,function(){
-            this.nextPage();
-        },this);
-        this.preBtn.on(cc.Node.EventType.TOUCH_END,function(){
-            this.prePage();
-        },this);
+        //this.nextBtn.on(cc.Node.EventType.TOUCH_END,function(){
+        //    this.nextPage();
+        //},this);
+        //this.preBtn.on(cc.Node.EventType.TOUCH_END,function(){
+        //    this.prePage();
+        //},this);
     },
     changeBox(event,customEventData){//切换列表容器
         if(customEventData=='0'){
@@ -155,7 +156,6 @@ cc.Class({
         }
         Global.conLayer.parent = this.root;
         Global.conLayer.active = true;
-
         var dia = cc.instantiate(this.conDia);
         dia.parent = this.root;
         dia.getComponent('ConfirmDia').setBoxFun(msg,fn1,fn2);

@@ -128,7 +128,7 @@ cc.Class({
     },
     prePage(){
         if(this.curPageNum<=1){
-            this.showLittleTip('没有上一页');
+            this.showLittleTip('没有上一页了');
             this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
             this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
             return

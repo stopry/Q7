@@ -48,8 +48,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 300,
-      "height": 50
+      "width": 373,
+      "height": 181
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -89,9 +89,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 1,
-      "b": 1,
+      "r": 178,
+      "g": 50,
+      "b": 20,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -102,8 +102,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 280,
-      "height": 30
+      "width": 300,
+      "height": 60
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -111,8 +111,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": -1,
+      "y": -30
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -122,26 +122,20 @@
     "groupIndex": 0
   },
   {
-    "__type__": "cc.Label",
+    "__type__": "cc.RichText",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
     },
     "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 28,
-    "_fontSize": 30,
-    "_lineHeight": 30,
-    "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_spacingX": 0,
-    "_N$string": "提示内容提示内容提示",
+    "_N$string": "<color=#B23214><outline color=#FFECB4 width=2>提示内容提示内容提示内容</outline></color>",
     "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 0,
-    "_N$fontFamily": "Arial",
-    "_N$overflow": 2
+    "_N$fontSize": 30,
+    "_N$font": null,
+    "_N$maxWidth": 300,
+    "_N$lineHeight": 30,
+    "_N$imageAtlas": null
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -163,7 +157,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "a23235d1-15db-4b95-8439-a2e005bfff91"
+      "__uuid__": "9ea3bb6c-5a09-49ed-abea-467e4b699979"
     },
     "_type": 0,
     "_sizeMode": 0,

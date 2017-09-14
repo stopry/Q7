@@ -154,7 +154,12 @@ cc.Class({
             //判断点击范围是否在多边形范围内
             let location = touch.getLocation();
             let isContain = land.getComponent('CustomComponent').check(location);
+            cc.log(isContain);
             if(!isContain) return;//不在绘制的多边形范围内，直接return
+            if(status==0){
+                this.getComponent('LittleTip').setContent('该土地未开垦！');
+                return;
+            }
             if(this.getPerNode()){
                 this.perNode.getComponent('PersistNode').userData.curLandId = id;//当前进入的土地id
                 this.perNode.getComponent('PersistNode').userData.curPdId = pdId;//当前进入的pId
@@ -170,6 +175,7 @@ cc.Class({
             });
         },this);
     },
+
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

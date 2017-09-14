@@ -58,22 +58,26 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
+        this.type = 0;
         this.createEntItemPool();
         this.items = [];
     },
     createEntItemPool(){//仓库item对象池
-        this.itemPool = [[],[],[],[]];
+        this.itemPool = [
+            new cc.NodePool(),
+            new cc.NodePool(),
+            new cc.NodePool(),
+            new cc.NodePool()
+        ];
     },
     initialize:function(type){//0123——树苗-道具-木材-碳汇
         this.type = type;//仓库类型
         cc.log(this.type);
         var itemLen = this.content[this.type].getChildren().length;//子节点数量
         for(var l = 0;l<itemLen;l++){
-            (this.itemPool[this.type]).push(this.content[this.type].getChildren()[l]);
+            (this.itemPool[this.type]).put(this.content[this.type].getChildren()[0]);
         }
-        this.content[this.type].removeAllChildren();//移除所有子节点
         this.getEnterData(type);
-
     },
     getEnterData(type){//得到仓库信息
         var type = type+1||1;
@@ -81,17 +85,16 @@ cc.Class({
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else if(data.obj.length<=0){
-                this.showLittleTip('没有物品信息');
+                this.showLittleTip('没有物品信息!');
             }else{
                 var _len = data.obj.length;
                 var item = null;
                 for(var i = 0;i<_len;i++){
-                    if((this.itemPool[this.type]).length>0){
-                        item = (this.itemPool[this.type]).shift();
+                    if((this.itemPool[this.type]).size()>0){
+                        item = (this.itemPool[this.type]).get();
                     }else{
                         item = cc.instantiate(this.itemTemplate);
                     }
-                    cc.log('ccc');
                     this.content[type-1].addChild(item);
                     item.getComponent('SetEnterpotItem').setItme(
                         parseInt(((data.obj[i].itemTypeId).toString()).split('')[3])-1,//物品图片
@@ -99,7 +102,6 @@ cc.Class({
                         data.obj[i].name,//物品名字
                         data.obj[i].desc//物品描述
                     );
-                    //this.items.push(item);
                 }
             }
         }.bind(this),function(err){
@@ -123,18 +125,16 @@ cc.Class({
         this.cBtn[index].getComponent(cc.Sprite).spriteFrame = this.btnActive[index];
         //显示切换到的仓库
         this.content[index].active = true;
-        this.content[index].removeAllChildren();
         //设置激活按钮背景图位置
         var pos = event.target.getPosition();
         var action = cc.moveTo(0.1,pos);
-        //this.activeBtnBg.setPosition(pos);
         this.activeBtnBg.runAction(action);
         this.initialize(index);
     },
     showThis(){//显示动画
         this.enterpot.active = true;
         this.enterpot.runAction(Global.openAction);
-        this.initialize(0);
+        this.initialize(this.type);
     },
     showConDia(){//弹出确认对话框
         if(!Global.conLayer||!Global.conLayer.name){

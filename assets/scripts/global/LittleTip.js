@@ -22,7 +22,7 @@ cc.Class({
         var actionHold = cc.fadeTo(1.5,255);
         var actionHide = cc.fadeTo(0.5,0);
         var seq = cc.sequence(actionShow,actionHold,actionHide);
-        _little.getChildByName('littleTip').getComponent(cc.Label).string = str;
+        _little.getChildByName('littleTip').getComponent(cc.RichText).string = "<color=#B23214><outline color=#FFECB4 width=2>"+str+"</outline></color>";
         _little.parent = this.root;
         _little.runAction(seq);
     }
