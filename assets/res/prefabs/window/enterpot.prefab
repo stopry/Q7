@@ -4433,7 +4433,69 @@
     ],
     "activeBtnBg": {
       "__id__": 106
-    }
+    },
+    "treePic": [
+      {
+        "__uuid__": "9f8edc22-6127-49e9-859c-21936b5b7513"
+      },
+      {
+        "__uuid__": "87cfe09f-cadd-455a-a3e7-9b4507712759"
+      },
+      {
+        "__uuid__": "8d8bd517-b5dc-4983-8b20-0fac86d8c7cb"
+      },
+      {
+        "__uuid__": "aeb5486b-aa09-4ea2-8f2c-a333d57a3198"
+      },
+      {
+        "__uuid__": "eacbf93f-53e2-4f89-8b9c-411bf37d839c"
+      },
+      {
+        "__uuid__": "8b224997-37b9-41cf-94e3-88053ef72ef5"
+      }
+    ],
+    "woodPic": [
+      {
+        "__uuid__": "8a6c9f8f-857c-4591-a8f4-c5e6e3b78889"
+      },
+      {
+        "__uuid__": "06b981d7-b3ce-4157-926b-26dd2cd0120f"
+      },
+      {
+        "__uuid__": "a47cc573-fc77-4373-a013-a38256b30704"
+      },
+      {
+        "__uuid__": "f5f5f59a-1995-4b49-800c-166a1a3ea7aa"
+      },
+      {
+        "__uuid__": "d20d06ec-a17e-4732-8f2a-3e0afec216a3"
+      },
+      {
+        "__uuid__": "555e733f-af5f-40c5-8f91-f0ad27a71d4d"
+      }
+    ],
+    "propPic": [
+      {
+        "__uuid__": "652cb0b5-6b37-4536-933a-ed7093554b1c"
+      },
+      {
+        "__uuid__": "b974e8df-f213-474b-a8d8-05b16b2c45ea"
+      },
+      {
+        "__uuid__": "1997e838-168f-4115-b20c-7f8a20e755ad"
+      },
+      {
+        "__uuid__": "5d3fdabe-2a07-4a3b-8389-a5cbd469e44c"
+      }
+    ],
+    "tanPic": [
+      {
+        "__uuid__": "2e572d71-1577-426e-9ba1-834522e99caf"
+      },
+      {
+        "__uuid__": "63e7b0df-7b5f-4547-a8ae-e3f2ba093cf5"
+      }
+    ]
   },
   {
     "__type__": "c4d13vZ0QdAiK/MGDwZENX3",

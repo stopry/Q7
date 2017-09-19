@@ -54,6 +54,23 @@ cc.Class({
         activeBtnBg:{//激活按钮的背景
             default:null,
             type:cc.Node
+        },
+        //道具图片列表
+        treePic:{//树苗
+            default:[],
+            type:[cc.SpriteFrame]
+        },
+        woodPic:{//树苗
+            default:[],
+            type:[cc.SpriteFrame]
+        },
+        propPic:{//树苗
+            default:[],
+            type:[cc.SpriteFrame]
+        },
+        tanPic:{//树苗
+            default:[],
+            type:[cc.SpriteFrame]
         }
     },
     // use this for initialization
@@ -81,6 +98,7 @@ cc.Class({
     },
     getEnterData(type){//得到仓库信息
         var type = type+1||1;
+        var propList = null;
         Net.get('/api/game/getPlayerItemList',1,{type:type},function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
@@ -96,8 +114,17 @@ cc.Class({
                         item = cc.instantiate(this.itemTemplate);
                     }
                     this.content[type-1].addChild(item);
+                    if(type==1){
+                        propList=this.treePic;
+                    }else if(type==2){
+                        propList=this.woodPic;
+                    }else if(type==3){
+                        propList=this.propPic;
+                    }else{
+                        propList=this.tanPic;
+                    }
                     item.getComponent('SetEnterpotItem').setItme(
-                        parseInt(((data.obj[i].itemTypeId).toString()).split('')[3])-1,//物品图片
+                        propList[parseInt(((data.obj[i].itemTypeId).toString()).split('')[3])-1],//物品图片
                         data.obj[i].cnt,//物品数量
                         data.obj[i].name,//物品名字
                         data.obj[i].desc//物品描述
@@ -107,7 +134,6 @@ cc.Class({
         }.bind(this),function(err){
 
         }.bind(this))
-
     },
     changeBox(event,customEventData){//切换列表容器
         //customEventData——0 1 2 3 树苗 道具 木材 碳汇

@@ -250,11 +250,9 @@
       "__id__": 5
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "2c8dc46f-784c-4a9b-88a9-d20d0e6ea5b8"
-    },
+    "_spriteFrame": null,
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 2,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -263,7 +261,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
@@ -341,7 +339,7 @@
       "__id__": 8
     },
     "_enabled": true,
-    "_N$string": "<outline color=#562B04 width=2>草莓</outline>",
+    "_N$string": "<outline color=#562B04 width=2></outline>",
     "_N$horizontalAlign": 0,
     "_N$fontSize": 26,
     "_N$font": null,
@@ -482,7 +480,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 62.14,
+      "width": 53.459999999999994,
       "height": 30
     },
     "_rotationX": 0,
@@ -509,7 +507,7 @@
       "__id__": 14
     },
     "_enabled": true,
-    "_N$string": "<color=#ff0000>20</c><color=#ffffff>/颗</color>",
+    "_N$string": "<color=#ff0000>**</c><color=#ffffff>/个</color>",
     "_N$horizontalAlign": 0,
     "_N$fontSize": 26,
     "_N$font": null,
@@ -1304,36 +1302,36 @@
     },
     "spriteList": [
       {
-        "__uuid__": "027be432-09cb-4085-9204-9f55b37ea608"
+        "__uuid__": "9f8edc22-6127-49e9-859c-21936b5b7513"
       },
       {
-        "__uuid__": "2c8dc46f-784c-4a9b-88a9-d20d0e6ea5b8"
+        "__uuid__": "87cfe09f-cadd-455a-a3e7-9b4507712759"
       },
       {
-        "__uuid__": "dc6633ad-bfe8-4521-9c10-1a058c855e25"
+        "__uuid__": "8d8bd517-b5dc-4983-8b20-0fac86d8c7cb"
       },
       {
-        "__uuid__": "2c8dc46f-784c-4a9b-88a9-d20d0e6ea5b8"
+        "__uuid__": "aeb5486b-aa09-4ea2-8f2c-a333d57a3198"
       },
       {
-        "__uuid__": "dc6633ad-bfe8-4521-9c10-1a058c855e25"
+        "__uuid__": "eacbf93f-53e2-4f89-8b9c-411bf37d839c"
       },
       {
-        "__uuid__": "027be432-09cb-4085-9204-9f55b37ea608"
+        "__uuid__": "8b224997-37b9-41cf-94e3-88053ef72ef5"
       }
     ],
     "propSpriteList": [
       {
-        "__uuid__": "dc6633ad-bfe8-4521-9c10-1a058c855e25"
+        "__uuid__": "652cb0b5-6b37-4536-933a-ed7093554b1c"
       },
       {
-        "__uuid__": "dc6633ad-bfe8-4521-9c10-1a058c855e25"
+        "__uuid__": "b974e8df-f213-474b-a8d8-05b16b2c45ea"
       },
       {
-        "__uuid__": "dc6633ad-bfe8-4521-9c10-1a058c855e25"
+        "__uuid__": "1997e838-168f-4115-b20c-7f8a20e755ad"
       },
       {
-        "__uuid__": "dc6633ad-bfe8-4521-9c10-1a058c855e25"
+        "__uuid__": "5d3fdabe-2a07-4a3b-8389-a5cbd469e44c"
       }
     ]
   },

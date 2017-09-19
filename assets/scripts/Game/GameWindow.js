@@ -209,6 +209,8 @@ cc.Class({
         Global.log.getComponent('Log').showThis();
     },
     openFriends(){//打开好友
+        this.getComponent('LittleTip').setContent('功能即将上线，敬请期待！');
+        return;
         this.opendNormalLayer();
 
         if(!Global.friends||!Global.friends.name){
@@ -226,6 +228,8 @@ cc.Class({
         Global.shop.getChildByName('prop').getComponent('Shop').showThis();
     },
     openRank(){//打开排行榜
+        this.getComponent('LittleTip').setContent('功能即将上线，敬请期待！');
+        return;
         this.opendNormalLayer();
         if(!Global.rank||!Global.rank.name){
             Global.rank = cc.instantiate(this.rank);
