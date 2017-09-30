@@ -122,7 +122,7 @@ cc.Class({
             return
         };
         this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
-        this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
+        this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[1];
         this.curPageNum++;
         this.renderLogList();
     },
@@ -133,7 +133,7 @@ cc.Class({
             this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
             return
         };
-        this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
+        this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
         this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[1];
         this.curPageNum--;
         this.renderLogList();
@@ -146,20 +146,20 @@ cc.Class({
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);
     },
-    openDeleteLogBox(){//弹出清空日志对话框
-        this.showConDia('确定清空日志吗？',()=>{
-            Net.get('/api/game/log/empty',1,null,(data)=>{
-                if(!data.success){
-                    this.showLittleTip(data.msg);
-                }else{
-                    this.showLittleTip('清除成功');
-                    this.renderLogList();
-                }
-            });
-        },()=>{
-
-        });
-    },
+    //openDeleteLogBox(){//弹出清空日志对话框
+    //    this.showConDia('确定清空日志吗？',()=>{
+    //        Net.get('/api/game/log/empty',1,null,(data)=>{
+    //            if(!data.success){
+    //                this.showLittleTip(data.msg);
+    //            }else{
+    //                this.showLittleTip('清除成功');
+    //                this.renderLogList();
+    //            }
+    //        });
+    //    },()=>{
+    //
+    //    });
+    //},
     showConDia(msg,fn1,fn2){//弹出确认对话框
         if(!Global.conLayer||!Global.conLayer.name){
             Global.conLayer = cc.instantiate(this.alertLayer);

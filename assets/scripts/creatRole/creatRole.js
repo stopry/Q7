@@ -40,11 +40,13 @@ cc.Class({
         Net.post('/api/game/createPlayer',1,creater,function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
+                this.getComponent('ReqAni').hideReqAni();
                 return;
             }
             this.loadPlayer();
         }.bind(this),function(err){
             this.showLittleTip("网络错误");
+            this.getComponent('ReqAni').hideReqAni();
         }.bind(this));
 
     },
@@ -63,6 +65,7 @@ cc.Class({
             this.getComponent('ReqAni').hideReqAni();
         }.bind(this),function(err){
             this.showLittleTip('网络异常');
+            this.getComponent('ReqAni').hideReqAni();
         }.bind(this))
     },
     getPerNode(){//得到常驻节点

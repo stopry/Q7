@@ -312,7 +312,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
+      "width": 120,
       "height": 40
     },
     "_rotationX": 0,
@@ -321,7 +321,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -54,
+      "x": -41,
       "y": 31
     },
     "_skewX": 0,
@@ -343,7 +343,7 @@
     "_N$horizontalAlign": 0,
     "_N$fontSize": 26,
     "_N$font": null,
-    "_N$maxWidth": 100,
+    "_N$maxWidth": 120,
     "_N$lineHeight": 40,
     "_N$imageAtlas": null
   },
@@ -489,7 +489,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 59,
+      "x": 77,
       "y": 32
     },
     "_skewX": 0,
@@ -619,7 +619,10 @@
     "node": {
       "__id__": 17
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "cc.Button",
@@ -782,7 +785,10 @@
     "node": {
       "__id__": 22
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "59e8fiUKK9Oa42ojFUPMZHi",
@@ -1219,7 +1225,10 @@
     "node": {
       "__id__": 31
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "cc.PrefabInfo",

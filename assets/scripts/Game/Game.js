@@ -36,6 +36,26 @@ cc.Class({
         cerList:{//四个证书  种植技术-林权证-木材准入-碳汇准入
             default:[],
             type:[cc.Button]
+        },
+        //游戏背景音乐
+        bgMusic:{
+            default:null,
+            url:cc.AudioClip
+        },
+        //下拉按钮
+        dropBtn:{
+            default:null,
+            type:cc.Node
+        },
+        //证书box
+        cerBox:{
+            default:null,
+            type:cc.Node
+        },
+        //设置头像框box
+        dropMenu:{
+            default:null,
+            type:cc.Node
         }
     },
     // use this for initialization
@@ -45,6 +65,61 @@ cc.Class({
         //cc.director.preloadScene("PlantDetail", function () {
         //    cc.info("PlantDetail scene preloaded");
         //});
+        if(Global.openBgMusic){
+            this.music = cc.audioEngine.play(this.bgMusic,true,1);
+        }else{
+            cc.audioEngine.stopAll();
+        }
+        this.isShowHeader();
+        this.isOpenShop();
+    },
+    //是否显示头部
+    isShowHeader(){
+        if(Global.isShowHeader){
+            this.dropBtn.rotation = 0;
+            this.dropMenu.opacity = 255;
+            this.dropMenu.scaleY = 1;
+            this.cerBox.rotation = 0;
+        }else{
+            cc.log(8);
+            this.dropBtn.rotation = 180;
+            this.dropMenu.opacity = 0;
+            this.dropMenu.scaleY = 0;
+            this.cerBox.rotation = 90;
+        }
+    },
+    //收起打开头部
+    toggleHeader(){
+        Global.isShowHeader = !Global.isShowHeader;
+        let openActionBtn = cc.rotateTo(0.2,0);
+        let openActionCer = cc.rotateTo(0.2,0);
+        let openActionMune = cc.spawn(cc.fadeIn(0.2), cc.scaleTo(0.2, 1, 1));
+        //let openActionMune = cc.scaleTo(0.2, 1, 1);
+
+        let closeActionBtn = cc.rotateTo(0.2,180);
+        let closeActionCer = cc.rotateTo(0.2,90);
+        let closeActionMune = cc.spawn(cc.fadeOut(0.2), cc.scaleTo(0.2, 1, 0));
+        //let closeActionMune = cc.scaleTo(0.2, 1, 0);
+
+        if(Global.isShowHeader){
+            this.dropBtn.runAction(openActionBtn);
+            this.dropMenu.runAction(openActionMune);
+            this.cerBox.runAction(openActionCer);
+        }else{
+            this.dropBtn.runAction(closeActionBtn);
+            this.dropMenu.runAction(closeActionMune);
+            this.cerBox.runAction(closeActionCer);
+        }
+    },
+    //判断是否是从种植详情跳转过来的是则打开商店
+    isOpenShop(){
+      if(!Global.hasTreesProp||!Global.hasWatersProp||!Global.hasBugsProp||!Global.hasGrassProp){
+          this.getComponent('GameWindow').openShop();
+          Global.hasTreesProp = Global.hasWatersProp = Global.hasBugsProp = Global.hasGrassProp = true;
+      };
+    },
+    onDestroy(){
+        cc.audioEngine.stopAll();
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');
@@ -131,6 +206,8 @@ cc.Class({
             var _treeStatus = _plantDetail.status; //0123  种植期 成长期 成熟期 死亡期
             //得到灾害状态 0123 无 虫 草 旱
             var _disaster = _plantDetail.disaster;
+            //cutStatus 1砍伐中
+            var cutStatus = _plantDetail.cutStatus;
             //如果有灾害状态
             if(_disaster!=0){
                 tree.getChildByName('status').getComponent(cc.Sprite).spriteFrame = this.statusPic[_disaster-1];
@@ -147,6 +224,10 @@ cc.Class({
                 }else{//树木已经成熟->显示可砍伐
                     tree.getChildByName('status').getComponent(cc.Sprite).spriteFrame = this.statusPic[6];
                 }
+                //判断种植详情中的砍伐状态如果是1则显示砍伐中状态气泡
+                //if(cutStatus==1){
+                //    tree.getChildByName('status').getComponent(cc.Sprite).spriteFrame = this.statusPic[7];
+                //}
             }
             tree.getChildByName('status').active = true;
         }

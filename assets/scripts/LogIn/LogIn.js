@@ -72,7 +72,7 @@ cc.Class({
         // 登录
         var account = (this.userName.string).trim();//账号
         var password = (this.password.string).trim();//密码
-        var verCode = (this.verCode.string).trim();//图形验证码
+        var verCode = (this.verCode.string).trim()||1;//图形验证码
 
         // 记住密码
         var isRemPwd = this.remPwd.children[2].active;//checkbox最后一个子节点钩号图片
@@ -94,6 +94,7 @@ cc.Class({
             cc.log(data);
             if(!data.success){//请求失败
                 this.showLittleTip(data.msg);
+                cc.director.getScene().getChildByName('ReqAni').active = false;
                 return
             }
             cc.sys.localStorage.setItem('token',data.obj.token_type+" "+data.obj.access_token);//保存数据到本地
@@ -107,6 +108,7 @@ cc.Class({
             this.loadPlayer();
         }.bind(this),function(err){
             self.showLittleTip("网络错误");
+            cc.director.getScene().getChildByName('ReqAni').active = false;
         }.bind(this));
     },
     loadPlayer(){//加载玩家信息
@@ -118,6 +120,7 @@ cc.Class({
                         cc.director.getScene().getChildByName('ReqAni').active = false;
                     }.bind(this));
                 }
+                cc.director.getScene().getChildByName('ReqAni').active = false;
             }else{
                 if(!this.persistNode.name){
                     this.persistNode = cc.director.getScene().getChildByName('PersistNode');
@@ -129,6 +132,7 @@ cc.Class({
             }
         }.bind(this),function(err){
             this.showLittleTip('网络异常');
+            cc.director.getScene().getChildByName('ReqAni').active = false;
         }.bind(this))
     },
     autoInput(){//记住密码状态下自动填充账号密码

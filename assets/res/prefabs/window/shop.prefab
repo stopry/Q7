@@ -336,7 +336,10 @@
     "node": {
       "__id__": 5
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -3201,7 +3204,10 @@
     "node": {
       "__id__": 95
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -3461,7 +3467,10 @@
     "node": {
       "__id__": 104
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "cc.PrefabInfo",

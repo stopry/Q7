@@ -61,6 +61,16 @@ cc.Class({
             type:cc.Node
         },
         sprayList:[cc.Node],//地面水花列表
+        //种植场景背景音乐
+        bgMusic:{
+            default:null,
+            url:cc.AudioClip
+        },
+        //确认框资源start
+        conDia:{//确认对话框
+            default:null,
+            type:cc.Prefab
+        },
     },
     // use this for initialization
     onLoad: function () {
@@ -72,10 +82,19 @@ cc.Class({
         cc.director.setDisplayStats(false);
         this.resetAni();
         this.walkAniCtr(1);
+        this.playNormalAni(1);
         this.renderTree();//初始化林场
         this.closeSpray();//关闭水花
         //添加绿能
         this.addGreenToWood();
+        if(Global.openBgMusic){
+            this.music = cc.audioEngine.play(this.bgMusic, true, 1);
+        }else{
+            cc.audioEngine.stopAll();
+        }
+    },
+    onDestroy(){
+        cc.audioEngine.stopAll();
     },
     getPerNode(){//得到常驻节点
         this.perNode = cc.director.getScene().getChildByName('PersistNode');
@@ -307,6 +326,13 @@ cc.Class({
                 cc.log(null);
         }
     },
+    //播放正常状态种植场景动画
+    playNormalAni(){
+        this.digAni[0].active = true;
+        this.digAni[0].getComponent(cc.Animation).play();
+        this.waterAni[2].active = true;
+        this.waterAni[2].getComponent(cc.Animation).play();
+    },
     resetAni(){//重置动画
         this.digAniCtr(!1);
         this.waterAniCtr(!1);
@@ -424,6 +450,12 @@ cc.Class({
         Net.post('/api/game/plant',1,plantData,function(data){
             this.isLoading = false;
             if(!data.success){
+                let isHasTree = '种植该土地需要'.indexOf(data.msg)!=-1;
+                if(!isHasTree){
+                    Global.hasTreesProp = false;
+                    this.toShop(data.msg+',是否去商店购买？');
+                    return;
+                }
                 this.showLittleTip(data.msg);
             }else{
                 this.playPlane(3);
@@ -452,6 +484,10 @@ cc.Class({
             this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
+                if(data.msg=='玩家没有该物品'){
+                    Global.hasWatersProp = false;
+                    this.toShop('你还没有甘露，是否去商店购买？')
+                }
             }else{
                 this.playPlane(3);
                 this.resetAni();
@@ -478,6 +514,10 @@ cc.Class({
             this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
+                if(data.msg=='玩家没有该物品'){
+                    Global.hasBugsProp = false;
+                    this.toShop('你还没有除虫剂，是否去商店购买？')
+                }
             }else{
                 this.playPlane(1);
             }
@@ -499,6 +539,10 @@ cc.Class({
             this.isLoading = false;
             if(!data.success){
                 this.showLittleTip(data.msg);
+                if(data.msg=='玩家没有该物品'){
+                    Global.hasGrassProp = false;
+                    this.toShop('你还没有除草剂，是否去商店购买？')
+                }
             }else{
                 this.playPlane(2);
             }
@@ -506,6 +550,28 @@ cc.Class({
             this.isLoading = false;
             this.showLittleTip('网络错误');
         }.bind(this));
+    },
+    //跳转回主场景商店
+    toShop(titile){
+        this.showConDia(titile,()=>{
+            cc.director.loadScene("Game",function(){//回调
+
+            }.bind(this));
+        },()=>{
+
+        })
+    },
+    showConDia(msg,fn1,fn2){//弹出确认对话框
+        if(!Global.conLayer||!Global.conLayer.name){
+            Global.conLayer = cc.instantiate(this.alertLayer);
+        }
+        Global.conLayer.parent = this.root;
+        Global.conLayer.active = true;
+
+        var dia = cc.instantiate(this.conDia);
+        dia.parent = this.root;
+        dia.getComponent('ConfirmDia').setBoxFun(msg,fn1,fn2);
+        dia.getComponent('ConfirmDia').showThis();
     },
     pick(){//收取绿能
         if(this.isLoading) return;

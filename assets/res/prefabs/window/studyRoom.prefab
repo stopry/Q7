@@ -3470,7 +3470,10 @@
     "node": {
       "__id__": 105
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "cc.PrefabInfo",

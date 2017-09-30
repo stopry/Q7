@@ -9,7 +9,7 @@ cc.Class({
         },
         num:{//item数量
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
         title:cc.String,//标题
         desc:cc.String,//介绍
@@ -42,7 +42,8 @@ cc.Class({
     setItme:function(img,num,title,desc){//设置item的显示数据
         //this.imgIndex = img;
         this.img.spriteFrame = img;
-        this.num.string = num;
+        this.num.string = "<color=#ffffff><outline color=#5b3104 width=3>"+num+"</outline></color>";
+        //this.num.string = ;
         this.title = title;
         this.desc = desc;
     },

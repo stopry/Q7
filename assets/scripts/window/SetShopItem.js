@@ -114,7 +114,7 @@ cc.Class({
             this.showConDia('确定购买'+_num+'个'+this.goodsName.string+'吗？',function (){
                 this.conformBuy();
             }.bind(this),function (){
-                this.showLittleTip('取消购买');
+                //this.showLittleTip('取消购买');
             }.bind(this));
         };
     },

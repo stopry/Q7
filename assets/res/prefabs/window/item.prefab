@@ -114,8 +114,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 86,
-      "height": 91
+      "width": 98,
+      "height": 104
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -145,7 +145,7 @@
       "__uuid__": "57b0d35a-9bfa-412b-a14f-1353239d3f05"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -218,7 +218,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 1,
-      "y": 12
+      "y": 4
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -328,8 +328,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 8.9,
-      "height": 16
+      "width": 60,
+      "height": 24
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -337,8 +337,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -2,
-      "y": -24
+      "x": 5,
+      "y": -29
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -348,26 +348,20 @@
     "groupIndex": 0
   },
   {
-    "__type__": "cc.Label",
+    "__type__": "cc.RichText",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 9
     },
     "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 16,
-    "_fontSize": 16,
-    "_lineHeight": 16,
-    "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_spacingX": 0,
-    "_N$string": "0",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$fontFamily": "Arial",
-    "_N$overflow": 0
+    "_N$string": "<color=#ffffff><outline color=#5b3104width=3>9999</outline></color>",
+    "_N$horizontalAlign": 2,
+    "_N$fontSize": 16,
+    "_N$font": null,
+    "_N$maxWidth": 60,
+    "_N$lineHeight": 24,
+    "_N$imageAtlas": null
   },
   {
     "__type__": "cc.Widget",
@@ -379,7 +373,7 @@
     "_enabled": true,
     "isAlignOnce": true,
     "_target": null,
-    "_alignFlags": 4,
+    "_alignFlags": 0,
     "_left": 0,
     "_right": 0,
     "_top": 0,

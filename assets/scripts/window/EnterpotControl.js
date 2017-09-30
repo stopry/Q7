@@ -103,7 +103,7 @@ cc.Class({
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else if(data.obj.length<=0){
-                this.showLittleTip('没有物品信息!');
+                //this.showLittleTip('没有物品信息!');
             }else{
                 var _len = data.obj.length;
                 var item = null;

@@ -78,7 +78,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 76
+        "__id__": 73
       }
     ],
     "_prefab": null,
@@ -271,7 +271,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 1,
-      "y": 279
+      "y": 295
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -320,7 +320,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 104,
-    "_bottom": 700,
+    "_bottom": 716,
     "_verticalCenter": 0,
     "_horizontalCenter": 1,
     "_isAbsLeft": true,
@@ -348,7 +348,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 75
+        "__id__": 72
       }
     ],
     "_prefab": null,
@@ -427,7 +427,7 @@
         "__id__": 47
       },
       {
-        "__id__": 69
+        "__id__": 66
       }
     ],
     "_tag": -1,
@@ -507,8 +507,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 428,
-      "height": 55
+      "width": 448,
+      "height": 69
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -517,7 +517,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 5,
-      "y": 256
+      "y": 260
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -559,8 +559,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 118,
-      "height": 41
+      "width": 78,
+      "height": 34
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -568,8 +568,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -141.6,
-      "y": -0.8
+      "x": -158,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -587,7 +587,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "efe3e058-116d-4281-b198-9a9fbb6951fd"
+      "__uuid__": "866fedff-91c0-4d62-8e18-780f9833619e"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -663,8 +663,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 260,
-      "height": 55
+      "width": 270,
+      "height": 59
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -672,8 +672,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 85,
-      "y": 255
+      "x": 67,
+      "y": 259
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -701,7 +701,7 @@
     "_N$returnType": 0,
     "_N$inputFlag": 3,
     "_N$inputMode": 6,
-    "_N$fontSize": 29,
+    "_N$fontSize": 30,
     "_N$lineHeight": 40,
     "_N$fontColor": {
       "__type__": "cc.Color",
@@ -711,7 +711,7 @@
       "a": 255
     },
     "_N$placeholder": "请输入用户名",
-    "_N$placeholderFontSize": 22,
+    "_N$placeholderFontSize": 26,
     "_N$placeholderFontColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -759,8 +759,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 428,
-      "height": 55
+      "width": 448,
+      "height": 69
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -768,8 +768,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 2,
-      "y": 165
+      "x": 5,
+      "y": 174
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -811,8 +811,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 116,
-      "height": 41
+      "width": 77,
+      "height": 34
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -820,8 +820,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -141.6,
-      "y": -0.8
+      "x": -157.6,
+      "y": 0.19999999999999996
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -839,7 +839,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "7ce1affd-87ca-4d55-8dad-91d52a97e1ce"
+      "__uuid__": "af3ca076-79a4-4525-885f-41d76c23bb02"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -915,8 +915,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 260,
-      "height": 55
+      "width": 270,
+      "height": 59
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -924,8 +924,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 85,
-      "y": 165
+      "x": 67,
+      "y": 174
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -953,7 +953,7 @@
     "_N$returnType": 0,
     "_N$inputFlag": 0,
     "_N$inputMode": 6,
-    "_N$fontSize": 29,
+    "_N$fontSize": 30,
     "_N$lineHeight": 40,
     "_N$fontColor": {
       "__type__": "cc.Color",
@@ -963,7 +963,7 @@
       "a": 255
     },
     "_N$placeholder": "请输入密码",
-    "_N$placeholderFontSize": 22,
+    "_N$placeholderFontSize": 26,
     "_N$placeholderFontColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -987,7 +987,7 @@
       }
     ],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 26
@@ -1143,7 +1143,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 28
@@ -1235,7 +1235,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 30
@@ -1371,8 +1371,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -96.7,
-      "y": 1
+      "x": -90.7,
+      "y": 76
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1495,8 +1495,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 142,
-      "height": 36
+      "width": 116,
+      "height": 30
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1547,7 +1547,10 @@
     "node": {
       "__id__": 35
     },
-    "_enabled": true
+    "_enabled": true,
+    "clickAudio": {
+      "__uuid__": "76833799-4487-473c-ba0f-86ef951c2264"
+    }
   },
   {
     "__type__": "cc.Node",
@@ -1725,8 +1728,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 151,
-      "height": 38
+      "width": 117,
+      "height": 33
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1734,8 +1737,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 150,
-      "y": 1
+      "x": 156,
+      "y": 76
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1882,7 +1885,7 @@
         "__id__": 49
       },
       {
-        "__id__": 68
+        "__id__": 65
       }
     ],
     "_prefab": null,
@@ -1913,7 +1916,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -151
+      "y": -59
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1931,7 +1934,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "03f86971-4e83-4975-983f-10dfe3480d7a"
+      "__uuid__": "4b3cdcb3-5086-48ec-9831-badf68467bd6"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -1997,7 +2000,7 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "03f86971-4e83-4975-983f-10dfe3480d7a"
+      "__uuid__": "4b3cdcb3-5086-48ec-9831-badf68467bd6"
     },
     "_N$disabledSprite": null,
     "_N$target": {
@@ -2028,13 +2031,13 @@
         "__id__": 52
       },
       {
-        "__id__": 65
+        "__id__": 62
       },
       {
-        "__id__": 66
+        "__id__": 63
       },
       {
-        "__id__": 67
+        "__id__": 64
       }
     ],
     "_prefab": null,
@@ -2184,19 +2187,16 @@
     "_children": [
       {
         "__id__": 56
-      },
-      {
-        "__id__": 59
       }
     ],
     "_tag": -1,
     "_active": false,
     "_components": [
       {
-        "__id__": 63
+        "__id__": 60
       },
       {
-        "__id__": 64
+        "__id__": 61
       }
     ],
     "_prefab": null,
@@ -2238,7 +2238,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "aniBg",
+    "_name": "ani",
     "_objFlags": 0,
     "_parent": {
       "__id__": 55
@@ -2252,116 +2252,9 @@
       },
       {
         "__id__": 58
-      }
-    ],
-    "_prefab": null,
-    "_id": "dd0861rp8dMgrqlpQ7zDquX",
-    "_opacity": 100,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 400,
-      "height": 300
-    },
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 320,
-      "y": 568
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_opacityModifyRGB": false,
-    "groupIndex": 0
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 56
-    },
-    "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "765536cf-da82-4bf7-a017-30718dacf89a"
-    },
-    "_type": 1,
-    "_sizeMode": 0,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_atlas": null
-  },
-  {
-    "__type__": "cc.Widget",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 56
-    },
-    "_enabled": true,
-    "isAlignOnce": true,
-    "_target": null,
-    "_alignFlags": 18,
-    "_left": 0,
-    "_right": 0,
-    "_top": 0,
-    "_bottom": 0,
-    "_verticalCenter": 0,
-    "_horizontalCenter": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_isAbsHorizontalCenter": true,
-    "_isAbsVerticalCenter": true,
-    "_originalWidth": 0,
-    "_originalHeight": 0
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "ani",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 55
-    },
-    "_children": [],
-    "_tag": -1,
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 60
       },
       {
-        "__id__": 61
-      },
-      {
-        "__id__": 62
+        "__id__": 59
       }
     ],
     "_prefab": null,
@@ -2406,7 +2299,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 59
+      "__id__": 56
     },
     "_enabled": true,
     "_spriteFrame": null,
@@ -2430,7 +2323,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 59
+      "__id__": 56
     },
     "_enabled": true,
     "_defaultClip": {
@@ -2448,7 +2341,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 59
+      "__id__": 56
     },
     "_enabled": true,
     "isAlignOnce": true,
@@ -2564,16 +2457,16 @@
     "_active": true,
     "_components": [
       {
+        "__id__": 67
+      },
+      {
+        "__id__": 68
+      },
+      {
         "__id__": 70
       },
       {
         "__id__": 71
-      },
-      {
-        "__id__": 73
-      },
-      {
-        "__id__": 74
       }
     ],
     "_prefab": null,
@@ -2604,7 +2497,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -255
+      "y": -188
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2618,7 +2511,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 66
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2644,7 +2537,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 66
     },
     "_enabled": true,
     "transition": 2,
@@ -2668,7 +2561,7 @@
     "hoverSprite": null,
     "clickEvents": [
       {
-        "__id__": 72
+        "__id__": 69
       }
     ],
     "_N$interactable": true,
@@ -2692,13 +2585,13 @@
     },
     "_N$disabledSprite": null,
     "_N$target": {
-      "__id__": 69
+      "__id__": 66
     }
   },
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 69
+      "__id__": 66
     },
     "component": "OpenWindow",
     "handler": "open",
@@ -2709,7 +2602,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 66
     },
     "_enabled": true,
     "clickAudio": {
@@ -2721,7 +2614,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 66
     },
     "_enabled": true,
     "alertBox": {
@@ -2733,7 +2626,7 @@
     "root": {
       "__id__": 2
     },
-    "webUrl": "http://center.0001wan.com/reg.html"
+    "webUrl": "http:/www.qq.com"
   },
   {
     "__type__": "cc.Widget",

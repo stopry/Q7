@@ -24,6 +24,11 @@ cc.Class({
             default:null,
             type:cc.Label
         },
+        //背景音乐开关
+        bgMusicBtnLabel:{
+            default:null,
+            type:cc.Label
+        },
         audio:{
             default:null,
             url:cc.AudioClip
@@ -64,6 +69,18 @@ cc.Class({
             this.showLittleTip('音效已关闭');
         }
         this.audioBtnLabel.string = Global.openAudio?'关闭音效':'开启音效';
+    },
+    //游戏背景音乐开关
+    bgMusicSet(){
+        Global.openBgMusic = !Global.openBgMusic;
+        if(Global.openBgMusic){
+            cc.audioEngine.play(cc.find('Game').getComponent('Game').bgMusic,true,1);
+            this.showLittleTip('背景音乐已开启');
+        }else{
+            cc.audioEngine.stopAll();
+            this.showLittleTip('背景音乐已关闭');
+        }
+        this.bgMusicBtnLabel.string = Global.openBgMusic?'关闭背景音乐':'开启背景音乐';
     },
     showConDia(msg,fn1,fn2){//弹出确认对话框
         if(!Global.conLayer||!Global.conLayer.name){

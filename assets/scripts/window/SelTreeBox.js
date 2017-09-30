@@ -28,6 +28,11 @@ cc.Class({
             default:null,
             type:Number
         },
+        //确认框资源start
+        conDia:{//确认对话框
+            default:null,
+            type:cc.Prefab
+        },
     },
     // use this for initialization
     onLoad: function () {
@@ -39,7 +44,7 @@ cc.Class({
     },
     renderTreeList(){//渲染树苗列表
         var itemLen = this.treeItemBox.getChildren().length;
-        for(var l = 0;l<itemLen;l++){
+        for(let l = 0;l<itemLen;l++){
             this.itemPool.put(this.treeItemBox.getChildren()[0]);
         }
         this.getTreeData();
@@ -51,7 +56,8 @@ cc.Class({
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else if(!data.obj||data.obj.length<=0){
-                this.showThis('没有树苗');
+                Global.hasTreesProp = false;
+                this.toShop('你还没有树苗，是否去商店购买?');
             }else{
                 var item = null;
                 for(let i = 0;i<data.obj.length;i++){
@@ -77,10 +83,32 @@ cc.Class({
             this.isLoading = false;
         }.bind(this))
     },
+    //跳转回主场景商店
+    toShop(titile){
+        this.showConDia(titile,()=>{
+            cc.director.loadScene("Game",function(){//回调
+
+            }.bind(this));
+        },()=>{
+
+        })
+    },
+    showConDia(msg,fn1,fn2){//弹出确认对话框
+        if(!Global.conLayer||!Global.conLayer.name){
+            Global.conLayer = cc.instantiate(this.alertLayer);
+        }
+        Global.conLayer.parent = this.root;
+        Global.conLayer.active = true;
+
+        var dia = cc.instantiate(this.conDia);
+        dia.parent = this.root;
+        dia.getComponent('ConfirmDia').setBoxFun(msg,fn1,fn2);
+        dia.getComponent('ConfirmDia').showThis();
+    },
     showThis(){
         this.root.active = true;
         this.root.runAction(Global.openAction);
-        this.renderTreeList()
+        this.renderTreeList();
     },
     selTree(){//选择树苗
         var self = this;
