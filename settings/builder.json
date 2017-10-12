@@ -24,5 +24,5 @@
   "renderMode": "0",
   "startScene": "0e8e454b-5177-4a67-b63a-c3626ff21b5e",
   "title": "ZHome",
-  "webOrientation": "portrait"
+  "webOrientation": "auto"
 }

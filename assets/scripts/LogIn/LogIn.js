@@ -60,6 +60,7 @@ cc.Class({
         //});
     },
     logIn:function(){
+        //cc.director.loadScene("Game",function(){})
         var logdata =  {
             "captchaCode": " ",
             "captchaValue": " ",

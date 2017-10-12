@@ -79,7 +79,7 @@ cc.Class({
 
         if(this.status==1){//正在产出
             this.greenEnergy.opacity = 155;
-            this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = '不可收取';
+            this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = '生成中...';
         }else if(this.status==2){//产出完成
             this.greenEnergy.opacity = 255;
             this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = '可收取';

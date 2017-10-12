@@ -20,35 +20,97 @@ cc.Class({
             default:null,
             type:cc.Prefab
         },
-        audioBtnLabel:{//声音开关
+        //音效文字
+        audioText:{
             default:null,
-            type:cc.Label
+            type:cc.Sprite
         },
-        //背景音乐开关
-        bgMusicBtnLabel:{
+        audioTextClosePic:{
             default:null,
-            type:cc.Label
+            type:cc.SpriteFrame
         },
+        audioTextOpenPic:{
+            default:null,
+            type:cc.SpriteFrame
+        },
+        audioCloseIcon:{
+            default:null,
+            type:cc.Node
+        },
+        //背景音乐文字
+        soundText:{
+            default:null,
+            type:cc.Sprite
+        },
+        soundTextClosePic:{
+            default:null,
+            type:cc.SpriteFrame
+        },
+        soundTextOpenPic:{
+            default:null,
+            type:cc.SpriteFrame
+        },
+        soundCloseIcon:{
+            default:null,
+            type:cc.Node
+        },
+
         audio:{
             default:null,
             url:cc.AudioClip
+        },
+        //退出游戏按钮
+        exitBtn:{
+            default:null,
+            type:cc.Node
+        },
+        //返回登录按钮
+        backLoginBtn:{
+            default:null,
+            type:cc.Node
+        },
+        //返回登录按钮2
+        backLoginBtnT:{
+            default:null,
+            type:cc.Node
         }
     },
-
     // use this for initialization
     onLoad: function () {
 
     },
     showThis(){
-        this.audioBtnLabel.string = Global.openAudio?'关闭音效':'开启音效';
+        //音效是否是打开状态
+        if(Global.openAudio){
+            this.audioText.spriteFrame = this.audioTextClosePic;
+            this.audioCloseIcon.active = false;
+        }else{
+            this.audioText.spriteFrame = this.audioTextOpenPic;
+            this.audioCloseIcon.active = true;
+        }
+        //背景音乐是否是打开状态
+        if(Global.openBgMusic){
+            this.soundText.spriteFrame = this.soundTextClosePic;
+            this.soundCloseIcon.active = false;
+        }else{
+            this.soundText.spriteFrame = this.soundTextOpenPic;
+            this.soundCloseIcon.active = true;
+        }
+
         this.root.active = true;
         this.root.runAction(Global.openAction);
+
+        if(!cc.sys.isNative){
+            this.backLoginBtnT.active = true;
+        }else{
+            this.exitBtn.active = true;
+            this.backLoginBtn.active = true;
+        }
     },
     showLittleTip:function(str){//显示提示
         this.getComponent('LittleTip').setContent(str);
     },
     confirmExit(){//确定退出
-        cc.log('退出成功');
         cc.director.end()
     },
     exitGame(){//退出游戏
@@ -68,7 +130,13 @@ cc.Class({
         }else{
             this.showLittleTip('音效已关闭');
         }
-        this.audioBtnLabel.string = Global.openAudio?'关闭音效':'开启音效';
+        if(Global.openAudio){
+            this.audioText.spriteFrame = this.audioTextClosePic;
+            this.audioCloseIcon.active = false;
+        }else{
+            this.audioText.spriteFrame = this.audioTextOpenPic;
+            this.audioCloseIcon.active = true;
+        }
     },
     //游戏背景音乐开关
     bgMusicSet(){
@@ -80,7 +148,13 @@ cc.Class({
             cc.audioEngine.stopAll();
             this.showLittleTip('背景音乐已关闭');
         }
-        this.bgMusicBtnLabel.string = Global.openBgMusic?'关闭背景音乐':'开启背景音乐';
+        if(Global.openBgMusic){
+            this.soundText.spriteFrame = this.soundTextClosePic;
+            this.soundCloseIcon.active = false;
+        }else{
+            this.soundText.spriteFrame = this.soundTextOpenPic;
+            this.soundCloseIcon.active = true;
+        }
     },
     showConDia(msg,fn1,fn2){//弹出确认对话框
         if(!Global.conLayer||!Global.conLayer.name){
