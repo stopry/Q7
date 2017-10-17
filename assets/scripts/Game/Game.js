@@ -56,11 +56,24 @@ cc.Class({
         dropMenu:{
             default:null,
             type:cc.Node
+        },
+        //测试
+        maskLayer:{
+            default:null,
+            type:cc.Node
+        },
+        muBiao:{
+            default:null,
+            type:cc.Node
         }
     },
     // use this for initialization
     onLoad: function () {
         cc.director.setDisplayStats(false);
+        this.maskLayer.on('touchstart', function(event){
+            //console.log(event);
+            //event.stopPropagation();
+        }, this);
         this.initGame();
         //cc.director.preloadScene("PlantDetail", function () {
         //    cc.info("PlantDetail scene preloaded");
