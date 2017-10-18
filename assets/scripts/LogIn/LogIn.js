@@ -60,6 +60,7 @@ cc.Class({
         //});
     },
     logIn:function(){
+        //cc.sys.openURL('http://www.qq.com/');//app上在浏览器打开网页
         //cc.director.loadScene("Game",function(){})
         var logdata =  {
             "captchaCode": " ",

@@ -26,11 +26,22 @@ cc.Class({
         numBot:{
             default:null,
             type:cc.Node
+        },
+        itemBox:{
+            default:null,
+            type:cc.Node
         }
     },
     // use this for initialization
     onLoad: function () {
         //this.action = cc.sequence(cc.scaleTo(0.8, 0, 1),cc.scaleTo(0.8, 1, 1));
+        this.itemBox.on(cc.Node.EventType.TOUCH_END,this.toMarket,this);
+    },
+    //去市场
+    toMarket(){
+        let token = cc.sys.localStorage.getItem('token');
+        let id = this.id;
+        //cc.sys.openURL('http://www.qq.com/')
     },
     //初始化商品项
     setItem(id,changePrice,changeRate,itmePic,itmeName){

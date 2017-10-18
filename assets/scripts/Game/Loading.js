@@ -23,6 +23,7 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
+        cc.view.enableRetina(true);
         cc.loader.loadResDir('/global', function (num, totalNum, item) {
             //cc.log(num,totalNum,item)
             var pge = num/totalNum;

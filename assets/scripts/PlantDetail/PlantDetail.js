@@ -309,6 +309,7 @@ cc.Class({
             case 0:
                 cc.log(0);//未砍伐
                 this.resetAni();
+                this.playNormalAni();
                 this.walkAniCtr(1);
                 break;
             case 1:
@@ -320,6 +321,7 @@ cc.Class({
             case 2:
                 cc.log(2);//砍伐结束
                 this.resetAni();
+                this.playNormalAni();
                 this.walkAniCtr(1);
                 break;
             default:
@@ -451,7 +453,7 @@ cc.Class({
             this.isLoading = false;
             if(!data.success){
                 let isHasTree = '种植该土地需要'.indexOf(data.msg)!=-1;
-                if(!isHasTree){
+                if(isHasTree){
                     Global.hasTreesProp = false;
                     this.toShop(data.msg+',是否去商店购买？');
                     return;
