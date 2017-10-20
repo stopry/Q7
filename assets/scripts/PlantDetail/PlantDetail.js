@@ -103,6 +103,7 @@ cc.Class({
     //渲染林场
     renderTree(){
         this.getComponent('UpdateUserInfo').refresh().then(function(data){
+            cc.log(JSON.stringify(data));
             if(this.getPerNode()){
                 //得到当前土地的id
                 this.curLandId = this.perNode.getComponent('PersistNode').userData.curLandId;
@@ -217,7 +218,8 @@ cc.Class({
                 for(let l = 0;l<greenList.length;l++){
                     this.createGreenEnergy(
                         greenList[l].status,//状态
-                        greenList[l].createTime,//成熟倒计时
+                        1508469000000,//成熟倒计时
+                        //greenList[l].nextGeTime,//成熟倒计时
                         this.treeBox.getPosition(),//收取时位置
                         1,
                         greenList[l].createTime.id

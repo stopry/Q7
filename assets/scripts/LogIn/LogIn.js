@@ -48,7 +48,6 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         cc._initDebugSetting(cc.DebugMode.INFO);
-
         cc.director.setDisplayStats(false);
         //添加常驻节点
         cc.game.addPersistRootNode(this.persistNode);//场景切换数据传递
@@ -92,7 +91,7 @@ cc.Class({
         logdata.userName = account;
 
         this.getComponent('ReqAni').showReqAni();//显示加载动画
-        Net.post('/api/oauth/token',!1,logdata,function(data){
+        Net.post('/market/oauth/token',!1,logdata,function(data){
             cc.log(data);
             if(!data.success){//请求失败
                 this.showLittleTip(data.msg);

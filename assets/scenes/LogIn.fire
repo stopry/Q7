@@ -1090,9 +1090,7 @@
       "__id__": 24
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "f2c0b913-264e-4802-928e-fe352c340400"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 1,
     "_fillType": 0,
@@ -2622,7 +2620,7 @@
     "root": {
       "__id__": 2
     },
-    "webUrl": "http:/www.qq.com"
+    "webUrl": "http://www.qq.com"
   },
   {
     "__type__": "cc.Widget",

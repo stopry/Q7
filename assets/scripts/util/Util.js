@@ -76,7 +76,8 @@ var Util = (function(util){
         if(secs<=0){
             secs = 0;
         }
-        var time = hours+"小时"+mins+"分钟"+secs+"秒";
+        //var time = hours+"小时"+mins+"分钟"+secs+"秒";
+        var time = hours+":"+mins+":"+secs;
         return time;
     };
     //得到某个范围内随机整数

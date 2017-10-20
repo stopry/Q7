@@ -13,4 +13,7 @@ window.Global={
     hasBugsProp:true,//是否有除虫剂
     hasGrassProp:true,//是否有除草剂
     isShowHeader:true,//是否显示头部
+    /*游戏引导公共变量*/
+    guideStep:1,//游戏引导当前的阶段
+    cmpGuide:false,//是否完成了新手引导
 };

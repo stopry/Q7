@@ -57,23 +57,17 @@ cc.Class({
             default:null,
             type:cc.Node
         },
-        //测试
-        //maskLayer:{
-        //    default:null,
-        //    type:cc.Node
-        //},
-        //muBiao:{
-        //    default:null,
-        //    type:cc.Node
-        //}
+        //引导常驻节点
+        Guider:{
+            default:null,
+            type:cc.Node
+        }
     },
     // use this for initialization
     onLoad: function () {
         cc.director.setDisplayStats(false);
-        //this.maskLayer.on('touchstart', function(event){
-            //console.log(event);
-            //event.stopPropagation();
-        //}, this);
+        //添加新手引导所需的常驻节点
+        cc.game.addPersistRootNode(this.Guider);
         this.initGame();
         //cc.director.preloadScene("PlantDetail", function () {
         //    cc.info("PlantDetail scene preloaded");

@@ -5,6 +5,7 @@ var Net = {
     get:function(url,header,data,succCallBack,errCallBack){//get请求
         //var host = '';
         var host = 'http://api.o2plan.cn';
+        //var host = 'http://101.132.109.119:9080';
         //var host = 'http://192.168.19.89:8081';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
@@ -33,7 +34,11 @@ var Net = {
     post:function(url,header,data,succCallBack,errCallBack){//post请求
         //var host = '';
         var host = 'http://api.o2plan.cn';
+        //var host = 'http://101.132.109.119:9080';
         //var host = 'http://192.168.19.89:8081';
+        //if(url=='/market/oauth/token'){
+        //    host = 'http://101.132.109.119:9080';
+        //}
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {

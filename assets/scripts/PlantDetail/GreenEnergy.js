@@ -1,4 +1,5 @@
 var Net = require('Net');
+var util = require('Util');
 cc.Class({
     extends: cc.Component,
 
@@ -13,6 +14,7 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
+        this._interVal = null;
         this.thisPos = this.greenEnergy.getPosition();//得到绿能位置
         //normal
         this.normalAction = cc.repeatForever(
@@ -78,7 +80,7 @@ cc.Class({
         this.type = type;//绿能类型好友的或自己的0/1
 
         if(this.status==1){//正在产出
-            this.greenEnergy.opacity = 155;
+            this.greenEnergy.opacity = 190;
             this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = '生成中...';
         }else if(this.status==2){//产出完成
             this.greenEnergy.opacity = 255;
@@ -89,6 +91,23 @@ cc.Class({
         }else{
             this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = '好友绿能'
         }*/
+        //调用定时刷新倒计时，当现在时间超过成熟时间标记为可收取状态，同时停止倒计时
+        this._interVal = setInterval(()=>{
+            this.freshCountDown();
+            if(this.countDown<=new Date().getTime()){
+                clearInterval(this._interVal);
+                this.status = 2;
+                this.greenEnergy.opacity = 255;
+                this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = '可收取';
+            }
+        },1000)
+    },
+    //刷新绿能成熟倒计时
+    freshCountDown(){
+      if(this.status==1){
+          this.greenEnergy.opacity = 190;
+          this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = util.getCountDown(this.countDown);
+      }
     },
     takeGreenEnergy(){//收取绿能
         if(this.isTaking) return;
@@ -106,6 +125,11 @@ cc.Class({
             this.greenEnergy.runAction(this.takeAction);
         }else{
             this.greenEnergy.runAction(this.takeFGAction);
+        }
+    },
+    onDestroy(){
+        if(this._interVal){
+            clearInterval(this._interVal)
         }
     }
     // called every frame, uncomment this function to activate update callback

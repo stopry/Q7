@@ -7,8 +7,8 @@
   "design-resolution-height": 960,
   "design-resolution-width": 640,
   "excluded-modules": [],
-  "fit-height": true,
-  "fit-width": false,
+  "fit-height": false,
+  "fit-width": true,
   "group-list": [
     "default"
   ],
