@@ -89,7 +89,7 @@ cc.Class({
     },
     initialize:function(type){//0123——树苗-道具-木材-碳汇
         this.type = type;//仓库类型
-        cc.log(this.type);
+        //cc.log(this.type);
         var itemLen = this.content[this.type].getChildren().length;//子节点数量
         for(var l = 0;l<itemLen;l++){
             (this.itemPool[this.type]).put(this.content[this.type].getChildren()[0]);
@@ -173,9 +173,9 @@ cc.Class({
         var dia = cc.instantiate(this.conDia);
         dia.parent = this.root;
         dia.getComponent('ConfirmDia').setBoxFun('111',function(){
-            cc.log('ok');
+            //cc.log('ok');
         },function(){
-            cc.log('no');
+            //cc.log('no');
         });
         dia.getComponent('ConfirmDia').showThis();
     },

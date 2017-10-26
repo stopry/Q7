@@ -2585,10 +2585,10 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 66
+      "__id__": 51
     },
-    "component": "OpenWindow",
-    "handler": "open",
+    "component": "LogIn",
+    "handler": "regist",
     "customEventData": "4"
   },
   {

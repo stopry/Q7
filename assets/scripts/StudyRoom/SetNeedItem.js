@@ -51,6 +51,8 @@ cc.Class({
             name='杉树木'
         }else if(img==5){
             name='银杏树木'
+        }else if(img==6){
+            name="钻石"
         }
         desc = name;
         this.title = name;

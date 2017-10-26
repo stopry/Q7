@@ -36,7 +36,7 @@ cc.Class({
         this.status = status;
         this.type = type;
         if(this.getPerNode()){
-            cc.log("林场id为",this.perNode.getComponent('PersistNode').userData.curTreeId);
+            /*cc.log("林场id为",this.perNode.getComponent('PersistNode').userData.curTreeId);*/
         }
     },
     createGreenEnergy(){//创建绿能
@@ -53,13 +53,13 @@ cc.Class({
     showStage(stage){//根据树的生长阶段显示画面
         switch (stage){
             case 1:
-                cc.log(1);
+                //cc.log(1);
                 break;
             case 2:
-                cc.log(1);
+                //cc.log(1);
                 break;
             default:
-                cc.log(null);
+                //cc.log(null);
         }
     },
     steal(){//偷玩家绿能

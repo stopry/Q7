@@ -88,7 +88,7 @@ cc.Class({
             this.dropMenu.scaleY = 1;
             this.cerBox.rotation = 0;
         }else{
-            cc.log(8);
+            //cc.log(8);
             this.dropBtn.rotation = 180;
             this.dropMenu.opacity = 0;
             this.dropMenu.scaleY = 0;
@@ -161,11 +161,11 @@ cc.Class({
             this.setHeader();
             //所有种植详情的下一状态时间
             var nextStsTimeArr = util.getNextStsTimeFromArr(res.playerPlantingDetail);
-            cc.log("所有下一状态时间：",nextStsTimeArr);
+            //cc.log("所有下一状态时间：",nextStsTimeArr);
             var nextStsTimeArrFilter = util.getAllThatThanParam(!1,nextStsTimeArr);
             var minNext = util.getMinFromArr(nextStsTimeArrFilter);
-            cc.log('最小下一状态时间：',minNext);
-            cc.log("现在时间：",new Date().getTime(),"下一状态时间",minNext)
+            //cc.log('最小下一状态时间：',minNext);
+            //cc.log("现在时间：",new Date().getTime(),"下一状态时间",minNext)
             util.updateStatusByNextStatusTime(
                 new Date().getTime(),
                 minNext,
@@ -203,7 +203,7 @@ cc.Class({
             var _plantDetail = util.getCurPlantDetail(pdId,this.playerPlantingDetail);
             //得到这块地的treeId并转换为对用树苗图片索引
             var _treeId = parseInt((_plantDetail.treeId+'').split('')[3])-1;
-            cc.log(_treeId,'树木id');
+            //cc.log(_treeId,'树木id');
 
             //显示种植的树木
             tree.getChildByName('tree').getComponent(cc.Sprite).spriteFrame = this.treePic[_treeId];
@@ -242,7 +242,7 @@ cc.Class({
             //判断点击范围是否在多边形范围内
             let location = touch.getLocation();
             let isContain = land.getComponent('CustomComponent').check(location);
-            cc.log(isContain);
+            //cc.log(isContain);
             if(!isContain) return;//不在绘制的多边形范围内，直接return
             if(status==0){
                 this.getComponent('LittleTip').setContent('该土地未开垦！');
@@ -251,10 +251,10 @@ cc.Class({
             if(this.getPerNode()){
                 this.perNode.getComponent('PersistNode').userData.curLandId = id;//当前进入的土地id
                 this.perNode.getComponent('PersistNode').userData.curPdId = pdId;//当前进入的pId
-                cc.log(
-                    this.perNode.getComponent('PersistNode').userData.curLandId,
-                    this.perNode.getComponent('PersistNode').userData.curPdId
-                );
+                //cc.log(
+                //    this.perNode.getComponent('PersistNode').userData.curLandId,
+                //    this.perNode.getComponent('PersistNode').userData.curPdId
+                //);
             };
             this.getComponent('ReqAni').showReqAni();
             //场景跳转-进入种植详情

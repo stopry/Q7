@@ -84,7 +84,7 @@ cc.Class({
                 this.allPage.string = 0;
                 this.cuurentPage.string = 0;
             }else{
-                cc.log(data);
+                //cc.log(data);
                 var recs = data.obj.records
                 var _len = recs.length;
                 var item = null;

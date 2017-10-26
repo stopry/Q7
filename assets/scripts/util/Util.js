@@ -60,13 +60,13 @@ var Util = (function(util){
         var now = new Date().getTime();
         var nextStatus = future
         var nextStatusText = (nextStatus-now)/1000;
-        console.log(nextStatusText);
+        //console.log(nextStatusText);
         var days=Math.floor(nextStatusText/3600/24);
         var hours=Math.floor((nextStatusText-days*24*3600)/3600);
         var mins=Math.floor((nextStatusText-days*24*3600-hours*3600)/60);
         var secs=Math.floor((nextStatusText-days*24*3600-hours*3600-mins*60));
 
-        console.log(days,hours,mins,secs);
+        //console.log(days,hours,mins,secs);
         if(hours<=0){
             hours = 0;
         }

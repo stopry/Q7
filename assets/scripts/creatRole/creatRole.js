@@ -51,7 +51,7 @@ cc.Class({
 
     },
     loadPlayer(){//加载玩家信息
-        Net.get('/game/loadPlayer',1,null,function(data){
+        Net.get('/api/game/loadPlayer',1,null,function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
             }else{

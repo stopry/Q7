@@ -92,14 +92,14 @@ cc.Class({
 
         this.getComponent('ReqAni').showReqAni();//显示加载动画
         Net.post('/market/oauth/token',!1,logdata,function(data){
-            cc.log(data);
+            //cc.log(data);
             if(!data.success){//请求失败
                 this.showLittleTip(data.msg);
                 cc.director.getScene().getChildByName('ReqAni').active = false;
                 return
             }
-            cc.sys.localStorage.setItem('token',data.obj.token_type+" "+data.obj.access_token);//保存数据到本地
-            cc.log(cc.sys.localStorage.getItem('token'),444);
+            cc.sys.localStorage.setItem('token',data.obj.tokenType+" "+data.obj.accessToken);//保存数据到本地
+            //cc.log(cc.sys.localStorage.getItem('token'),444);
             if(isRemPwd){
                 this.remActPwd(account,password);
             }else{
@@ -169,6 +169,13 @@ cc.Class({
         },this);
     },
     regist:function(){
+        //是否是原生平台
+        let isNative = cc.sys.isNative;
+        if(!isNative){
+            window.location = "http://wap.market.o2plan.cn/#/regist?origin=web";
+        }else{
+            cc.sys.openURL("http://wap.market.o2plan.cn/#/regist?origin=native")
+        }
         //this.showLittleTip("暂未设计");
     },
     update: function (dt) {

@@ -1,5 +1,4 @@
 const {ccclass, property} = cc._decorator;
-
 @ccclass()
 export default class LoadingTs extends cc.Component {
 
@@ -46,5 +45,8 @@ export default class LoadingTs extends cc.Component {
             //cc.log(assets)
         });
         cc._initDebugSetting(cc.DebugMode.INFO);
+    };
+    onDestroy(){
+
     }
 }

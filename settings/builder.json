@@ -4,9 +4,6 @@
   "excludeScenes": [],
   "includeAnySDK": false,
   "includeSDKBox": false,
-  "includeSdk": [
-    "anysdk"
-  ],
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": false,
   "md5Cache": true,
@@ -24,5 +21,6 @@
   "renderMode": "0",
   "startScene": "0e8e454b-5177-4a67-b63a-c3626ff21b5e",
   "title": "ZHome",
-  "webOrientation": "auto"
+  "webOrientation": "auto",
+  "jailbreakPlatform": false
 }

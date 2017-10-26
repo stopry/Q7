@@ -7,7 +7,7 @@ export default class StoPro extends cc.Component{
     touchTarget:cc.Node=null;// 这里是 TypeScript 用来声明变量类型的写法，冒号后面是属性类型;
 
     // 成员方法与js类似
-    onLoad() {
+    onLoad():void {
        this.touchTarget.on('touchstart',(event):void=>{
            event.stopPropagation();
        })

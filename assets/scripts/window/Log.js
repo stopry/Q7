@@ -55,8 +55,8 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.creatNodePool();
-        this.curPageNum = 1;//默认当前页
-        this.allPageNum = 10;//默认总页数
+        this.curPageNum = 0;//默认当前页
+        this.allPageNum = 0;//默认总页数
         this.isLoading = false;//默认不在加载中
         this.nextBtn.on(cc.Node.EventType.TOUCH_END,function(){
             this.nextPage();
@@ -84,8 +84,14 @@ cc.Class({
         Net.get('/api/game/log/list',1,{pageNum:self.curPageNum},function(data){
             if(!data.success){
                 this.showLittleTip(data.msg);
+                this.allPageNum = 0;
+                this.curPageNum = 0;
             }else if(!data.obj||!data.obj.records||data.obj.records.length<=0){
-                this.showLittleTip('没有数据');
+                //this.showLittleTip('没有数据');
+                this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
+                this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
+                this.allPageNum = 0;
+                this.curPageNum = 0;
             }else{
                 var logItem = null;
                 var recs = data.obj.records;
@@ -115,6 +121,11 @@ cc.Class({
         }.bind(this));
     },
     nextPage(){
+        if(this.allPageNum<=0){
+            this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
+            this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
+            return;
+        }
         if(this.curPageNum>=this.allPageNum){
             this.showLittleTip('没有下一页了');
             this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
@@ -124,9 +135,18 @@ cc.Class({
         this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
         this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[1];
         this.curPageNum++;
+        if(this.curPageNum>=this.allPageNum){
+            this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
+            this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[1];
+        }
         this.renderLogList();
     },
     prePage(){
+        if(this.allPageNum<=0){
+            this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
+            this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[2];
+            return;
+        }
         if(this.curPageNum<=1){
             this.showLittleTip('没有上一页了');
             this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
@@ -136,6 +156,10 @@ cc.Class({
         this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
         this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[1];
         this.curPageNum--;
+        if(this.curPageNum<=1){
+            this.nextBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[3];
+            this.preBtn.getComponent(cc.Sprite).spriteFrame = this.pageBtnBgList[0];
+        }
         this.renderLogList();
     },
     showThis(){

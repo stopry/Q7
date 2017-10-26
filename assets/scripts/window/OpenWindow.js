@@ -52,6 +52,7 @@ cc.Class({
         var _alertBox = cc.instantiate(this.alertBox);
         //如果弹框是webview
         if(_alertBox.name=="webPage"){
+            let token = cc.sys.localStorage.getItem('token');
             //cc.log(_alertBox.getChildByName('webView').getComponent(cc.WebView));
             _alertBox.getChildByName('webView').getComponent(cc.WebView)._url = this.webUrl||'http://www.center.0001wan.com';
         }

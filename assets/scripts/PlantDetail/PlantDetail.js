@@ -103,7 +103,7 @@ cc.Class({
     //渲染林场
     renderTree(){
         this.getComponent('UpdateUserInfo').refresh().then(function(data){
-            cc.log(JSON.stringify(data));
+            //cc.log(JSON.stringify(data));
             if(this.getPerNode()){
                 //得到当前土地的id
                 this.curLandId = this.perNode.getComponent('PersistNode').userData.curLandId;
@@ -111,7 +111,7 @@ cc.Class({
                 this.pdId
                     = this.perNode.getComponent('PersistNode').userData.curPdId
                     = util.getPdIdByLandId(this.curLandId,data.lands);
-                cc.log(this.pdId);
+                //cc.log(this.pdId);
                 this.treeDetails= this.perNode.getComponent('PersistNode').userData.selfInfo.playerPlantingDetail;//得到全部种植详情
                 if(this.treeDetails.length<=0){//如果全部种植详情为空
                     this.initTree(this.stump);
@@ -218,8 +218,8 @@ cc.Class({
                 for(let l = 0;l<greenList.length;l++){
                     this.createGreenEnergy(
                         greenList[l].status,//状态
-                        1508469000000,//成熟倒计时
-                        //greenList[l].nextGeTime,//成熟倒计时
+                        //1508469000000,//成熟倒计时
+                        greenList[l].nextGeTime,//成熟倒计时
                         this.treeBox.getPosition(),//收取时位置
                         1,
                         greenList[l].createTime.id
@@ -309,25 +309,25 @@ cc.Class({
         //cutStatus->砍伐状态 0 1 2 未砍伐 砍伐中 砍伐结束
         switch (stage){
             case 0:
-                cc.log(0);//未砍伐
+                //cc.log(0);//未砍伐
                 this.resetAni();
                 this.playNormalAni();
                 this.walkAniCtr(1);
                 break;
             case 1:
-                cc.log(1);//砍伐中
+                //cc.log(1);//砍伐中
                 this.resetAni();
                 this.cutAniCtr(1);
                 this.liftAniCtr(1);
                 break;
             case 2:
-                cc.log(2);//砍伐结束
+                //cc.log(2);//砍伐结束
                 this.resetAni();
                 this.playNormalAni();
                 this.walkAniCtr(1);
                 break;
             default:
-                cc.log(null);
+                //cc.log(null);
         }
     },
     //播放正常状态种植场景动画

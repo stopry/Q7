@@ -94,7 +94,7 @@ cc.Class({
         ];
         /*弹出确认升级框*/
         this.upBtn.on(cc.Node.EventType.TOUCH_END,function(){
-            cc.log(this.upType);
+            //cc.log(this.upType);
             var msgStr = '确认升级种植技术吗!';
             if(this.upType==0){
                 msgStr = '确认升级种植技术吗!';
@@ -115,19 +115,21 @@ cc.Class({
                         break;
                     case 1:
                         this.upWoodCer().then((res)=>{
-                            this.showLittleTip('成功，正在升级中！')
+                            this.showLittleTip('成功，正在升级中！');
                             this.renderUpAni(this.upType);
+                            //刷新常驻节点及头部信息
+                            cc.find('Game').getComponent('UpdateUserInfo').refresh(1)
                         });
                         break;
                     case 2:
                         this.activeWoodMar().then((res)=>{
-                            this.showLittleTip('成功，正在激活中！')
+                            this.showLittleTip('成功，正在激活中！');
                             this.renderUpAni(this.upType);
                         });
                         break;
                     case 3:
                         this.activeTanMar().then((res)=>{
-                            this.showLittleTip('成功，正在激活中！')
+                            this.showLittleTip('成功，正在激活中！');
                             this.renderUpAni(this.upType);
                         });
                         break;
@@ -209,7 +211,8 @@ cc.Class({
                     this.endTime = res.sc.certEnd;
                     this.renderUpAni(1,this.startTime,this.endTime);
                 }
-                this.renderNeedMerBox(res.ca.wood);
+                let tmpArr = [{wood_id: 7007, wood_cnt: res.ca.jewel}];
+                this.renderNeedMerBox(tmpArr);
                 this.oprBtnBox.active = true;
             });
             this.boxDesc.string = '林权证书';
@@ -402,6 +405,10 @@ cc.Class({
         arr = arr||[];
         this.needMerBox.removeAllChildren();//移除所有子节点
         if(arr.length<=0) return;
+        //通过常驻节点得到玩家拥有的钻石
+        if(this.getPerNode()){
+            var myJewel = this.perNode.getComponent('PersistNode').userData.selfInfo.jewel
+        }
         //得到仓库中所有木材
         Net.get('/api/game/getPlayerItemList',1,{type:2},(res)=>{
             if(!res.success){
@@ -412,9 +419,10 @@ cc.Class({
                     if(i!=arr.length-1){
                         var needItem = cc.instantiate(this.needBoxPre);
                         var add = cc.instantiate(this.addPre);
+
                         needItem.getComponent('SetNeedItem').setItem(
                             parseInt(((arr[i].wood_id).toString()).split('')[3])-1,//图片
-                            util.getCntByWoodId(wooList,arr[i].wood_id)+'/'+arr[i].wood_cnt
+                            arr[i]==7007?(myJewel+'/'+arr[i].wood_cnt):(util.getCntByWoodId(wooList,arr[i].wood_id)+'/'+arr[i].wood_cnt)
                         );
                         this.needMerBox.addChild(needItem);
                         this.needMerBox.addChild(add);
@@ -422,7 +430,7 @@ cc.Class({
                         var needItems = cc.instantiate(this.needBoxPre);
                         needItems.getComponent('SetNeedItem').setItem(
                             parseInt(((arr[i].wood_id).toString()).split('')[3])-1,//图片
-                            util.getCntByWoodId(wooList,arr[i].wood_id)+'/'+arr[i].wood_cnt
+                            arr[i]==7007?(myJewel+'/'+arr[i].wood_cnt):(util.getCntByWoodId(wooList,arr[i].wood_id)+'/'+arr[i].wood_cnt)
                         );
                         this.needMerBox.addChild(needItems);
                     }
@@ -449,6 +457,10 @@ cc.Class({
         dia.parent = this.root;
         dia.getComponent('ConfirmDia').setBoxFun(msg,fn1,fn2);
         dia.getComponent('ConfirmDia').showThis();
+    },
+    getPerNode(){//得到常驻节点
+        this.perNode = cc.director.getScene().getChildByName('PersistNode');
+        return this.perNode;
     },
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

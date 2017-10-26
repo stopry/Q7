@@ -345,7 +345,8 @@
     "_N$font": null,
     "_N$maxWidth": 120,
     "_N$lineHeight": 40,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -480,7 +481,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 53.459999999999994,
+      "width": 85.46000000000001,
       "height": 30
     },
     "_rotationX": 0,
@@ -507,13 +508,14 @@
       "__id__": 14
     },
     "_enabled": true,
-    "_N$string": "<color=#ff0000>**</c><color=#ffffff>/个</color>",
+    "_N$string": "<color=#1E6CCD><outline color=#72FCFE width=1>**钻</outline></c><color=#ffffff><outline color=#562B04 width=2>/个</outline></color>",
     "_N$horizontalAlign": 0,
     "_N$fontSize": 26,
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 30,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",

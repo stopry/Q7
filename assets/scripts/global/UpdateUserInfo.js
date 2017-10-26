@@ -26,7 +26,7 @@ cc.Class({
                         //pdId会实时变化，每次更新信息时重新给pdId赋值
                         //self.perNode.getComponent('PersistNode').
                         if(_bool){
-                            cc.log('update');
+                            //cc.log('update');
                             self.gameCom.getComponent('Game').setHeader();
                         }
                     }

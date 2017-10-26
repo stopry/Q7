@@ -699,7 +699,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 640,
+      "width": 388,
       "height": 168
     },
     "_rotationX": 0,
@@ -933,7 +933,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 28,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1297,7 +1298,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 28,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1548,7 +1550,7 @@
       }
     ],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 55
@@ -1661,7 +1663,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 18,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1912,7 +1915,7 @@
       }
     ],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 67
@@ -1947,7 +1950,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 446,
+      "x": 320,
       "y": 0
     },
     "_skewX": 0,
@@ -2025,7 +2028,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 18,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -2308,7 +2312,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 572,
+      "x": 320,
       "y": 0
     },
     "_skewX": 0,
@@ -2386,7 +2390,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 28,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -2537,7 +2542,7 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 640,
+      "width": 388,
       "height": 168
     },
     "_resize": 1,
@@ -3072,7 +3077,8 @@
     "_N$font": null,
     "_N$maxWidth": 400,
     "_N$lineHeight": 40,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",

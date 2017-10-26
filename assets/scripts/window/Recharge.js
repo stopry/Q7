@@ -85,10 +85,10 @@ cc.Class({
         var dia = cc.instantiate(this.conDia);
         dia.parent = this.root;
         dia.getComponent('ConfirmDia').setBoxFun('确定要用'+this.needMoney+'金币兑换'+this.exchangeJewel+'砖石吗？',function(){
-            cc.log('ok');
+            //cc.log('ok');
             this.confirmExh();
         }.bind(this),function(){
-            cc.log('no');
+            //cc.log('no');
         });
         dia.getComponent('ConfirmDia').showThis();
     },

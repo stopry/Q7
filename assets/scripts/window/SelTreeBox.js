@@ -1,7 +1,6 @@
 var Net = require('Net');
 cc.Class({
     extends: cc.Component,
-
     properties: {
         root:{//根节点
             default:null,
