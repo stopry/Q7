@@ -80,6 +80,20 @@ cc.Class({
         this.isShowHeader();
         this.isOpenShop();
     },
+    //去用户中心
+    toUserCenter(){
+        let token = cc.sys.localStorage.getItem('token');
+        token = encodeURI(token);
+        cc.sys.openURL("http://wap.market.o2plan.cn/#/skipPage?token="+token+"&link=userCenter");
+        // cc.sys.openURL("http://localhost:4200/#/skipPage?token="+token+"&link=userCenter");
+    },
+    //去交易市场行情首页
+    toMarket(){
+        let token = cc.sys.localStorage.getItem('token');
+        token = encodeURI(token);
+        cc.sys.openURL("http://wap.market.o2plan.cn/#/skipPage?token="+token+"&link=market");
+        // cc.sys.openURL("http://localhost:4200/#/skipPage?token="+token+"&link=market");
+    },
     //是否显示头部
     isShowHeader(){
         if(Global.isShowHeader){

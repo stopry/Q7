@@ -34,14 +34,15 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
-        //this.action = cc.sequence(cc.scaleTo(0.8, 0, 1),cc.scaleTo(0.8, 1, 1));
         this.itemBox.on(cc.Node.EventType.TOUCH_END,this.toMarket,this);
     },
     //去市场
     toMarket(){
         let token = cc.sys.localStorage.getItem('token');
+        token = encodeURI(token);
         let id = this.id;
-        //cc.sys.openURL('http://www.qq.com/')
+        cc.sys.openURL("http://wap.market.o2plan.cn/#/skipPage?id="+id+"&token="+token+"&link=marketDetail");
+        // cc.sys.openURL("http://localhost:4200/#/skipPage?id="+id+"&token="+token+"&link=marketDetail");
     },
     //初始化商品项
     setItem(id,changePrice,changeRate,itmePic,itmeName){
@@ -56,8 +57,10 @@ cc.Class({
         this.numBot.runAction(cc.sequence(cc.scaleTo(0.3, 1, 0),cc.scaleTo(0.3, 1, 1)));
         this.changePrice.string = "<color=#ffffff><outline color=#42230e width=2>"+changePrice+"</outline></color>";
         this.changeRate.string = "<color=#ff0000><outline color=#42230e width=2>"+changeRate+"</outline></color>";
+    },
+    onDestroy(){
+        this.itemBox.off(cc.Node.EventType.TOUCH_END,this.toMarket,this);
     }
-
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

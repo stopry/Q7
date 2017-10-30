@@ -63,8 +63,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
-
         //cc.log(this.buyBtn);
         if(this.buyBtn){
             this.buyBtn.on(cc.Node.EventType.TOUCH_END,this.buy,this);

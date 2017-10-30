@@ -8730,7 +8730,7 @@ declare module cc {
 		@param selfCollider the collider belong to this rigidbody
 		@param otherCollider the collider belong to another rigidbody 
 		*/
-		onEndSolve(contact: PhysicsContact, selfCollider: PhysicsCollider, otherCollider: PhysicsCollider): void;		
+		onEndSolve(contact: PhysicsContact, selfCollider: PhysicsCollider, otherCollider: PhysicsCollider): void;
 		/** !#en
 		Is this a fast moving body that should be prevented from tunneling through
 		other moving bodies?

@@ -236,7 +236,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 20,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -412,7 +413,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 20,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -691,7 +693,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 24,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -730,6 +733,9 @@
     },
     "numBot": {
       "__id__": 8
+    },
+    "itemBox": {
+      "__id__": 14
     }
   },
   {
