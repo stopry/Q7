@@ -58,6 +58,13 @@ cc.Class({
                 if(!this.getPerNode()){
                     this.perNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
                 }
+                if(data.obj.functions){
+                    let functions = data.obj.functions;
+                    Global.tranActive.market = functions[0].value;
+                    Global.tranActive.users = functions[1].value;
+                    Global.tranActive.exchange = functions[2].value;
+                    Global.tranActive.transact = functions[3].value;
+                }
                 cc.director.loadScene("Game",function(){//进入主场景
 
                 }.bind(this));

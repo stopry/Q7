@@ -120,6 +120,7 @@ cc.Class({
         if(Global.layer){
             Global.layer = null;
         }
+        cc.director.getScene().getChildByName('PersistNode').getComponent('UpdateToken').stopUpdateToken();
         cc.director.loadScene("LogIn");
     },
     audioSet(){//开关声音

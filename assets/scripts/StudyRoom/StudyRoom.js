@@ -96,9 +96,9 @@ cc.Class({
         this.upBtn.on(cc.Node.EventType.TOUCH_END,function(){
             //cc.log(this.upType);
             var msgStr = '确认升级种植技术吗!';
-            if(this.upType==0){
+            if(this.upType==1){
                 msgStr = '确认升级种植技术吗!';
-            }else if(this.upType==1){
+            }else if(this.upType==0){
                 msgStr = '确认升级林权证书吗!';
             }else if(this.upType==2){
                 msgStr = '确认升级木材市场准入证吗!';
@@ -107,13 +107,13 @@ cc.Class({
             }
             this.showConDia(msgStr,function(){
                 switch (this.upType){
-                    case 0:
+                    case 1:
                         this.upPlantTec().then((res)=>{
                             this.showLittleTip('成功，正在升级中！')
                             this.renderUpAni(this.upType);
                         });
                         break;
-                    case 1:
+                    case 0:
                         this.upWoodCer().then((res)=>{
                             this.showLittleTip('成功，正在升级中！');
                             this.renderUpAni(this.upType);
@@ -171,9 +171,13 @@ cc.Class({
     //显示升级框中内容
     renderUpBox(type){
         this.renderUpAni(0);
-        if(type==0){//种植技术
+        if(type==1){//种植技术
             this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>种植技术</outline></color>";
-            this.getPlantTec().then((res)=>{
+
+            this.boxDesc.string = '暂未开放';
+            this.oprBtnBox.active = false;
+            //种植技术后台数据
+           /* this.getPlantTec().then((res)=>{
                 //种植证书状态正常 1->正常 2->升级中
                 if(res.sc.plantStatus==1){
                     var string = '';
@@ -195,10 +199,20 @@ cc.Class({
                 }
                 this.renderNeedMerBox(res.pa.wood);
                 this.oprBtnBox.active = true;
-            });
-        }else if(type==1){//林权证
+            });*/
+        }else if(type==0){//林权证
             this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>林权证书</outline></color>";
-            this.getWoodCer().then((res)=>{
+            let desc = "邀请好友1人可升级3级林权证，可开辟第七块地\n" +
+                        "邀请好友3人可升级3级林权证，可开辟第八块地\n"+
+                        "邀请好友5人可升级4级林权证，可开辟第九块地\n"+
+                        "邀请好友10人可升级5级林权证，可开辟第十块地\n"+
+                        "邀请好友20人可升级6级林权证，可开辟第十一块地\n"+
+                        "邀请好友50人可升级7级林权证，可开辟第十二块地";
+
+            this.boxDesc.string = desc;
+            this.oprBtnBox.active = false;
+            // 林权证后台数据
+            /*this.getWoodCer().then((res)=>{
                 //林权证书状态正常 1->正常 2->升级中
                 if(res.sc.certStatus==1){//林权证书正常状态
                     var _string = '';
@@ -214,8 +228,8 @@ cc.Class({
                 let tmpArr = [{wood_id: 7007, wood_cnt: res.ca.jewel}];
                 this.renderNeedMerBox(tmpArr);
                 this.oprBtnBox.active = true;
-            });
-            this.boxDesc.string = '林权证书';
+            });*/
+            // 林权证后台数据
         }else if(type==2){//木材市场准入证
             this.boxTitle.string = "<color=#ffd07e><outline color=#562B04 width=2>木材市场准入证</outline></color>";
             this.getWoodMarket().then((res)=>{

@@ -122,7 +122,7 @@ cc.Class({
         var buyParm = {
             itemId:self.id,
             num:_num,
-            type:1
+            // type:1
         };
         this.getComponent('ReqAni').showReqAni();
         Net.get('/api/game/store/buy',1,buyParm,function(data){

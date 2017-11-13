@@ -1,3 +1,4 @@
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -17,18 +18,32 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
-        this.msg = '这有一条短公告'
+        this.msg = '';
         //this.AnoAni(1);
-        this.getShortAnno();
+        this.getShortMsgFromBackend();
         this.schedule(()=>{
+            this.getShortMsgFromBackend();
+        },60);
+    },
+    //后台获取短公告数据
+    getShortMsgFromBackend(){
+        let id = cc.sys.localStorage.getItem('msgId')||'0';
+        Net.get('/api/msg/getMsg',1,{id:id},function (data) {
+            if(!data.success||!data.obj){
+                return;
+            }
+            cc.sys.localStorage.setItem('msgId',data.obj.id);
+            this.msg = data.obj.content;
             this.getShortAnno();
-        },30);
+        }.bind(this),function (err) {
+
+        }.bind(this))
     },
     //获取短公告
     getShortAnno(){
         this.shortAnnoWrap.active = true;
         var _wrapWidth = this.shortAnnoWrap.width;//短消息外框的宽度
-        this.msg +="1";
+        // this.msg +="1";
         this.shortAnno.getComponent(cc.Label).string = this.msg;
         var _width = this.shortAnno.width;//得到消息框Label的宽度
         //设置Label的位置在box的最右侧（隐藏Label）
@@ -62,7 +77,7 @@ cc.Class({
         }else{
             this.announce.getComponent(cc.Animation).stop('announce');
         }
-    }
+    },
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

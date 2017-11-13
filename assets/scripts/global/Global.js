@@ -16,4 +16,10 @@ window.Global={
     /*游戏引导公共变量*/
     guideStep:1,//游戏引导当前的阶段
     cmpGuide:false,//是否完成了新手引导
+    tranActive:{
+        market:'1',
+        users:'1',
+        exchange:'1',
+        transact:'1',
+    }
 };

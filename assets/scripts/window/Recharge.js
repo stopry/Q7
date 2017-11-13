@@ -92,6 +92,14 @@ cc.Class({
         });
         dia.getComponent('ConfirmDia').showThis();
     },
+    //去交易界面充值
+    toRecharge(){
+        let token = cc.sys.localStorage.getItem('token');
+        token = encodeURI(token);
+        cc.sys.openURL("http://wap.market.o2plan.cn/#/skipPage?token="+token+"&link=goldRecharge");
+        // cc.sys.openURL("http://localhost:4200/#/skipPage?token="+token+"&link=goldRecharge");
+
+    },
     confirmExh(){//确认兑换钻石
         var self = this;
         Net.get('/api/game/jewel/convert',1,{num:self.exchangeJewel},function(data){

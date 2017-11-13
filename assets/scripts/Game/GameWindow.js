@@ -108,6 +108,17 @@ cc.Class({
             type:cc.Node
         },
         //市场end
+
+        //公告start
+        announceBox:{//公告弹框
+            default:null,
+            type:cc.Prefab
+        },
+        announceBtn:{//打开公共弹框的按钮
+            default:null,
+            type:cc.Node
+        }
+        //公告end
     },
 
     // use this for initialization
@@ -122,6 +133,7 @@ cc.Class({
         this.openRankBtn.on(cc.Node.EventType.TOUCH_END,this.openRank,this);
         this.openSetBtn.on(cc.Node.EventType.TOUCH_END,this.openSet,this);
         this.openMarketBtn.on(cc.Node.EventType.TOUCH_END,this.openMarket,this);
+        this.announceBtn.on(cc.Node.EventType.TOUCH_END,this.openAnnounceBox,this);
     },
     //预初始化预制资源（一些弹窗），解决第一次打开卡顿现象
     preInsPrefabs(){
@@ -161,6 +173,10 @@ cc.Class({
         if(!Global.setBox||!Global.setBox.name){
             Global.setBox = cc.instantiate(this.set);
         }
+        //公告
+        if(!Global.AnnounceBoxs||!Global.AnnounceBoxs.name){
+            Global.AnnounceBoxs = cc.instantiate(this.announceBox);
+        }
     },
     opendNormalLayer(){//打开普通遮罩层
         if(!Global.layer||!Global.layer.name){
@@ -170,6 +186,7 @@ cc.Class({
         Global.layer.active = true;
     },
     openRechargeBox(){//打开充值框
+        if(Global.tranActive.exchange=='0') return;
         //充值弹窗遮罩层
         if(!Global.layerRecharge||!Global.layerRecharge.name){
             Global.layerRecharge = cc.instantiate(this.alertLayer);
@@ -246,12 +263,21 @@ cc.Class({
         Global.setBox.getComponent('Set').showThis();
     },
     openMarket(){//打开市场
+        if(Global.tranActive.market=='0') return;
         this.opendNormalLayer();
         if(!Global.Market||!Global.Market.name){
             Global.Market = cc.instantiate(this.market);
         }
         Global.Market.parent = this.root;
         Global.Market.getComponent('Market').showThis();
+    },
+    openAnnounceBox(){//打开公告弹框
+        this.opendNormalLayer();
+        if(!Global.AnnounceBoxs||!Global.AnnounceBoxs.name){
+            Global.AnnounceBoxs = cc.instantiate(this.announceBox);
+        }
+        Global.AnnounceBoxs.parent = this.root;
+        Global.AnnounceBoxs.getComponent('AnnounceBox').showThis();
     }
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

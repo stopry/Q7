@@ -82,6 +82,7 @@ cc.Class({
     },
     //去用户中心
     toUserCenter(){
+        if(Global.tranActive.users=='0') return;
         let token = cc.sys.localStorage.getItem('token');
         token = encodeURI(token);
         cc.sys.openURL("http://wap.market.o2plan.cn/#/skipPage?token="+token+"&link=userCenter");
@@ -89,6 +90,7 @@ cc.Class({
     },
     //去交易市场行情首页
     toMarket(){
+        if(Global.tranActive.transact=='0') return;
         let token = cc.sys.localStorage.getItem('token');
         token = encodeURI(token);
         cc.sys.openURL("http://wap.market.o2plan.cn/#/skipPage?token="+token+"&link=market");

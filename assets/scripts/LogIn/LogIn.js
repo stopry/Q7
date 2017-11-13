@@ -50,7 +50,7 @@ cc.Class({
         cc._initDebugSetting(cc.DebugMode.INFO);
         cc.director.setDisplayStats(false);
         //添加常驻节点
-        cc.game.addPersistRootNode(this.persistNode);//场景切换数据传递
+        cc.game.addPersistRootNode(this.persistNode);//场景切换数据传递 //全局定时更新token
         cc.game.addPersistRootNode(this.reqAni);//网络请求加载遮罩层
         this.autoInput();
         this.changeVer();
@@ -59,13 +59,11 @@ cc.Class({
         //});
     },
     logIn:function(){
-        //cc.sys.openURL('http://www.qq.com/');//app上在浏览器打开网页
-        //cc.director.loadScene("Game",function(){})
         var logdata =  {
-            "captchaCode": " ",
-            "captchaValue": " ",
+            "captchaCode": "",
+            "captchaValue": "",
             "clientId": "098f6bcd4621d373cade4e832627b4f6",
-            "login_channel": " ",
+            "login_channel": "",
             "password": "123456",
             "userName": "13632473925"
         };
@@ -100,9 +98,10 @@ cc.Class({
             }
             cc.sys.localStorage.setItem('token',data.obj.tokenType+" "+data.obj.accessToken);//保存数据到本地
             //cc.log(cc.sys.localStorage.getItem('token'),444);
-            if(isRemPwd){
-                this.remActPwd(account,password);
-            }else{
+            this.remActPwd(account,password);
+            //登录成功后定时更新token
+            cc.director.getScene().getChildByName('PersistNode').getComponent('UpdateToken').updateToken();
+            if(!isRemPwd){
                 this.removeStorage();
             }
             //加载玩家信息
@@ -127,6 +126,13 @@ cc.Class({
                     this.persistNode = cc.director.getScene().getChildByName('PersistNode');
                 }
                 this.persistNode.getComponent('PersistNode').userData.selfInfo = data.obj;//玩家基本星系赋给常驻节点的selfInfo属性
+                if(data.obj.functions){
+                    let functions = data.obj.functions;
+                    Global.tranActive.market = functions[0].value;
+                    Global.tranActive.users = functions[1].value;
+                    Global.tranActive.exchange = functions[2].value;
+                    Global.tranActive.transact = functions[3].value;
+                }
                 cc.director.loadScene("Game",function(){//进入主场景
                     cc.director.getScene().getChildByName('ReqAni').active = false;
                 }.bind(this));

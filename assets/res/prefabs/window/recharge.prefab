@@ -33,12 +33,15 @@
         "__id__": 67
       },
       {
-        "__id__": 74
+        "__id__": 73
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
+      {
+        "__id__": 79
+      },
       {
         "__id__": 80
       },
@@ -47,13 +50,10 @@
       },
       {
         "__id__": 82
-      },
-      {
-        "__id__": 83
       }
     ],
     "_prefab": {
-      "__id__": 84
+      "__id__": 83
     },
     "_id": "",
     "_opacity": 255,
@@ -218,7 +218,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 149,
-      "height": 37
+      "height": 36
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -2115,13 +2115,10 @@
       },
       {
         "__id__": 71
-      },
-      {
-        "__id__": 72
       }
     ],
     "_prefab": {
-      "__id__": 73
+      "__id__": 72
     },
     "_id": "",
     "_opacity": 255,
@@ -2246,30 +2243,11 @@
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 67
-    },
-    "component": "OpenWindow",
-    "handler": "open",
-    "customEventData": "4"
-  },
-  {
-    "__type__": "c4d13vZ0QdAiK/MGDwZENX3",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 67
-    },
-    "_enabled": true,
-    "alertBox": {
-      "__uuid__": "9d19e035-c8b0-4fa6-aac4-46fd4b1149e2"
-    },
-    "alertLayer": {
-      "__uuid__": "ca732ffd-ad3e-4dca-a1b0-450173064bed"
-    },
-    "root": {
       "__id__": 1
     },
-    "webUrl": "http://center.0001wan.com/xgmm.html"
+    "component": "Recharge",
+    "handler": "toRecharge",
+    "customEventData": ""
   },
   {
     "__type__": "5aff1KbhKxDaZDexGmBVLRB",
@@ -2306,17 +2284,17 @@
     "_active": true,
     "_components": [
       {
+        "__id__": 74
+      },
+      {
         "__id__": 75
       },
       {
-        "__id__": 76
-      },
-      {
-        "__id__": 78
+        "__id__": 77
       }
     ],
     "_prefab": {
-      "__id__": 79
+      "__id__": 78
     },
     "_id": "",
     "_opacity": 255,
@@ -2359,7 +2337,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 74
+      "__id__": 73
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2385,7 +2363,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 74
+      "__id__": 73
     },
     "_enabled": true,
     "transition": 2,
@@ -2411,7 +2389,7 @@
     "hoverSprite": null,
     "clickEvents": [
       {
-        "__id__": 77
+        "__id__": 76
       }
     ],
     "_N$interactable": true,
@@ -2435,7 +2413,7 @@
     },
     "_N$disabledSprite": null,
     "_N$target": {
-      "__id__": 74
+      "__id__": 73
     }
   },
   {
@@ -2452,7 +2430,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 74
+      "__id__": 73
     },
     "_enabled": true,
     "clickAudio": {
@@ -2547,7 +2525,7 @@
     "exchangeJewel": 20000,
     "needMoney": 200,
     "exchangeBtn": {
-      "__id__": 74
+      "__id__": 73
     }
   },
   {
