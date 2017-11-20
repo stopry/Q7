@@ -1,4 +1,5 @@
 var util = require('Util');
+var Net = require('Net');
 cc.Class({
     extends: cc.Component,
 
@@ -65,6 +66,7 @@ cc.Class({
     },
     // use this for initialization
     onLoad: function () {
+        //默认工厂id
         cc.director.setDisplayStats(false);
         //添加新手引导所需的常驻节点
         cc.game.addPersistRootNode(this.Guider);
@@ -170,6 +172,9 @@ cc.Class({
             //碳汇市场准入
             this.cerList[3].interactable = this.perNode.getComponent('PersistNode').userData.selfInfo.scientific.greenCa?true:false;
         };
+    },
+    showLittleTip:function(str){//显示提示
+        this.getComponent('LittleTip').setContent(str);
     },
     initGame(){
         this.getComponent('UpdateUserInfo').refresh().then((res)=>{
@@ -279,7 +284,6 @@ cc.Class({
             });
         },this);
     },
-
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

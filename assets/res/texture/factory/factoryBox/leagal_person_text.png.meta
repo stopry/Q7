@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5cec78f4-ed08-4939-b796-2189f7c76638",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "leagal_person_text": {
+      "ver": "1.0.3",
+      "uuid": "7f79796b-991d-4c75-82a5-184d48f7e028",
+      "rawTextureUuid": "5cec78f4-ed08-4939-b796-2189f7c76638",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 119,
+      "height": 31,
+      "rawWidth": 119,
+      "rawHeight": 31,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

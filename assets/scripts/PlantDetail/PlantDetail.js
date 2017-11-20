@@ -221,7 +221,8 @@ cc.Class({
                         //1508469000000,//成熟倒计时
                         greenList[l].nextGeTime,//成熟倒计时
                         this.treeBox.getPosition(),//收取时位置
-                        1,
+                        1,//绿能类型->自己的
+                        0,//绿能种类-> 柳树
                         greenList[l].createTime.id
                     );
                 }
@@ -229,7 +230,7 @@ cc.Class({
         }
     },
     //创建绿能
-    createGreenEnergy(status,countDown,treeBoxPos,type,id){//创建绿能
+    createGreenEnergy(status,countDown,treeBoxPos,type,treeType,id){//创建绿能
         var greenEne = null;
         this.greenEnergyArray = [];
         if(this.greenPool.size()>0){
@@ -239,7 +240,7 @@ cc.Class({
         }
         greenEne.parent = cc.find('Canvas');
         //状态 倒计时 树木容器的位置 类型(好友的0，我的1) id(绿能id)
-        greenEne.getComponent('GreenEnergy').initGreenEnergy(status,countDown,treeBoxPos,type,id);
+        greenEne.getComponent('GreenEnergy').initGreenEnergy(status,countDown,treeBoxPos,type,treeType,id);
         greenEne.setPosition(this.getRandomPos());
         this.greenEnergyArray.push(greenEne);//生成的绿能加入数组
     },
@@ -417,7 +418,7 @@ cc.Class({
         }
         Global.selTreeBox.getComponent('SelTreeBox').showThis();
     },
-    cut(){//砍伐树木
+    /*cut(){//砍伐树木
         if(this.isLoading) return;
         this.isLoading = true;
         var self = this;
@@ -436,6 +437,31 @@ cc.Class({
                 this.liftAniCtr(1);
                 this.renderTree();
                 //this.showLittleTip('收取成功');
+            }
+        }.bind(this),function(){
+            this.isLoading = false;
+        }.bind(this));
+    },*/
+    //改造林场
+    transform(){
+        if(this.isLoading) return;
+        this.isLoading = true;
+        var self = this;
+        var plantData = {//
+            "landId": (function(){if(self.getPerNode()){
+                return self.perNode.getComponent('PersistNode').userData.curLandId;
+            }})()||0
+        };
+        Net.post('/api/game/transform',1,plantData,function(data){
+            this.isLoading = false;
+            if(!data.success){
+                this.showLittleTip(data.msg);
+            }else{
+                this.resetAni();
+                this.cutAniCtr(1);
+                this.liftAniCtr(1);
+                this.renderTree();
+                this.showLittleTip('改造成功,你可以重新种植树木');
             }
         }.bind(this),function(){
             this.isLoading = false;

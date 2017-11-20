@@ -19,11 +19,19 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.msg = '';
-        //this.AnoAni(1);
+        this.interVal = null;
         this.getShortMsgFromBackend();
-        this.schedule(()=>{
+
+        this.interVal = setInterval(()=>{
             this.getShortMsgFromBackend();
-        },60);
+        },60*1000);
+
+        // this.schedule(()=>{
+        //     this.getShortMsgFromBackend();
+        // },60);
+
+        this.isHasNewAno();
+        this.closeAnoAni();
     },
     //后台获取短公告数据
     getShortMsgFromBackend(){
@@ -76,6 +84,34 @@ cc.Class({
             this.announce.getComponent(cc.Animation).play('announce');
         }else{
             this.announce.getComponent(cc.Animation).stop('announce');
+        }
+    },
+    //点击过后关闭公告牌动画
+    closeAnoAni(){
+        this.announce.on(cc.Node.EventType.TOUCH_END,()=>{
+            this.AnoAni(false);
+        },this);
+    },
+    // 通过lastNotice接口获取最新公告id，通过id与本地储存的anoId对比，如果相同则说明对此用户没有最新公告，否者有最新公告；
+    isHasNewAno(){
+        Net.get('/api/notice/lastNotice',1,null,function (data) {
+            if(data.success){
+                let anoId = cc.sys.localStorage.getItem('anoId')||'none';
+                let id = data.obj.id;
+                if(anoId==id){
+                    this.AnoAni(false);
+                }else {
+                    this.AnoAni(true);
+                }
+                cc.sys.localStorage.setItem('anoId',id);
+            }
+        }.bind(this),function (err) {
+
+        }.bind(this));
+    },
+    onDestroy(){
+        if(this.interVal){
+            clearInterval(this.interVal);
         }
     },
     // called every frame, uncomment this function to activate update callback

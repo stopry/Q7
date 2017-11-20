@@ -36,7 +36,6 @@ cc.Class({
         }
     }
     ,
-
     // use this for initialization
     onLoad: function () {
         //上一条id

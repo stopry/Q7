@@ -117,8 +117,19 @@ cc.Class({
         announceBtn:{//打开公共弹框的按钮
             default:null,
             type:cc.Node
-        }
+        },
         //公告end
+
+        //工厂start
+        factoryBox:{
+            default:null,
+            type:cc.Prefab
+        },
+        factoryBtn:{
+            default:null,
+            type:cc.Node
+        },
+        //工厂end
     },
 
     // use this for initialization
@@ -134,6 +145,7 @@ cc.Class({
         this.openSetBtn.on(cc.Node.EventType.TOUCH_END,this.openSet,this);
         this.openMarketBtn.on(cc.Node.EventType.TOUCH_END,this.openMarket,this);
         this.announceBtn.on(cc.Node.EventType.TOUCH_END,this.openAnnounceBox,this);
+        this.factoryBtn.on(cc.Node.EventType.TOUCH_END,this.openFactoryBox,this);
     },
     //预初始化预制资源（一些弹窗），解决第一次打开卡顿现象
     preInsPrefabs(){
@@ -278,7 +290,15 @@ cc.Class({
         }
         Global.AnnounceBoxs.parent = this.root;
         Global.AnnounceBoxs.getComponent('AnnounceBox').showThis();
-    }
+    },
+    openFactoryBox(){//打开工厂弹框
+        this.opendNormalLayer();
+        if(!Global.FactoryBox||!Global.FactoryBox.name){
+            Global.FactoryBox = cc.instantiate(this.factoryBox);
+        }
+        Global.FactoryBox.parent = this.root;
+        Global.FactoryBox.getComponent('FactoryBox').showThis();
+    },
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

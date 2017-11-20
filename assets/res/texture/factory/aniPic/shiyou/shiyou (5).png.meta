@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "9861ce9f-01b6-4b03-b9a3-1bf98ffaeefc",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "shiyou (5)": {
+      "ver": "1.0.3",
+      "uuid": "2cf2d555-60a6-4143-8e1e-0d8d73ef74c3",
+      "rawTextureUuid": "9861ce9f-01b6-4b03-b9a3-1bf98ffaeefc",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 640,
+      "height": 1136,
+      "rawWidth": 640,
+      "rawHeight": 1136,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

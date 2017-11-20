@@ -4,9 +4,9 @@ var Net = {
     //请求地址、请求头、发送数据、成功回调、失败回调
     get:function(url,header,data,succCallBack,errCallBack){//get请求
         var host = '';
-        var host = 'http://api.o2plan.cn';
+        // var host = 'http://api.o2plan.cn';
         //var host = 'http://101.132.109.119:9080';
-        // var host = 'http://192.168.19.89:8081';
+        var host = 'http://192.168.19.89:8081';
         //var host = 'http://192.168.19.200:8081';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
@@ -35,9 +35,9 @@ var Net = {
     post:function(url,header,data,succCallBack,errCallBack){//post请求
         var host = '';
         //var host = 'http://192.168.19.200:8081';
-        var host = 'http://api.o2plan.cn';
+        // var host = 'http://api.o2plan.cn';
         //var host = 'http://101.132.109.119:9080';
-        // var host = 'http://192.168.19.89:8081';
+        var host = 'http://192.168.19.89:8081';
         //if(url=='/market/oauth/token'){
         //    host = 'http://101.132.109.119:9080';
         //}
@@ -53,9 +53,9 @@ var Net = {
             }
         };
         let uri = host+url;
-        // if(url=='/market/oauth/token'){
-        //     uri = 'http://192.168.19.89:8080'+url
-        // }
+        if(url=='/market/oauth/token'){
+            uri = 'http://192.168.19.89:8080'+url
+        }
         xhr.open("POST", uri, true);
         xhr.setRequestHeader("Content-Type","application/json;charset=utf-8");
         if (cc.sys.isNative) {

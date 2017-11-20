@@ -89,7 +89,7 @@ cc.Class({
 
             }.bind(this));
         },()=>{
-
+            Global.hasTreesProp = true;
         })
     },
     showConDia(msg,fn1,fn2){//弹出确认对话框

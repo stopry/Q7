@@ -47,131 +47,43 @@ cc.Class({
         //排污量label
         pwlTxt:{
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
         //产能label
         cnTxt:{
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
+        //已盈利
+        yyl:{
+            default:null,
+            type:cc.RichText
+        },
+        //头部信息结束
+
+        /*营业执照信息*/
         //法人代表label
         legalTxt:{
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
         //工厂编号label
         facNumTxt:{
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
         //营业范围label
         bniRngTxt:{
             default:null,
-            type:cc.Label
+            type:cc.RichText
         },
-        //工厂等级lebel
-        facLvTxt:{
-            default:null,
-            type:cc.Label
-        },
+
         //工厂建筑
         facBud:{
             default:null,
             type:cc.Node
         },
-        /*办公室弹窗*/
-        //办公室
-        officeRoom:{
-            default:null,
-            type:cc.Node
-        },
-        //等级
-        facLv_o:{
-            default:null,
-            type:cc.Label
-        },
-        //法人
-        legal_o:{
-            default:null,
-            type:cc.Label
-        },
-        //工厂编号
-        facNum_o:{
-            default:null,
-            type:cc.Label
-        },
-        //营业范围
-        bniRang_o:{
-            default:null,
-            type:cc.Node
-        },
-        //污染度
-        wrdPrg_o:{
-            default:null,
-            type:cc.ProgressBar
-        },
-        //污染度数值
-        wrdNumText_o:{
-            default:null,
-            type:cc.Label
-        },
-        //排污量
-        pwl_o:{
-            default:null,
-            type:cc.Label
-        },
-        //产能
-        cn_o:{
-            default:null,
-            type:cc.Label
-        },
-        //累计盈利
-        profit_o:{
-            default:null,
-            type:cc.Label
-        },
-        //未激活状态BOX
-        inactiveBox:{
-            default:null,
-            type:cc.Node
-        },
-        //激活状态BOX
-        activeBox:{
-            default:null,
-            type:cc.Node
-        },
-        //激活条件列表容器
-        activeCndt_o:{
-            default:null,
-            type:cc.Node
-        },
-        //生产状态内容文字描述
-        statusCon_o:{
-            default:null,
-            type:cc.Label
-        },
-        //生产状态文字描述
-        status_o:{
-            default:null,
-            type:cc.Label
-        },
-        /*升级弹窗*/
-        //升级工厂对话框
-        upGradeBox:{
-            default:null,
-            type:cc.Node
-        },
-        //等级描述
-        lvDesc:{
-            default:null,
-            type:cc.Label,
-            tooltip:'升级框等级描述'
-        },
-        //升级条件列表容器
-        upCndt:{
-            default:null,
-            type:cc.Node
-        },
+
         /*治理弹框*/
         //治理环境对话框
         dealEvnBox:{
@@ -183,6 +95,7 @@ cc.Class({
             default:null,
             type:cc.ProgressBar
         },
+        //污染度进度条数字
         ploNumText:{
             default:null,
             type:cc.Label
@@ -202,39 +115,38 @@ cc.Class({
             default:null,
             type:cc.Label
         },
-        /*工厂升级和环境治理按钮*/
-        //工厂升级按钮
-        upGradeBtn:{
+
+        /*展开关闭头部底部按钮*/
+        topBotToggleBtn:{
             default:null,
-            type:cc.Button
+            type:cc.Node
         },
-        //环境治理按钮
-        dealEnvBtn:{
+        //头部
+        header:{
             default:null,
-            type:cc.Button
+            type:cc.Node
         },
-        /*条件资源预制*/
-        needBoxPre:{//所需材料预制
+        //底部
+        footer:{
             default:null,
-            type:cc.Prefab
-        },
-        addPre:{//加号预制
-            default:null,
-            type:cc.Prefab
+            type:cc.Node
         },
     },
     onLoad(){
+        //关闭加载动画
+        cc.director.getScene().getChildByName('ReqAni').active = false;
+
+        this.facId = cc.sys.localStorage.getItem('factoryId')||'none';
         //当前绿能数量
         this.greenCnt = 120;
-        //营业执照详情展开状态
-        this.licenseStatus = false;
+        //头部底部展开状态
+        this.showStatus = true;
         this.init();
     },
     init(){
         this.renderScene();
-        this.renderOfficeRoom();
-        this.renderUpBox();
-        this.renderDealBox();
+
+        // this.renderDealBox();
     },
     mockDatas(){
         let d = {};
@@ -263,36 +175,46 @@ cc.Class({
                     {itemId: '1002', cnt: 10}
                 ],
             }
-
         };
         return d;
     },
-    //toggle营业执照详情
-    licenseToggle(){
-        this.licenseStatus = !this.licenseStatus;
-        this.licenseDetailBox.active = this.licenseStatus;
+
+    //显示营业执照
+    showLicense(){
+        this.boxLayer.active = true;
+        this.setPosIndex(this.licenseDetailBox);
     },
-    hideLicenseDetail(){
-        if(this.licenseStatus){
-            this.licenseStatus = false;
-            this.licenseDetailBox.active = this.licenseStatus;
-        }
+    //关闭营业执照
+    closeLicense(){
+        this.boxLayer.active = false;
+        this.licenseDetailBox.active = false;
     },
     /*界面渲染*/
     //主场景渲染
     renderScene(){
-        this.wrdPrg.progress = this.mockDatas().facInfo.pl/100;
-        this.wrdNumText.string = this.mockDatas().facInfo.pl+"/100";
-        this.pwlTxt.string = this.mockDatas().facInfo.plph+"吨/小时";
-        this.cnTxt.string = this.mockDatas().facInfo.uph+"金币/每小时";
-        let license = this.mockDatas().facInfo.license;
-        this.legalTxt.string = license.legal;
-        this.facNumTxt.string = license.num;
-        this.bniRngTxt.string = license.range;
-        this.facLvTxt.string = license.level;
+        this.getFactoryInfo(this.facId).then((res)=>{
+            if(res){
+                this.wrdPrg.progress = res.pl/res.max;//头部污染度进度条
+                this.wrdNumText.string = res.pl+"/"+res.max;//进度条数值显示
+                this.pwlTxt.string = "<outline color=#5D1A0A width=1>"+res.plph+"吨/每小时</outline>";//头部污染度
+                this.cnTxt.string = "<outline color=#8A4B11 width=2>"+res.uph+"金币/每小时</outline>";//头部产能
+                this.yyl.string = "<outline color=#8A4B11 width=2>"+100+"金币</outline>";//头部已盈利
+                //营业执照信息
+                if(this.getPerNode()){//法人信息
+                    let name =  this.perNode.getComponent('PersistNode').userData.selfInfo.nickname;
+                    this.legalTxt.string = "<outline color=#5D1A0A width=1>"+name+"</outline>";
+                }
+                this.facNumTxt.string = "<outline color=#5D1A0A width=1>"+res.no||'未激活'+"</outline>";//工厂编号
+                this.bniRngTxt.string = "<outline color=#5D1A0A width=1>"+res.name+"</outline>";//营业范围
+            }
+        });
+    },
+    getPerNode(){//得到常驻节点
+        this.perNode = cc.director.getScene().getChildByName('PersistNode');
+        return this.perNode;
     },
     //办公室渲染
-    renderOfficeRoom(){
+    /*renderOfficeRoom(){
         let of = this.mockDatas().facInfo;
         this.facLv_o.string = of.license.level;
         this.legal_o.string = of.license.legal;
@@ -326,9 +248,9 @@ cc.Class({
         //升级工厂和治理环境按钮可用状态设置
         this.upGradeBtn.interactable = !(parseInt(this.mockDatas().facInfo.license.level)>9);
         this.dealEnvBtn.interactable = !(this.mockDatas().facInfo.pl<=0);
-    },
+    },*/
     //升级框渲染
-    renderUpBox(){
+    /*renderUpBox(){
         this.upCndt.removeAllChildren();
         for(var i = 0;i<5;i++){
             if(i!=4){
@@ -341,22 +263,13 @@ cc.Class({
                 this.upCndt.addChild(needItems);
             }
         }
-    },
+    },*/
     //治理环境框渲染
     renderDealBox(){
-        let datas = this.mockDatas().facInfo;
         this.ploPrg.progress = datas.pl/100;
         this.greenAmt.string = this.greenCnt+"吨";
     },
-    /*升级操作*/
-    //确认升级工厂
-    upGradeFactory(){
 
-    },
-    //确认治理环境
-    dealEnvironment(){
-
-    },
     /*治理环境绿能数量操作*/
     //计算治理当前污染度所需要的绿能
     calcGrnOfDealEnv(){
@@ -383,7 +296,7 @@ cc.Class({
         this.onGrnChange();
     },
     //显示提示
-    showLittleTip:function(str){
+    showLittleTip(str){
         this.getComponent('LittleTip').setContent(str);
     },
     /*弹窗控制*/
@@ -423,26 +336,7 @@ cc.Class({
         var action = cc.sequence(scaleTo,scaleTo2, finished);
         node.runAction(action);
     },
-    //打开办公室
-    openOffice(){
-        this.boxLayer.active = true;
-        this.setPosIndex(this.officeRoom);
-    },
-    //关闭办公室
-    closeOffice(){
-        this.boxLayer.active = false;
-        this.closeAni(this.officeRoom);
-    },
-    //打开升级弹框
-    openUpBox(){
-        this.upDealLayer.active = true;
-        this.setPosIndex(this.upGradeBox);
-    },
-    //关闭升级弹框
-    closeUpBox(){
-        this.upDealLayer.active = false;
-        this.closeAni(this.upGradeBox);
-    },
+
     //打开治理弹框
     openDealBox(){
         this.upDealLayer.active = true;
@@ -452,6 +346,113 @@ cc.Class({
     closeDealBox(){
         this.upDealLayer.active = false;
         this.closeAni(this.dealEvnBox);
+    },
+    //展开收起头部底部
+    toggleTopBot(){
+        this.showStatus = !this.showStatus;
+        let rotate_0 = cc.rotateTo(0,0);
+        let rotate_180 = cc.rotateTo(0,180);
+
+        let fade_out = cc.fadeTo(0.5,0);
+        let fade_out_2 = cc.fadeTo(0.5,0);
+        let fade_in = cc.fadeTo(0.5,255);
+        let fade_in_2 = cc.fadeTo(0.5,255);
+
+        let movetopHide = cc.moveBy(0.5, 0, 152);//头部隐藏
+        let movetopShow = cc.moveBy(0.5, 0, -152);//头部显示
+
+        let movebotHide = cc.moveBy(0.5, 0, -87);//底部隐藏
+        let movebotShow = cc.moveBy(0.5, 0, 87);//底部显示
+
+        if(!this.showStatus) {
+            this.topBotToggleBtn.runAction(rotate_0);
+            this.header.runAction(cc.spawn(fade_out,movetopHide));
+            this.footer.runAction(cc.spawn(fade_out_2,movebotHide));
+        }else{
+            this.topBotToggleBtn.runAction(rotate_180);
+            this.header.runAction(cc.spawn(fade_in,movetopShow));
+            this.footer.runAction(cc.spawn(fade_in_2,movebotShow));
+        }
+    },
+
+    /*工厂接口*/
+    //激活工厂
+    //工厂id
+    /*confirmActiveFactory(id){
+      let pro = new Promise((resolve,reject)=>{
+         Net.get('/api/game/factory/activate',1,{id:id},(data)=>{
+             if(!data.success){
+                 this.showLittleTip(data.msg);
+                 reject(data.msg);
+                 return;
+             }else{
+                 resolve(data.obj);
+             }
+         },(err)=>{
+             reject(false);
+         })
+      });
+      return pro;
+    },*/
+    //获取工厂
+    //工厂id
+    getFactoryInfo(id){
+        let pro = new Promise((resolve,reject)=>{
+            Net.get('/api/game/factory/getFactory',1,{id:id},(data)=>{
+                if(!data.success){
+                    this.showLittleTip(data.msg);
+                    reject(data.msg);
+                    return;
+                }else{
+                    resolve(data.obj);
+                }
+            },(err)=>{
+                reject(false);
+            })
+        });
+        return pro;
+    },
+    //治理工厂
+    //工厂id 绿能数量num
+    /*confirmGovernFactory(id,num){
+        let pro = new Promise((resolve,reject)=>{
+            Net.get('/api/game/factory/govern',1,{id:id,num:num},(data)=>{
+                if(!data.success){
+                    this.showLittleTip(data.msg);
+                    reject(data.msg);
+                    return;
+                }else{
+                    resolve(data.obj);
+                }
+            },(err)=>{
+                reject(false);
+            })
+        });
+        return pro;
+    },*/
+    //升级工厂
+    //工厂id
+    /*confirmUpgradeFactory(id){
+        let pro = new Promise((resolve,reject)=>{
+            Net.get('/api/game/factory/upgrade',1,{id:id},(data)=>{
+                if(!data.success){
+                    this.showLittleTip(data.msg);
+                    reject(data.msg);
+                    return;
+                }else{
+                    resolve(data.obj);
+                }
+            },(err)=>{
+                reject(false);
+            })
+        });
+        return pro;
+    },*/
+    //返回游戏场景
+    backGame(){
+        cc.director.loadScene("Game",()=>{//回调
+            // cc.director.getScene().getChildByName('ReqAni').active = false;
+        });
     },
     //组件销毁
     onDestroy(){

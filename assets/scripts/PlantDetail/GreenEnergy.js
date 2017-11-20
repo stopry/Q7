@@ -11,6 +11,15 @@ cc.Class({
         status:0,//绿能状态
         countDown:null,//收取倒计时
         isTaking:false,//是否正在收取中
+        greenPic:{
+            default:null,
+            type:cc.Sprite
+        },
+        //树的类型图片
+        treeTypePic:{
+            default:[],
+            type:[cc.SpriteFrame]
+        }
     },
     // use this for initialization
     onLoad: function () {
@@ -57,7 +66,7 @@ cc.Class({
         }
 
     },
-    initGreenEnergy(status,countDown,treeBoxPos,type,id){//初始化绿能
+    initGreenEnergy(status,countDown,treeBoxPos,type,treeType,id){//初始化绿能
         //take
         this.id = id;
         var finished = cc.callFunc(this.takeOk,this);
@@ -66,7 +75,8 @@ cc.Class({
         this.status = status;
         this.countDown = countDown;
         this.type = type;
-        this.renderGreenEnergy(this.status,this.countDown,this.type);
+        this.treeType = treeType;
+        this.renderGreenEnergy(this.status,this.countDown,this.type,this.treeType);
         this.greenEnergy.runAction(this.normalAction)
     },
     /**
@@ -74,11 +84,13 @@ cc.Class({
     @param countDown->可收取时间倒数计时
     @param type 0-1 好友绿能-自己绿能
     */
-    renderGreenEnergy(status,countDown,type){//渲染绿能
+    renderGreenEnergy(status,countDown,type,treeType){//渲染绿能
         this.status = status;
         this.countDown = countDown;
         this.type = type;//绿能类型好友的或自己的0/1
+        this.treeType = treeType;//绿能的种类
 
+        this.greenPic.SpriteFrame = this.treeType[this.treeType];
         if(this.status==1){//正在产出
             this.greenEnergy.opacity = 190;
             this.greenEnergy.getChildByName('greenDesc').getComponent(cc.Label).string = '生成中...';
